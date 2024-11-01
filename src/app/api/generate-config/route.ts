@@ -1,5 +1,4 @@
 import { NextResponse } from 'next/server';
-import {boolean} from "zod";
 
 interface ConfigRequest {
   templateFile: string;

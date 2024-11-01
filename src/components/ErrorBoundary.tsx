@@ -9,10 +9,11 @@ class ErrorBoundary extends React.Component<{ children: React.ReactNode }, { has
     }
 
     // lets you update state in response to an error and display an error message to the user
-    static getDerivedStateFromError(error: any) {
+    static getDerivedStateFromError(error: Error) {
+        console.log({ error })
         return { hasError: true }
     }
-    componentDidCatch(error: any, errorInfo: any) {
+    componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
         // You can use your own error logging service here
         console.log({ error, errorInfo })
     }

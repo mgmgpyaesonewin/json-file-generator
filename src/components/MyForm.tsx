@@ -125,7 +125,7 @@ const MyForm: React.FC = () => {
                         name="deviceSettingsOfBottomInfoLine1"
                         render={({ field }) => (
                             <FormItem>
-                                <FormLabel htmlFor={field.name}>TID ( Device Settings of Bottom Info Line 1 ) </FormLabel>
+                                <FormLabel htmlFor={field.name}>TID ( deviceSettings {'>'} bottomInfoLine1 ) </FormLabel>
                                 <FormControl>
                                     <Input {...field} />
                                 </FormControl>
@@ -155,7 +155,7 @@ const MyForm: React.FC = () => {
                         name="deviceSettingsOfEnableUserManagement"
                         render={({ field }) => (
                             <FormItem className="space-y-3">
-                                <FormLabel htmlFor={field.name}>Enable User Management</FormLabel>
+                                <FormLabel htmlFor={field.name}>Enable User Management ( deviceSettings {'>'} enableUserManagement )</FormLabel>
                                 <FormControl>
                                     <RadioGroup
                                         onValueChange={field.onChange}
@@ -188,7 +188,7 @@ const MyForm: React.FC = () => {
                         name="linkPOSConfigOfToggle"
                         render={({ field }) => (
                             <FormItem className="space-y-3">
-                                <FormLabel htmlFor={field.name}>Link POS Configuration Toggle</FormLabel>
+                                <FormLabel htmlFor={field.name}>Link POS Configuration Toggle ( linkPOSConfig {'>'} toggle )</FormLabel>
                                 <FormControl>
                                     <RadioGroup
                                         onValueChange={field.onChange}
@@ -221,7 +221,7 @@ const MyForm: React.FC = () => {
                         name="appThemeOfTransLogging"
                         render={({ field }) => (
                             <FormItem className="space-y-3">
-                                <FormLabel htmlFor={field.name}>App Theme of Transaction Logging</FormLabel>
+                                <FormLabel htmlFor={field.name}>App Theme of Transaction Logging ( appTheme {'>'} transLogging )</FormLabel>
                                 <FormControl>
                                     <RadioGroup
                                         onValueChange={field.onChange}

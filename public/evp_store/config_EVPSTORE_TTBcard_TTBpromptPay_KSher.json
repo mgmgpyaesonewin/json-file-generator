@@ -1,0 +1,3994 @@
+{
+	"users": [
+		{
+			"isAdmin": false,
+			"password": "000000",
+			"userName": "01",
+			"visibleName": "Cashier A"
+		},
+		{
+			"isAdmin": false,
+			"password": "000000",
+			"userName": "02",
+			"visibleName": "Cashier B"
+		}
+	],
+	"appTheme": {
+		"navBar": {
+			"icon": "ic_timer.png",
+			"btnBack": "ic_back_arrow.png",
+			"timeout": 60
+		},
+		"bgColor": {
+			"primary": "#4A5356",
+			"tertiary": "#80C0BF",
+			"secondary": "#E2F0F0"
+		},
+		"defaultLang": "th",
+		"transLogging": "off"
+	},
+	"revision": {
+		"_comment_": "[24-01-2022] This config support LinkPOS config and compatible with EVPStore version > 1.0.11"
+	},
+	"slideAds": {
+		"image": [
+			{
+				"index": 1,
+				"preview": "ad_1.png",
+				"fullscreen": "ad_1.png"
+			}
+		],
+		"timer": 10,
+		"btnClose": "ic_close.png"
+	},
+	"viewBank": {
+		"navBar": {
+			"label": [
+				{
+					"lang": "en",
+					"text": "Bank Selection",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "58",
+					"fontColor": "#FFFFFF",
+					"fontStyle": "Bold",
+					"fontSizeUnit": "px"
+				},
+				{
+					"lang": "th",
+					"text": "Bank Selection",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "58",
+					"fontColor": "#FFFFFF",
+					"fontStyle": "Bold",
+					"fontSizeUnit": "px"
+				}
+			]
+		},
+		"content": [
+			{
+				"items": [
+					{
+						"icon": "ic_bank_ttb.png",
+						"index": 1,
+						"label": [
+							{
+								"lang": "en",
+								"text": "",
+								"fontFace": "THSarabunNew.ttf",
+								"fontSize": "58",
+								"fontColor": "#FFFFFF",
+								"fontStyle": "Bold",
+								"fontSizeUnit": "px"
+							},
+							{
+								"lang": "th",
+								"text": "",
+								"fontFace": "THSarabunNew.ttf",
+								"fontSize": "58",
+								"fontColor": "#FFFFFF",
+								"fontStyle": "Bold",
+								"fontSizeUnit": "px"
+							}
+						],
+						"status": "unavailable",
+						"btnBase": "ic_base_border_btn.png",
+						"pkgName": "com.evp.payment.evpttb",
+						"reqName": "request_payment_ttb",
+						"navigate": "",
+						"transType": "",
+						"paymentType": ""
+					},
+					{
+						"icon": "ic_bank_scb.png",
+						"index": 2,
+						"label": [
+							{
+								"lang": "en",
+								"text": "",
+								"fontFace": "THSarabunNew.ttf",
+								"fontSize": "58",
+								"fontColor": "#FFFFFF",
+								"fontStyle": "Bold",
+								"fontSizeUnit": "px"
+							},
+							{
+								"lang": "th",
+								"text": "",
+								"fontFace": "THSarabunNew.ttf",
+								"fontSize": "58",
+								"fontColor": "#FFFFFF",
+								"fontStyle": "Bold",
+								"fontSizeUnit": "px"
+							}
+						],
+						"status": "unavailable",
+						"btnBase": "ic_base_border_btn.png",
+						"pkgName": "com.evp.payment.evpscb",
+						"reqName": "request_payment_scb",
+						"navigate": "",
+						"transType": "",
+						"paymentType": ""
+					},
+					{
+						"icon": "ic_bank_kbank.png",
+						"index": 3,
+						"label": [
+							{
+								"lang": "en",
+								"text": "",
+								"fontFace": "THSarabunNew.ttf",
+								"fontSize": "58",
+								"fontColor": "#FFFFFF",
+								"fontStyle": "Bold",
+								"fontSizeUnit": "px"
+							},
+							{
+								"lang": "th",
+								"text": "",
+								"fontFace": "THSarabunNew.ttf",
+								"fontSize": "58",
+								"fontColor": "#FFFFFF",
+								"fontStyle": "Bold",
+								"fontSizeUnit": "px"
+							}
+						],
+						"status": "unavailable",
+						"btnBase": "ic_base_border_btn.png",
+						"pkgName": "com.evp.payment.evpkbk",
+						"reqName": "request_payment_kbk",
+						"navigate": "",
+						"transType": "",
+						"paymentType": ""
+					},
+					{
+						"icon": "ic_bank_krungsri.png",
+						"index": 4,
+						"label": [
+							{
+								"lang": "en",
+								"text": "",
+								"fontFace": "THSarabunNew.ttf",
+								"fontSize": "58",
+								"fontColor": "#FFFFFF",
+								"fontStyle": "Bold",
+								"fontSizeUnit": "px"
+							},
+							{
+								"lang": "th",
+								"text": "",
+								"fontFace": "THSarabunNew.ttf",
+								"fontSize": "58",
+								"fontColor": "#FFFFFF",
+								"fontStyle": "Bold",
+								"fontSizeUnit": "px"
+							}
+						],
+						"status": "unavailable",
+						"btnBase": "ic_base_border_btn.png",
+						"pkgName": "com.evp.payment.evpksher",
+						"reqName": "request_payment_ksher",
+						"navigate": "",
+						"transType": "",
+						"paymentType": ""
+					},
+					{
+						"icon": "ic_bank_bbl.png",
+						"index": 5,
+						"label": [
+							{
+								"lang": "en",
+								"text": "",
+								"fontFace": "THSarabunNew.ttf",
+								"fontSize": "58",
+								"fontColor": "#FFFFFF",
+								"fontStyle": "Bold",
+								"fontSizeUnit": "px"
+							},
+							{
+								"lang": "th",
+								"text": "",
+								"fontFace": "THSarabunNew.ttf",
+								"fontSize": "58",
+								"fontColor": "#FFFFFF",
+								"fontStyle": "Bold",
+								"fontSizeUnit": "px"
+							}
+						],
+						"status": "unavailable",
+						"btnBase": "ic_base_border_btn.png",
+						"pkgName": "com.evp.payment.evpttb",
+						"reqName": "request_payment_ttb",
+						"navigate": "",
+						"transType": "",
+						"paymentType": ""
+					},
+					{
+						"icon": "ic_bank_citi.png",
+						"index": 6,
+						"label": [
+							{
+								"lang": "en",
+								"text": "",
+								"fontFace": "THSarabunNew.ttf",
+								"fontSize": "58",
+								"fontColor": "#FFFFFF",
+								"fontStyle": "Bold",
+								"fontSizeUnit": "px"
+							},
+							{
+								"lang": "th",
+								"text": "",
+								"fontFace": "THSarabunNew.ttf",
+								"fontSize": "58",
+								"fontColor": "#FFFFFF",
+								"fontStyle": "Bold",
+								"fontSizeUnit": "px"
+							}
+						],
+						"status": "unavailable",
+						"btnBase": "ic_base_border_btn.png",
+						"pkgName": "com.evp.payment.evpksher",
+						"reqName": "request_payment_ksher",
+						"navigate": "",
+						"transType": "",
+						"paymentType": ""
+					},
+					{
+						"icon": "ic_bank_uob.png",
+						"index": 7,
+						"label": [
+							{
+								"lang": "en",
+								"text": "",
+								"fontFace": "THSarabunNew.ttf",
+								"fontSize": "58",
+								"fontColor": "#FFFFFF",
+								"fontStyle": "Bold",
+								"fontSizeUnit": "px"
+							},
+							{
+								"lang": "th",
+								"text": "",
+								"fontFace": "THSarabunNew.ttf",
+								"fontSize": "58",
+								"fontColor": "#FFFFFF",
+								"fontStyle": "Bold",
+								"fontSizeUnit": "px"
+							}
+						],
+						"status": "unavailable",
+						"btnBase": "ic_base_border_btn.png",
+						"pkgName": "com.evp.payment.evpksher",
+						"reqName": "request_payment_ksher",
+						"navigate": "",
+						"transType": "",
+						"paymentType": ""
+					}
+				],
+				"tabImage": "",
+				"tabIndex": 1
+			}
+		],
+		"tabActive": "ic_tab_active.png",
+		"tabInactive": "ic_tab_inactive.png"
+	},
+	"mainMenus": [
+		{
+			"icon": "ic_more.png",
+			"index": 1,
+			"label": [
+				{
+					"lang": "en",
+					"text": "More",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "14",
+					"fontColor": "#0059A1",
+					"fontStyle": "normal",
+					"fontSizeUnit": "dp"
+				},
+				{
+					"lang": "th",
+					"text": "อื่นๆ",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "14",
+					"fontColor": "#0059A1",
+					"fontStyle": "normal",
+					"fontSizeUnit": "dp"
+				}
+			],
+			"status": "available",
+			"btnBase": "ic_base_btn.png",
+			"pkgName": "",
+			"reqName": "",
+			"navigate": "moreMenus",
+			"transType": "",
+			"paymentType": ""
+		},
+		{
+			"icon": "ic_pay.png",
+			"index": 2,
+			"label": [
+				{
+					"lang": "en",
+					"text": "Pay",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "14",
+					"fontColor": "#0059A1",
+					"fontStyle": "normal",
+					"fontSizeUnit": "dp"
+				},
+				{
+					"lang": "th",
+					"text": "จ่าย",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "14",
+					"fontColor": "#0059A1",
+					"fontStyle": "normal",
+					"fontSizeUnit": "dp"
+				}
+			],
+			"status": "available",
+			"btnBase": "ic_base_btn.png",
+			"pkgName": "",
+			"reqName": "",
+			"navigate": "customerInfo",
+			"transType": "",
+			"paymentType": ""
+		},
+		{
+			"icon": "ic_log.png",
+			"index": 3,
+			"label": [
+				{
+					"lang": "en",
+					"text": "History",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "14",
+					"fontColor": "#0059A1",
+					"fontStyle": "normal",
+					"fontSizeUnit": "dp"
+				},
+				{
+					"lang": "th",
+					"text": "ประวัติรายการ",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "14",
+					"fontColor": "#0059A1",
+					"fontStyle": "normal",
+					"fontSizeUnit": "dp"
+				}
+			],
+			"status": "available",
+			"btnBase": "ic_base_btn.png",
+			"pkgName": "",
+			"reqName": "",
+			"navigate": "viewSelectAcquirer",
+			"transType": "translog",
+			"paymentType": ""
+		}
+	],
+	"moreMenus": {
+		"content": [
+			{
+				"items": [
+					{
+						"icon": "ic_void.png",
+						"index": 1,
+						"label": [
+							{
+								"lang": "en",
+								"text": "Void",
+								"fontFace": "THSarabunNew.ttf",
+								"fontSize": "14",
+								"fontColor": "#0059A1",
+								"fontStyle": "normal",
+								"fontSizeUnit": "dp"
+							},
+							{
+								"lang": "th",
+								"text": "ยกเลิกรายการ",
+								"fontFace": "THSarabunNew.ttf",
+								"fontSize": "14",
+								"fontColor": "#0059A1",
+								"fontStyle": "normal",
+								"fontSizeUnit": "dp"
+							}
+						],
+						"status": "available",
+						"btnBase": "ic_base_btn.png",
+						"pkgName": "",
+						"reqName": "",
+						"navigate": "viewSelectAcquirer",
+						"transType": "void",
+						"paymentType": ""
+					},
+					{
+						"icon": "ic_settlement.png",
+						"index": 2,
+						"label": [
+							{
+								"lang": "en",
+								"text": "Settlement",
+								"fontFace": "THSarabunNew.ttf",
+								"fontSize": "14",
+								"fontColor": "#0059A1",
+								"fontStyle": "normal",
+								"fontSizeUnit": "dp"
+							},
+							{
+								"lang": "th",
+								"text": "สรุปยอด",
+								"fontFace": "THSarabunNew.ttf",
+								"fontSize": "14",
+								"fontColor": "#0059A1",
+								"fontStyle": "normal",
+								"fontSizeUnit": "dp"
+							}
+						],
+						"status": "available",
+						"btnBase": "ic_base_btn.png",
+						"pkgName": "",
+						"reqName": "",
+						"navigate": "viewSelectAcquirer",
+						"transType": "settlement",
+						"paymentType": ""
+					},
+					{
+						"icon": "ic_query.png",
+						"index": 3,
+						"label": [
+							{
+								"lang": "en",
+								"text": "Query",
+								"fontFace": "THSarabunNew.ttf",
+								"fontSize": "14",
+								"fontColor": "#0059A1",
+								"fontStyle": "normal",
+								"fontSizeUnit": "dp"
+							},
+							{
+								"lang": "th",
+								"text": "ค้นหา",
+								"fontFace": "THSarabunNew.ttf",
+								"fontSize": "14",
+								"fontColor": "#0059A1",
+								"fontStyle": "normal",
+								"fontSizeUnit": "dp"
+							}
+						],
+						"status": "available",
+						"btnBase": "ic_base_btn.png",
+						"pkgName": "",
+						"reqName": "",
+						"navigate": "viewSelectAcquirer",
+						"transType": "inquiry",
+						"paymentType": ""
+					},
+					{
+						"icon": "ic_log.png",
+						"index": 4,
+						"label": [
+							{
+								"lang": "en",
+								"text": "History",
+								"fontFace": "THSarabunNew.ttf",
+								"fontSize": "14",
+								"fontColor": "#0059A1",
+								"fontStyle": "normal",
+								"fontSizeUnit": "dp"
+							},
+							{
+								"lang": "th",
+								"text": "ประวัติรายการ",
+								"fontFace": "THSarabunNew.ttf",
+								"fontSize": "14",
+								"fontColor": "#0059A1",
+								"fontStyle": "normal",
+								"fontSizeUnit": "dp"
+							}
+						],
+						"status": "available",
+						"btnBase": "ic_base_btn.png",
+						"pkgName": "",
+						"reqName": "",
+						"navigate": "viewSelectAcquirer",
+						"transType": "translog",
+						"paymentType": ""
+					},
+					{
+						"icon": "ic_print.png",
+						"index": 5,
+						"label": [
+							{
+								"lang": "en",
+								"text": "Print",
+								"fontFace": "THSarabunNew.ttf",
+								"fontSize": "14",
+								"fontColor": "#0059A1",
+								"fontStyle": "normal",
+								"fontSizeUnit": "dp"
+							},
+							{
+								"lang": "th",
+								"text": "พิมพ์",
+								"fontFace": "THSarabunNew.ttf",
+								"fontSize": "14",
+								"fontColor": "#0059A1",
+								"fontStyle": "normal",
+								"fontSizeUnit": "dp"
+							}
+						],
+						"status": "available",
+						"btnBase": "ic_base_btn.png",
+						"pkgName": "",
+						"reqName": "",
+						"navigate": "viewSelectAcquirer",
+						"transType": "reprint",
+						"paymentType": ""
+					},
+					{
+						"icon": "ic_installment.png",
+						"index": 6,
+						"label": [
+							{
+								"lang": "en",
+								"text": "Installment",
+								"fontFace": "THSarabunNew.ttf",
+								"fontSize": "14",
+								"fontColor": "#0059A1",
+								"fontStyle": "normal",
+								"fontSizeUnit": "dp"
+							},
+							{
+								"lang": "th",
+								"text": "ผ่อนชำระ",
+								"fontFace": "THSarabunNew.ttf",
+								"fontSize": "13",
+								"fontColor": "#0059A1",
+								"fontStyle": "normal",
+								"fontSizeUnit": "dp"
+							}
+						],
+						"status": "unavailable",
+						"btnBase": "ic_base_btn.png",
+						"pkgName": "",
+						"reqName": "",
+						"navigate": "viewBankSelection",
+						"transType": "installment",
+						"paymentType": ""
+					},
+					{
+						"icon": "ic_redeem.png",
+						"index": 7,
+						"label": [
+							{
+								"lang": "en",
+								"text": "Redeem",
+								"fontFace": "THSarabunNew.ttf",
+								"fontSize": "14",
+								"fontColor": "#0059A1",
+								"fontStyle": "normal",
+								"fontSizeUnit": "dp"
+							},
+							{
+								"lang": "th",
+								"text": "แลกคะแนน",
+								"fontFace": "THSarabunNew.ttf",
+								"fontSize": "14",
+								"fontColor": "#0059A1",
+								"fontStyle": "normal",
+								"fontSizeUnit": "dp"
+							}
+						],
+						"status": "unavailable",
+						"btnBase": "ic_base_btn.png",
+						"pkgName": "",
+						"reqName": "",
+						"navigate": "viewBankSelection",
+						"transType": "redemption",
+						"paymentType": ""
+					},
+					{
+						"icon": "ic_manual_key_in.png",
+						"index": 8,
+						"label": [
+							{
+								"lang": "en",
+								"text": "Key-in",
+								"fontFace": "THSarabunNew.ttf",
+								"fontSize": "14",
+								"fontColor": "#0059A1",
+								"fontStyle": "normal",
+								"fontSizeUnit": "dp"
+							},
+							{
+								"lang": "th",
+								"text": "คีย์-อิน",
+								"fontFace": "THSarabunNew.ttf",
+								"fontSize": "14",
+								"fontColor": "#0059A1",
+								"fontStyle": "normal",
+								"fontSizeUnit": "dp"
+							}
+						],
+						"status": "unavailable",
+						"btnBase": "ic_base_btn.png",
+						"pkgName": "",
+						"reqName": "",
+						"navigate": "viewBankSelection",
+						"transType": "manual_key_in",
+						"paymentType": ""
+					},
+					{
+						"icon": "ic_refund.png",
+						"index": 9,
+						"label": [
+							{
+								"lang": "en",
+								"text": "Refund",
+								"fontFace": "THSarabunNew.ttf",
+								"fontSize": "14",
+								"fontColor": "#0059A1",
+								"fontStyle": "normal",
+								"fontSizeUnit": "dp"
+							},
+							{
+								"lang": "th",
+								"text": "รีฟันด์",
+								"fontFace": "THSarabunNew.ttf",
+								"fontSize": "14",
+								"fontColor": "#0059A1",
+								"fontStyle": "normal",
+								"fontSizeUnit": "dp"
+							}
+						],
+						"status": "available",
+						"btnBase": "ic_base_btn.png",
+						"pkgName": "",
+						"reqName": "",
+						"navigate": "viewSelectAcquirer",
+						"transType": "refund",
+						"paymentType": ""
+					}
+				],
+				"tabImage": "",
+				"tabIndex": 1
+			},
+			{
+				"items": [
+					{
+						"icon": "ic_preauth.png",
+						"index": 1,
+						"label": [
+							{
+								"lang": "en",
+								"text": "Pre-auth",
+								"fontFace": "THSarabunNew.ttf",
+								"fontSize": "14",
+								"fontColor": "#0059A1",
+								"fontStyle": "normal",
+								"fontSizeUnit": "dp"
+							},
+							{
+								"lang": "th",
+								"text": "Pre-auth",
+								"fontFace": "THSarabunNew.ttf",
+								"fontSize": "14",
+								"fontColor": "#0059A1",
+								"fontStyle": "normal",
+								"fontSizeUnit": "dp"
+							}
+						],
+						"status": "unavailable",
+						"btnBase": "ic_base_btn.png",
+						"pkgName": "",
+						"reqName": "",
+						"navigate": "viewBankSelection",
+						"transType": "preauth",
+						"paymentType": ""
+					},
+					{
+						"icon": "ic_preauth_cancel.png",
+						"index": 2,
+						"label": [
+							{
+								"lang": "en",
+								"text": "Pre-auth Cancel",
+								"fontFace": "THSarabunNew.ttf",
+								"fontSize": "14",
+								"fontColor": "#0059A1",
+								"fontStyle": "normal",
+								"fontSizeUnit": "dp"
+							},
+							{
+								"lang": "th",
+								"text": "Pre-auth Cancel",
+								"fontFace": "THSarabunNew.ttf",
+								"fontSize": "14",
+								"fontColor": "#0059A1",
+								"fontStyle": "normal",
+								"fontSizeUnit": "dp"
+							}
+						],
+						"status": "unavailable",
+						"btnBase": "ic_base_btn.png",
+						"pkgName": "com.evp.payment.evpscb",
+						"reqName": "request_payment_scb",
+						"navigate": "",
+						"transType": "preauth_cancel",
+						"paymentType": ""
+					},
+					{
+						"icon": "ic_preauth_complete.png",
+						"index": 3,
+						"label": [
+							{
+								"lang": "en",
+								"text": "Pre-auth Compl.",
+								"fontFace": "THSarabunNew.ttf",
+								"fontSize": "14",
+								"fontColor": "#0059A1",
+								"fontStyle": "normal",
+								"fontSizeUnit": "dp"
+							},
+							{
+								"lang": "th",
+								"text": "Pre-auth Compl.",
+								"fontFace": "THSarabunNew.ttf",
+								"fontSize": "14",
+								"fontColor": "#0059A1",
+								"fontStyle": "normal",
+								"fontSizeUnit": "dp"
+							}
+						],
+						"status": "unavailable",
+						"btnBase": "ic_base_btn.png",
+						"pkgName": "com.evp.payment.evpscb",
+						"reqName": "request_payment_scb",
+						"navigate": "",
+						"transType": "preauth_complete",
+						"paymentType": ""
+					},
+					{
+						"icon": "ic_report.png",
+						"index": 4,
+						"label": [
+							{
+								"lang": "en",
+								"text": "Report",
+								"fontFace": "THSarabunNew.ttf",
+								"fontSize": "14",
+								"fontColor": "#0059A1",
+								"fontStyle": "normal",
+								"fontSizeUnit": "dp"
+							},
+							{
+								"lang": "th",
+								"text": "รายงาน",
+								"fontFace": "THSarabunNew.ttf",
+								"fontSize": "14",
+								"fontColor": "#0059A1",
+								"fontStyle": "normal",
+								"fontSizeUnit": "dp"
+							}
+						],
+						"status": "available",
+						"btnBase": "ic_base_btn.png",
+						"pkgName": "",
+						"reqName": "",
+						"navigate": "viewSelectAcquirer",
+						"transType": "report",
+						"paymentType": ""
+					},
+					{
+						"icon": "ic_offline_sale.png",
+						"index": 5,
+						"label": [
+							{
+								"lang": "en",
+								"text": "Offline Sale",
+								"fontFace": "THSarabunNew.ttf",
+								"fontSize": "13",
+								"fontColor": "#0059A1",
+								"fontStyle": "normal",
+								"fontSizeUnit": "dp"
+							},
+							{
+								"lang": "th",
+								"text": "Offline Sale",
+								"fontFace": "THSarabunNew.ttf",
+								"fontSize": "14",
+								"fontColor": "#0059A1",
+								"fontStyle": "normal",
+								"fontSizeUnit": "dp"
+							}
+						],
+						"status": "unavailable",
+						"btnBase": "ic_base_btn.png",
+						"pkgName": "",
+						"reqName": "",
+						"navigate": "viewBankSelection",
+						"transType": "offlinesale",
+						"paymentType": ""
+					},
+					{
+						"icon": "ic_adjust.png",
+						"index": 6,
+						"label": [
+							{
+								"lang": "en",
+								"text": "Adjust",
+								"fontFace": "THSarabunNew.ttf",
+								"fontSize": "13",
+								"fontColor": "#0059A1",
+								"fontStyle": "normal",
+								"fontSizeUnit": "dp"
+							},
+							{
+								"lang": "th",
+								"text": "Adjust",
+								"fontFace": "THSarabunNew.ttf",
+								"fontSize": "14",
+								"fontColor": "#0059A1",
+								"fontStyle": "normal",
+								"fontSizeUnit": "dp"
+							}
+						],
+						"status": "unavailable",
+						"btnBase": "ic_base_btn.png",
+						"pkgName": "",
+						"reqName": "",
+						"navigate": "viewBankSelection",
+						"transType": "adjust",
+						"paymentType": ""
+					},
+					{
+						"icon": "ic_about.png",
+						"index": 7,
+						"label": [
+							{
+								"lang": "en",
+								"text": "About",
+								"fontFace": "THSarabunNew.ttf",
+								"fontSize": "14",
+								"fontColor": "#0059A1",
+								"fontStyle": "normal",
+								"fontSizeUnit": "dp"
+							},
+							{
+								"lang": "th",
+								"text": "เกี่ยวกับ",
+								"fontFace": "THSarabunNew.ttf",
+								"fontSize": "14",
+								"fontColor": "#0059A1",
+								"fontStyle": "normal",
+								"fontSizeUnit": "dp"
+							}
+						],
+						"status": "available",
+						"btnBase": "ic_base_btn.png",
+						"pkgName": "",
+						"reqName": "",
+						"navigate": "viewAbout",
+						"transType": "",
+						"paymentType": ""
+					},
+					{
+						"icon": "ic_lang.png",
+						"index": 8,
+						"label": [
+							{
+								"lang": "en",
+								"text": "Language",
+								"fontFace": "THSarabunNew.ttf",
+								"fontSize": "14",
+								"fontColor": "#0059A1",
+								"fontStyle": "normal",
+								"fontSizeUnit": "dp"
+							},
+							{
+								"lang": "th",
+								"text": "ภาษา",
+								"fontFace": "THSarabunNew.ttf",
+								"fontSize": "14",
+								"fontColor": "#0059A1",
+								"fontStyle": "normal",
+								"fontSizeUnit": "dp"
+							}
+						],
+						"status": "available",
+						"btnBase": "ic_base_btn.png",
+						"pkgName": "",
+						"reqName": "",
+						"navigate": "viewLanguage",
+						"transType": "",
+						"paymentType": ""
+					},
+					{
+						"icon": "ic_setting.png",
+						"index": 9,
+						"label": [
+							{
+								"lang": "en",
+								"text": "Setting",
+								"fontFace": "THSarabunNew.ttf",
+								"fontSize": "14",
+								"fontColor": "#0059A1",
+								"fontStyle": "normal",
+								"fontSizeUnit": "dp"
+							},
+							{
+								"lang": "th",
+								"text": "ตั้งค่า",
+								"fontFace": "THSarabunNew.ttf",
+								"fontSize": "14",
+								"fontColor": "#0059A1",
+								"fontStyle": "normal",
+								"fontSizeUnit": "dp"
+							}
+						],
+						"status": "available",
+						"btnBase": "ic_base_btn.png",
+						"pkgName": "",
+						"reqName": "",
+						"navigate": "viewSelectAcquirer",
+						"transType": "setting",
+						"paymentType": ""
+					}
+				],
+				"tabImage": "",
+				"tabIndex": 2
+			},
+			{
+				"items": [
+					{
+						"icon": "ic_echo.png",
+						"index": 1,
+						"label": [
+							{
+								"lang": "en",
+								"text": "Echo",
+								"fontFace": "THSarabunNew.ttf",
+								"fontSize": "14",
+								"fontColor": "#0059A1",
+								"fontStyle": "normal",
+								"fontSizeUnit": "dp"
+							},
+							{
+								"lang": "th",
+								"text": "Echo",
+								"fontFace": "THSarabunNew.ttf",
+								"fontSize": "14",
+								"fontColor": "#0059A1",
+								"fontStyle": "normal",
+								"fontSizeUnit": "dp"
+							}
+						],
+						"status": "available",
+						"btnBase": "ic_base_btn.png",
+						"pkgName": "",
+						"reqName": "",
+						"navigate": "viewSelectAcquirer",
+						"transType": "echo_test",
+						"paymentType": ""
+					},
+					{
+						"icon": "ic_update_param.png",
+						"index": 2,
+						"label": [
+							{
+								"lang": "en",
+								"text": "Update Params",
+								"fontFace": "THSarabunNew.ttf",
+								"fontSize": "14",
+								"fontColor": "#0059A1",
+								"fontStyle": "normal",
+								"fontSizeUnit": "dp"
+							},
+							{
+								"lang": "th",
+								"text": "อัพเดทข้อมูล",
+								"fontFace": "THSarabunNew.ttf",
+								"fontSize": "14",
+								"fontColor": "#0059A1",
+								"fontStyle": "normal",
+								"fontSizeUnit": "dp"
+							}
+						],
+						"status": "unavailable",
+						"btnBase": "ic_base_btn.png",
+						"pkgName": "",
+						"reqName": "",
+						"navigate": "downloadPaxStore",
+						"transType": "",
+						"paymentType": ""
+					},
+					{
+						"icon": "ic_log_agent.png",
+						"index": 3,
+						"label": [
+							{
+								"lang": "en",
+								"text": "LogAgent",
+								"fontFace": "THSarabunNew.ttf",
+								"fontSize": "14",
+								"fontColor": "#0059A1",
+								"fontStyle": "normal",
+								"fontSizeUnit": "dp"
+							},
+							{
+								"lang": "th",
+								"text": "เปิดบันทึก",
+								"fontFace": "THSarabunNew.ttf",
+								"fontSize": "14",
+								"fontColor": "#0059A1",
+								"fontStyle": "normal",
+								"fontSizeUnit": "dp"
+							}
+						],
+						"status": "unavailable",
+						"btnBase": "ic_base_btn.png",
+						"pkgName": "",
+						"reqName": "",
+						"navigate": "viewLogAgent",
+						"transType": "",
+						"paymentType": ""
+					},
+					{
+						"icon": "ic_linkpos.png",
+						"index": 4,
+						"label": [
+							{
+								"lang": "en",
+								"text": "LinkPOS",
+								"fontFace": "THSarabunNew.ttf",
+								"fontSize": "14",
+								"fontColor": "#0059A1",
+								"fontStyle": "normal",
+								"fontSizeUnit": "dp"
+							},
+							{
+								"lang": "th",
+								"text": "LinkPOS",
+								"fontFace": "THSarabunNew.ttf",
+								"fontSize": "14",
+								"fontColor": "#0059A1",
+								"fontStyle": "normal",
+								"fontSizeUnit": "dp"
+							}
+						],
+						"status": "unavailable",
+						"btnBase": "ic_base_btn.png",
+						"pkgName": "",
+						"reqName": "",
+						"navigate": "viewSettingLinkPOS",
+						"transType": "",
+						"paymentType": ""
+					}
+				],
+				"tabImage": "",
+				"tabIndex": 3
+			}
+		],
+		"tabActive": "ic_tab_active.png",
+		"tabInactive": "ic_tab_inactive.png"
+	},
+	"viewAbout": {
+		"btnOK": {
+			"label": [
+				{
+					"lang": "en",
+					"text": "OK",
+					"fontFace": "THSarabunNew Bold.ttf",
+					"fontSize": "30",
+					"fontColor": "#FFFFFF",
+					"fontStyle": "Bold",
+					"fontSizeUnit": "dp"
+				},
+				{
+					"lang": "th",
+					"text": "ตกลง",
+					"fontFace": "THSarabunNew Bold.ttf",
+					"fontSize": "30",
+					"fontColor": "#FFFFFF",
+					"fontStyle": "Bold",
+					"fontSizeUnit": "dp"
+				}
+			],
+			"btnBase": "ic_base_blue_btn.png"
+		},
+		"navBar": {
+			"label": [
+				{
+					"lang": "en",
+					"text": "About",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "58",
+					"fontColor": "#FFFFFF",
+					"fontStyle": "Bold",
+					"fontSizeUnit": "px"
+				},
+				{
+					"lang": "th",
+					"text": "เกี่ยวกับ",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "58",
+					"fontColor": "#FFFFFF",
+					"fontStyle": "Bold",
+					"fontSizeUnit": "px"
+				}
+			]
+		},
+		"boxAppVersion": {
+			"label": [
+				{
+					"lang": "en",
+					"text": "Software Version No.",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "14",
+					"fontColor": "#000000",
+					"fontStyle": "normal",
+					"fontSizeUnit": "dp"
+				},
+				{
+					"lang": "th",
+					"text": "แอพพลิเคชั่นรุ่น",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "14",
+					"fontColor": "#000000",
+					"fontStyle": "normal",
+					"fontSizeUnit": "dp"
+				}
+			],
+			"width": "340dp",
+			"height": "120dp",
+			"bgColor": "#FFFFFF",
+			"borderSize": "4dp",
+			"borderColor": "#626161"
+		},
+		"boxConfigFile": {
+			"label": [
+				{
+					"lang": "en",
+					"text": "Configuration File",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "14",
+					"fontColor": "#000000",
+					"fontStyle": "normal",
+					"fontSizeUnit": "dp"
+				},
+				{
+					"lang": "th",
+					"text": "ไฟล์ปรับแต่ง",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "14",
+					"fontColor": "#000000",
+					"fontStyle": "normal",
+					"fontSizeUnit": "dp"
+				}
+			],
+			"width": "340dp",
+			"height": "120dp",
+			"bgColor": "#FFFFFF",
+			"borderSize": "4dp",
+			"borderColor": "#626161"
+		},
+		"boxResourceFile": {
+			"label": [
+				{
+					"lang": "en",
+					"text": "Resource File",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "14",
+					"fontColor": "#000000",
+					"fontStyle": "normal",
+					"fontSizeUnit": "dp"
+				},
+				{
+					"lang": "th",
+					"text": "แฟ้มข้อมูล",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "14",
+					"fontColor": "#000000",
+					"fontStyle": "normal",
+					"fontSizeUnit": "dp"
+				}
+			],
+			"width": "340dp",
+			"height": "120dp",
+			"bgColor": "#FFFFFF",
+			"borderSize": "4dp",
+			"borderColor": "#626161"
+		}
+	},
+	"slideMotto": {
+		"image": [
+			{
+				"index": 1,
+				"preview": "EVPLogoTop.png",
+				"fullscreen": "EVPLogoTop.png"
+			}
+		],
+		"timer": 10,
+		"btnClose": "ic_close.png"
+	},
+	"viewAmount": {
+		"tip": {
+			"label": [
+				{
+					"lang": "en",
+					"text": "Tip amount",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "30",
+					"fontColor": "#0B3979",
+					"fontStyle": "Bold",
+					"fontSizeUnit": "dp"
+				},
+				{
+					"lang": "th",
+					"text": "จำนวนทิป",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "30",
+					"fontColor": "#0B3979",
+					"fontStyle": "Bold",
+					"fontSizeUnit": "dp"
+				}
+			],
+			"status": "unavailable",
+			"bgColor": "#B9E6FF"
+		},
+		"btnOK": {
+			"label": [
+				{
+					"lang": "en",
+					"text": "PAY",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "28",
+					"fontColor": "#138F2D",
+					"fontStyle": "Bold",
+					"fontSizeUnit": "dp"
+				},
+				{
+					"lang": "th",
+					"text": "จ่าย",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "28",
+					"fontColor": "#138F2D",
+					"fontStyle": "Bold",
+					"fontSizeUnit": "dp"
+				}
+			],
+			"btnBase": "ic_btn_pay.png"
+		},
+		"amount": {
+			"label": [
+				{
+					"lang": "en",
+					"text": "Amount",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "30",
+					"fontColor": "#FFFEFE",
+					"fontStyle": "Bold",
+					"fontSizeUnit": "dp"
+				},
+				{
+					"lang": "th",
+					"text": "จำนวนเงิน",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "30",
+					"fontColor": "#FFFEFE",
+					"fontStyle": "Bold",
+					"fontSizeUnit": "dp"
+				}
+			],
+			"status": "available",
+			"bgColor": "#1583C7"
+		},
+		"donate": {
+			"label": [
+				{
+					"lang": "en",
+					"text": "Donate",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "30",
+					"fontColor": "#0B3979",
+					"fontStyle": "Bold",
+					"fontSizeUnit": "dp"
+				},
+				{
+					"lang": "th",
+					"text": "บริจาค",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "30",
+					"fontColor": "#0B3979",
+					"fontStyle": "Bold",
+					"fontSizeUnit": "dp"
+				}
+			],
+			"status": "unavailable",
+			"bgColor": "#DFF4FF"
+		},
+		"navBar": {
+			"label": [
+				{
+					"lang": "en",
+					"text": "",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "58",
+					"fontColor": "#FFFFFF",
+					"fontStyle": "Bold",
+					"fontSizeUnit": "px"
+				},
+				{
+					"lang": "th",
+					"text": "",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "58",
+					"fontColor": "#FFFFFF",
+					"fontStyle": "Bold",
+					"fontSizeUnit": "px"
+				}
+			]
+		}
+	},
+	"loginDialog": {
+		"btnOk": {
+			"label": [
+				{
+					"lang": "en",
+					"text": "OK",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "28",
+					"fontColor": "#138F2D",
+					"fontStyle": "Bold",
+					"fontSizeUnit": "dp"
+				},
+				{
+					"lang": "th",
+					"text": "ตกลง",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "28",
+					"fontColor": "#138F2D",
+					"fontStyle": "Bold",
+					"fontSizeUnit": "dp"
+				}
+			],
+			"btnBase": "ic_btn_small_round_ok.png"
+		},
+		"topic": {
+			"title": [
+				{
+					"lang": "en",
+					"text": "Login",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "25",
+					"fontColor": "#000000",
+					"fontStyle": "bold",
+					"fontSizeUnit": "dp"
+				},
+				{
+					"lang": "th",
+					"text": "Login",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "25",
+					"fontColor": "#000000",
+					"fontStyle": "bold",
+					"fontSizeUnit": "dp"
+				}
+			],
+			"pwdLabel": [
+				{
+					"lang": "en",
+					"text": "Password:",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "18",
+					"fontColor": "#000000",
+					"fontStyle": "bold",
+					"fontSizeUnit": "dp"
+				},
+				{
+					"lang": "th",
+					"text": "รหัสผ่าน:",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "18",
+					"fontColor": "#000000",
+					"fontStyle": "bold",
+					"fontSizeUnit": "dp"
+				}
+			],
+			"userIdLabel": [
+				{
+					"lang": "en",
+					"text": "User ID:",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "18",
+					"fontColor": "#000000",
+					"fontStyle": "bold",
+					"fontSizeUnit": "dp"
+				},
+				{
+					"lang": "th",
+					"text": "ชื่อผู้ใช้งาน:",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "18",
+					"fontColor": "#000000",
+					"fontStyle": "bold",
+					"fontSizeUnit": "dp"
+				}
+			]
+		},
+		"dialogBox": {
+			"color": "#BEE6FF",
+			"width": 300,
+			"height": 250,
+			"borderColor": "#000000"
+		}
+	},
+	"logoutDialog": {
+		"btnOk": {
+			"label": [
+				{
+					"lang": "en",
+					"text": "OK",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "28",
+					"fontColor": "#138F2D",
+					"fontStyle": "Bold",
+					"fontSizeUnit": "dp"
+				},
+				{
+					"lang": "th",
+					"text": "ตกลง",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "28",
+					"fontColor": "#138F2D",
+					"fontStyle": "Bold",
+					"fontSizeUnit": "dp"
+				}
+			],
+			"btnBase": "ic_btn_small_round_ok.png"
+		},
+		"topic": {
+			"title": [
+				{
+					"lang": "en",
+					"text": "Logout",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "25",
+					"fontColor": "#000000",
+					"fontStyle": "bold",
+					"fontSizeUnit": "dp"
+				},
+				{
+					"lang": "th",
+					"text": "Logout",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "25",
+					"fontColor": "#000000",
+					"fontStyle": "bold",
+					"fontSizeUnit": "dp"
+				}
+			],
+			"message": [
+				{
+					"lang": "en",
+					"text": "Do you want to logout?",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "18",
+					"fontColor": "#000000",
+					"fontStyle": "bold",
+					"fontSizeUnit": "dp"
+				},
+				{
+					"lang": "th",
+					"text": "ต้องการออกจากระบบ ใช่หรือไม่ ?",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "18",
+					"fontColor": "#000000",
+					"fontStyle": "bold",
+					"fontSizeUnit": "dp"
+				}
+			]
+		},
+		"btnCancel": {
+			"label": [
+				{
+					"lang": "en",
+					"text": "CANCEL",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "28",
+					"fontColor": "#626161",
+					"fontStyle": "bold",
+					"fontSizeUnit": "dp"
+				},
+				{
+					"lang": "th",
+					"text": "ยกเลิก",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "28",
+					"fontColor": "#626161",
+					"fontStyle": "bold",
+					"fontSizeUnit": "dp"
+				}
+			],
+			"btnBase": "ic_btn_small_round_cancel.png"
+		},
+		"dialogBox": {
+			"color": "#BEE6FF",
+			"width": 300,
+			"height": 250,
+			"borderColor": "#000000"
+		}
+	},
+	"settleConfig": {
+		"autoRun": "on",
+		"transType": "auto_settlement",
+		"scheduleOnTime": "23:00",
+		"activeAfterSecond": 30,
+		"postponeLaterMinute": 15
+	},
+	"viewAcquirer": {
+		"btnOK": {
+			"label": [
+				{
+					"lang": "en",
+					"text": "OK",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "28",
+					"fontColor": "#138F2D",
+					"fontStyle": "Bold",
+					"fontSizeUnit": "dp"
+				},
+				{
+					"lang": "th",
+					"text": "ตกลง",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "28",
+					"fontColor": "#138F2D",
+					"fontStyle": "Bold",
+					"fontSizeUnit": "dp"
+				}
+			],
+			"btnBase": "ic_btn_round_ok.png"
+		},
+		"items": [
+			{
+				"icon": [
+					"ic_brand_ttb.png",
+					"ic_brand_ttb_promptpay.png"
+				],
+				"index": 1,
+				"status": "available",
+				"pkgName": "com.evp.payment.evpttb",
+				"reqName": "request_payment_ttb",
+				"paymentType": "all_payment"
+			},
+			{
+				"icon": [
+					"ic_brand_promptpay.png",
+					"ic_brand_linepay.png",
+					"ic_brand_alipay.png",
+					"ic_brand_wechatpay.png",
+					"ic_brand_shopeepay.png",
+					"ic_brand_truemoney.png"
+				],
+				"index": 2,
+				"status": "available",
+				"pkgName": "com.evp.payment.evpksher",
+				"reqName": "request_payment_ksher",
+				"paymentType": "all_payment"
+			}
+		],
+		"topic": {
+			"label": [
+				{
+					"lang": "en",
+					"text": "Select Acquirer",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "34",
+					"fontColor": "#FFFBFB",
+					"fontStyle": "normal",
+					"fontSizeUnit": "dp"
+				},
+				{
+					"lang": "th",
+					"text": "เลือกช่องทางการชำระ",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "34",
+					"fontColor": "#FFFBFB",
+					"fontStyle": "normal",
+					"fontSizeUnit": "dp"
+				}
+			]
+		},
+		"navBar": {
+			"label": [
+				{
+					"lang": "en",
+					"text": "",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "58",
+					"fontColor": "#FFFFFF",
+					"fontStyle": "Bold",
+					"fontSizeUnit": "px"
+				},
+				{
+					"lang": "th",
+					"text": "",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "58",
+					"fontColor": "#FFFFFF",
+					"fontStyle": "Bold",
+					"fontSizeUnit": "px"
+				}
+			]
+		},
+		"selector": {
+			"checkedBox": "ic_box_checked.png",
+			"uncheckBox": "ic_box_uncheck.png"
+		}
+	},
+	"viewLanguage": {
+		"navBar": {
+			"label": [
+				{
+					"lang": "en",
+					"text": "Select Language",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "58",
+					"fontColor": "#FFFFFF",
+					"fontStyle": "Bold",
+					"fontSizeUnit": "px"
+				},
+				{
+					"lang": "th",
+					"text": "เลือกภาษา",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "58",
+					"fontColor": "#FFFFFF",
+					"fontStyle": "Bold",
+					"fontSizeUnit": "px"
+				}
+			]
+		},
+		"listLang": {
+			"label": [
+				{
+					"lang": "en",
+					"text": "English",
+					"fontFace": "THSarabunNew Bold.ttf",
+					"fontSize": "18",
+					"fontColor": "#000000",
+					"fontStyle": "Bold",
+					"fontSizeUnit": "dp"
+				},
+				{
+					"lang": "th",
+					"text": "ไทย",
+					"fontFace": "THSarabunNew Bold.ttf",
+					"fontSize": "18",
+					"fontColor": "#000000",
+					"fontStyle": "Bold",
+					"fontSizeUnit": "dp"
+				}
+			],
+			"width": "340dp",
+			"height": "120dp",
+			"bgColor": "#FFFFFF",
+			"checkImage": {
+				"icon": "ic_check.png",
+				"width": "44",
+				"height": "44"
+			},
+			"lineStroke": {
+				"color": "#626161",
+				"width": "340dp",
+				"height": "1"
+			}
+		}
+	},
+	"viewWalletQR": {
+		"navBar": {
+			"label": [
+				{
+					"lang": "en",
+					"text": "QR Payment Selection",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "58",
+					"fontColor": "#FFFFFF",
+					"fontStyle": "Bold",
+					"fontSizeUnit": "px"
+				},
+				{
+					"lang": "th",
+					"text": "QR Payment Selection",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "58",
+					"fontColor": "#FFFFFF",
+					"fontStyle": "Bold",
+					"fontSizeUnit": "px"
+				}
+			]
+		},
+		"content": [
+			{
+				"items": [
+					{
+						"icon": "ic_promptpay_ttb.png",
+						"index": 1,
+						"label": [
+							{
+								"lang": "en",
+								"text": "",
+								"fontFace": "THSarabunNew.ttf",
+								"fontSize": "58",
+								"fontColor": "#FFFFFF",
+								"fontStyle": "Bold",
+								"fontSizeUnit": "px"
+							},
+							{
+								"lang": "th",
+								"text": "",
+								"fontFace": "THSarabunNew.ttf",
+								"fontSize": "58",
+								"fontColor": "#FFFFFF",
+								"fontStyle": "Bold",
+								"fontSizeUnit": "px"
+							}
+						],
+						"status": "available",
+						"btnBase": "ic_base_border_btn.png",
+						"pkgName": "com.evp.payment.evpttb",
+						"reqName": "request_payment_ttb",
+						"navigate": "",
+						"transType": "",
+						"paymentType": "promptpay"
+					},
+					{
+						"icon": "ic_prompt_pay.png",
+						"index": 2,
+						"label": [
+							{
+								"lang": "en",
+								"text": "",
+								"fontFace": "THSarabunNew.ttf",
+								"fontSize": "58",
+								"fontColor": "#FFFFFF",
+								"fontStyle": "Bold",
+								"fontSizeUnit": "px"
+							},
+							{
+								"lang": "th",
+								"text": "",
+								"fontFace": "THSarabunNew.ttf",
+								"fontSize": "58",
+								"fontColor": "#FFFFFF",
+								"fontStyle": "Bold",
+								"fontSizeUnit": "px"
+							}
+						],
+						"status": "available",
+						"btnBase": "ic_base_border_btn.png",
+						"pkgName": "com.evp.payment.evpksher",
+						"reqName": "request_payment_ksher",
+						"navigate": "",
+						"transType": "",
+						"paymentType": "promptpay"
+					},
+					{
+						"icon": "ic_alipay.png",
+						"index": 3,
+						"label": [
+							{
+								"lang": "en",
+								"text": "",
+								"fontFace": "THSarabunNew.ttf",
+								"fontSize": "58",
+								"fontColor": "#FFFFFF",
+								"fontStyle": "Bold",
+								"fontSizeUnit": "px"
+							},
+							{
+								"lang": "th",
+								"text": "",
+								"fontFace": "THSarabunNew.ttf",
+								"fontSize": "58",
+								"fontColor": "#FFFFFF",
+								"fontStyle": "Bold",
+								"fontSizeUnit": "px"
+							}
+						],
+						"status": "available",
+						"btnBase": "ic_base_border_btn.png",
+						"pkgName": "com.evp.payment.evpksher",
+						"reqName": "request_payment_ksher",
+						"navigate": "",
+						"transType": "",
+						"paymentType": "alipay"
+					},
+					{
+						"icon": "ic_wechat.png",
+						"index": 4,
+						"label": [
+							{
+								"lang": "en",
+								"text": "",
+								"fontFace": "THSarabunNew.ttf",
+								"fontSize": "58",
+								"fontColor": "#FFFFFF",
+								"fontStyle": "Bold",
+								"fontSizeUnit": "px"
+							},
+							{
+								"lang": "th",
+								"text": "",
+								"fontFace": "THSarabunNew.ttf",
+								"fontSize": "58",
+								"fontColor": "#FFFFFF",
+								"fontStyle": "Bold",
+								"fontSizeUnit": "px"
+							}
+						],
+						"status": "available",
+						"btnBase": "ic_base_border_btn.png",
+						"pkgName": "com.evp.payment.evpksher",
+						"reqName": "request_payment_ksher",
+						"navigate": "",
+						"transType": "",
+						"paymentType": "wechat"
+					},
+					{
+						"icon": "ic_true_wallet.png",
+						"index": 5,
+						"label": [
+							{
+								"lang": "en",
+								"text": "",
+								"fontFace": "THSarabunNew.ttf",
+								"fontSize": "58",
+								"fontColor": "#FFFFFF",
+								"fontStyle": "Bold",
+								"fontSizeUnit": "px"
+							},
+							{
+								"lang": "th",
+								"text": "",
+								"fontFace": "THSarabunNew.ttf",
+								"fontSize": "58",
+								"fontColor": "#FFFFFF",
+								"fontStyle": "Bold",
+								"fontSizeUnit": "px"
+							}
+						],
+						"status": "available",
+						"btnBase": "ic_base_border_btn.png",
+						"pkgName": "com.evp.payment.evpksher",
+						"reqName": "request_payment_ksher",
+						"navigate": "",
+						"transType": "",
+						"paymentType": "truemoney"
+					},
+					{
+						"icon": "ic_shopee.png",
+						"index": 6,
+						"label": [
+							{
+								"lang": "en",
+								"text": "",
+								"fontFace": "THSarabunNew.ttf",
+								"fontSize": "58",
+								"fontColor": "#FFFFFF",
+								"fontStyle": "Bold",
+								"fontSizeUnit": "px"
+							},
+							{
+								"lang": "th",
+								"text": "",
+								"fontFace": "THSarabunNew.ttf",
+								"fontSize": "58",
+								"fontColor": "#FFFFFF",
+								"fontStyle": "Bold",
+								"fontSizeUnit": "px"
+							}
+						],
+						"status": "unavailable",
+						"btnBase": "ic_base_border_btn.png",
+						"pkgName": "com.evp.payment.evpksher",
+						"reqName": "request_payment_ksher",
+						"navigate": "",
+						"transType": "",
+						"paymentType": "airpay"
+					},
+					{
+						"icon": "ic_alipayplus.png",
+						"index": 7,
+						"label": [
+							{
+								"lang": "en",
+								"text": "",
+								"fontFace": "THSarabunNew.ttf",
+								"fontSize": "58",
+								"fontColor": "#FFFFFF",
+								"fontStyle": "Bold",
+								"fontSizeUnit": "px"
+							},
+							{
+								"lang": "th",
+								"text": "",
+								"fontFace": "THSarabunNew.ttf",
+								"fontSize": "58",
+								"fontColor": "#FFFFFF",
+								"fontStyle": "Bold",
+								"fontSizeUnit": "px"
+							}
+						],
+						"status": "unavailable",
+						"btnBase": "ic_base_border_btn.png",
+						"pkgName": "com.evp.payment.evpghl",
+						"reqName": "request_payment_ghl",
+						"navigate": "",
+						"transType": "",
+						"paymentType": "alipayplus"
+					},
+					{
+						"icon": "ic_lazadapay.png",
+						"index": 8,
+						"label": [
+							{
+								"lang": "en",
+								"text": "",
+								"fontFace": "THSarabunNew.ttf",
+								"fontSize": "58",
+								"fontColor": "#FFFFFF",
+								"fontStyle": "Bold",
+								"fontSizeUnit": "px"
+							},
+							{
+								"lang": "th",
+								"text": "",
+								"fontFace": "THSarabunNew.ttf",
+								"fontSize": "58",
+								"fontColor": "#FFFFFF",
+								"fontStyle": "Bold",
+								"fontSizeUnit": "px"
+							}
+						],
+						"status": "unavailable",
+						"btnBase": "ic_base_border_btn.png",
+						"pkgName": "com.evp.payment.evpghl",
+						"reqName": "request_payment_ghl",
+						"navigate": "",
+						"transType": "",
+						"paymentType": "lazadapay"
+					}
+				],
+				"tabImage": "",
+				"tabIndex": 1
+			}
+		],
+		"tabActive": "ic_tab_active.png",
+		"tabInactive": "ic_tab_inactive.png"
+	},
+	"customerMenus": {
+		"listNav": [
+			{
+				"index": 1,
+				"label": [
+					{
+						"lang": "en",
+						"text": "QR Payment Selection",
+						"fontFace": "THSarabunNew.ttf",
+						"fontSize": "58",
+						"fontColor": "#FFFFFF",
+						"fontStyle": "Bold",
+						"fontSizeUnit": "px"
+					},
+					{
+						"lang": "th",
+						"text": "จ่ายผ่านคิวอาร์",
+						"fontFace": "THSarabunNew.ttf",
+						"fontSize": "58",
+						"fontColor": "#FFFFFF",
+						"fontStyle": "Bold",
+						"fontSizeUnit": "px"
+					}
+				]
+			},
+			{
+				"index": 2,
+				"label": [
+					{
+						"lang": "en",
+						"text": "Scan Payment",
+						"fontFace": "THSarabunNew.ttf",
+						"fontSize": "58",
+						"fontColor": "#FFFFFF",
+						"fontStyle": "Bold",
+						"fontSizeUnit": "px"
+					},
+					{
+						"lang": "th",
+						"text": "จ่ายผ่านสแกน",
+						"fontFace": "THSarabunNew.ttf",
+						"fontSize": "58",
+						"fontColor": "#FFFFFF",
+						"fontStyle": "Bold",
+						"fontSizeUnit": "px"
+					}
+				]
+			},
+			{
+				"index": 3,
+				"label": [
+					{
+						"lang": "en",
+						"text": "Card Selection",
+						"fontFace": "THSarabunNew.ttf",
+						"fontSize": "58",
+						"fontColor": "#FFFFFF",
+						"fontStyle": "Bold",
+						"fontSizeUnit": "px"
+					},
+					{
+						"lang": "th",
+						"text": "จ่ายผ่านบัตร",
+						"fontFace": "THSarabunNew.ttf",
+						"fontSize": "58",
+						"fontColor": "#FFFFFF",
+						"fontStyle": "Bold",
+						"fontSizeUnit": "px"
+					}
+				]
+			},
+			{
+				"index": 4,
+				"label": [
+					{
+						"lang": "en",
+						"text": "Bank Selection",
+						"fontFace": "THSarabunNew.ttf",
+						"fontSize": "58",
+						"fontColor": "#FFFFFF",
+						"fontStyle": "Bold",
+						"fontSizeUnit": "px"
+					},
+					{
+						"lang": "th",
+						"text": "จ่ายผ่านธนาคาร",
+						"fontFace": "THSarabunNew.ttf",
+						"fontSize": "58",
+						"fontColor": "#FFFFFF",
+						"fontStyle": "Bold",
+						"fontSizeUnit": "px"
+					}
+				]
+			}
+		],
+		"listIcon": [
+			{
+				"icon": "ic_qr.png",
+				"index": 1,
+				"label": [
+					{
+						"lang": "en",
+						"text": "QR",
+						"fontFace": "THSarabunNew.ttf",
+						"fontSize": "12",
+						"fontColor": "#0059A1",
+						"fontStyle": "normal",
+						"fontSizeUnit": "dp"
+					},
+					{
+						"lang": "th",
+						"text": "คิวอาร์",
+						"fontFace": "THSarabunNew.ttf",
+						"fontSize": "12",
+						"fontColor": "#0059A1",
+						"fontStyle": "normal",
+						"fontSizeUnit": "dp"
+					}
+				],
+				"status": "available",
+				"btnBase": "ic_base_btn.png",
+				"pkgName": "",
+				"reqName": "",
+				"navigate": "viewWalletQR",
+				"mediaType": "qrc2b",
+				"transType": "sale"
+			},
+			{
+				"icon": "ic_scan.png",
+				"index": 2,
+				"label": [
+					{
+						"lang": "en",
+						"text": "SCAN",
+						"fontFace": "THSarabunNew.ttf",
+						"fontSize": "12",
+						"fontColor": "#0059A1",
+						"fontStyle": "normal",
+						"fontSizeUnit": "dp"
+					},
+					{
+						"lang": "th",
+						"text": "สแกน",
+						"fontFace": "THSarabunNew.ttf",
+						"fontSize": "12",
+						"fontColor": "#0059A1",
+						"fontStyle": "normal",
+						"fontSizeUnit": "dp"
+					}
+				],
+				"status": "available",
+				"btnBase": "ic_base_btn.png",
+				"pkgName": "",
+				"reqName": "",
+				"navigate": "viewWalletScan",
+				"mediaType": "qrb2c",
+				"transType": "sale"
+			},
+			{
+				"icon": "ic_card.png",
+				"index": 3,
+				"label": [
+					{
+						"lang": "en",
+						"text": "CARD",
+						"fontFace": "THSarabunNew.ttf",
+						"fontSize": "12",
+						"fontColor": "#0059A1",
+						"fontStyle": "normal",
+						"fontSizeUnit": "dp"
+					},
+					{
+						"lang": "th",
+						"text": "CARD",
+						"fontFace": "THSarabunNew.ttf",
+						"fontSize": "12",
+						"fontColor": "#0059A1",
+						"fontStyle": "normal",
+						"fontSizeUnit": "dp"
+					}
+				],
+				"status": "available",
+				"btnBase": "ic_base_btn.png",
+				"pkgName": "com.evp.payment.evpttb",
+				"reqName": "request_payment_ttb",
+				"navigate": "",
+				"mediaType": "allcard",
+				"transType": "sale"
+			},
+			{
+				"icon": "ic_bank.png",
+				"index": 4,
+				"label": [
+					{
+						"lang": "en",
+						"text": "BANK",
+						"fontFace": "THSarabunNew.ttf",
+						"fontSize": "12",
+						"fontColor": "#0059A1",
+						"fontStyle": "normal",
+						"fontSizeUnit": "dp"
+					},
+					{
+						"lang": "th",
+						"text": "BANK",
+						"fontFace": "THSarabunNew.ttf",
+						"fontSize": "12",
+						"fontColor": "#0059A1",
+						"fontStyle": "normal",
+						"fontSizeUnit": "dp"
+					}
+				],
+				"status": "unavailable",
+				"btnBase": "ic_base_btn.png",
+				"pkgName": "",
+				"reqName": "",
+				"navigate": "viewBankSelection",
+				"mediaType": "",
+				"transType": "sale"
+			}
+		]
+	},
+	"linkPOSConfig": {
+		"btnOK": {
+			"label": [
+				{
+					"lang": "en",
+					"text": "OK",
+					"fontFace": "THSarabunNew Bold.ttf",
+					"fontSize": "30",
+					"fontColor": "#FFFFFF",
+					"fontStyle": "Bold",
+					"fontSizeUnit": "dp"
+				},
+				{
+					"lang": "th",
+					"text": "ตกลง",
+					"fontFace": "THSarabunNew Bold.ttf",
+					"fontSize": "30",
+					"fontColor": "#FFFFFF",
+					"fontStyle": "Bold",
+					"fontSizeUnit": "dp"
+				}
+			],
+			"btnBase": "ic_base_blue_btn.png"
+		},
+		"btnBox": {
+			"label": [
+				{
+					"lang": "en",
+					"text": "",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "14",
+					"fontColor": "#05508D",
+					"fontStyle": "normal",
+					"fontSizeUnit": "dp"
+				},
+				{
+					"lang": "th",
+					"text": "",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "14",
+					"fontColor": "#05508D",
+					"fontStyle": "normal",
+					"fontSizeUnit": "dp"
+				}
+			],
+			"btnBase": "ic_btn_base_textfield.png"
+		},
+		"navBar": {
+			"label": [
+				{
+					"lang": "en",
+					"text": "Setting",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "40",
+					"fontColor": "#FFFFFF",
+					"fontStyle": "Bold",
+					"fontSizeUnit": "px"
+				},
+				{
+					"lang": "th",
+					"text": "ปรับแต่ง",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "40",
+					"fontColor": "#FFFFFF",
+					"fontStyle": "Bold",
+					"fontSizeUnit": "px"
+				}
+			]
+		},
+		"qrType": [
+			{
+				"ref": "Alipay",
+				"code": "alipay",
+				"pkgName": "com.evp.payment.evpghl",
+				"reqName": "request_payment_ghl"
+			},
+			{
+				"ref": "Wechat",
+				"code": "wechat",
+				"pkgName": "com.evp.payment.evpghl",
+				"reqName": "request_payment_ghl"
+			},
+			{
+				"ref": "QR Payment",
+				"code": "promptpay",
+				"pkgName": "com.evp.payment.evpksher",
+				"reqName": "request_payment_ksher"
+			},
+			{
+				"ref": "QR Credit",
+				"code": "emv",
+				"pkgName": "com.evp.payment.evpscb",
+				"reqName": "request_payment_scb"
+			},
+			{
+				"ref": "Rabbit LinePay",
+				"code": "linepay",
+				"pkgName": "com.evp.payment.evpksher",
+				"reqName": "request_payment_ksher"
+			},
+			{
+				"ref": "TrueMoney",
+				"code": "truemoney",
+				"pkgName": "com.evp.payment.evpksher",
+				"reqName": "request_payment_ksher"
+			},
+			{
+				"ref": "ShopeePay",
+				"code": "airpay",
+				"pkgName": "com.evp.payment.evpksher",
+				"reqName": "request_payment_ksher"
+			},
+			{
+				"ref": "AlipayPlus",
+				"code": "alipayplus",
+				"pkgName": "com.evp.payment.evpghl",
+				"reqName": "request_payment_ghl"
+			},
+			{
+				"ref": "LazadaPay",
+				"code": "lazadapay",
+				"pkgName": "com.evp.payment.evpghl",
+				"reqName": "request_payment_ghl"
+			}
+		],
+		"toggle": "off",
+		"posName": "DESKTOP-KEA4ER0",
+		"section": {
+			"topicPosName": {
+				"label": [
+					{
+						"lang": "en",
+						"text": "POS Name:",
+						"fontFace": "THSarabunNew.ttf",
+						"fontSize": "14",
+						"fontColor": "#05508D",
+						"fontStyle": "bold",
+						"fontSizeUnit": "dp"
+					},
+					{
+						"lang": "th",
+						"text": "POS Name:",
+						"fontFace": "THSarabunNew.ttf",
+						"fontSize": "14",
+						"fontColor": "#05508D",
+						"fontStyle": "bold",
+						"fontSizeUnit": "dp"
+					}
+				]
+			},
+			"topicCommMode": {
+				"label": [
+					{
+						"lang": "en",
+						"text": "LinkPOS Mode",
+						"fontFace": "THSarabunNew.ttf",
+						"fontSize": "14",
+						"fontColor": "#05508D",
+						"fontStyle": "bold",
+						"fontSizeUnit": "dp"
+					},
+					{
+						"lang": "th",
+						"text": "LinkPOS Mode",
+						"fontFace": "THSarabunNew.ttf",
+						"fontSize": "14",
+						"fontColor": "#05508D",
+						"fontStyle": "bold",
+						"fontSizeUnit": "dp"
+					}
+				]
+			},
+			"topicMerchant": {
+				"label": [
+					{
+						"lang": "en",
+						"text": "Merchant:",
+						"fontFace": "THSarabunNew.ttf",
+						"fontSize": "14",
+						"fontColor": "#05508D",
+						"fontStyle": "bold",
+						"fontSizeUnit": "dp"
+					},
+					{
+						"lang": "th",
+						"text": "ร้านค้า:",
+						"fontFace": "THSarabunNew.ttf",
+						"fontSize": "14",
+						"fontColor": "#05508D",
+						"fontStyle": "bold",
+						"fontSizeUnit": "dp"
+					}
+				]
+			},
+			"topicProtocol": {
+				"label": [
+					{
+						"lang": "en",
+						"text": "Protocol:",
+						"fontFace": "THSarabunNew.ttf",
+						"fontSize": "14",
+						"fontColor": "#05508D",
+						"fontStyle": "bold",
+						"fontSizeUnit": "dp"
+					},
+					{
+						"lang": "th",
+						"text": "Protocol:",
+						"fontFace": "THSarabunNew.ttf",
+						"fontSize": "14",
+						"fontColor": "#05508D",
+						"fontStyle": "bold",
+						"fontSizeUnit": "dp"
+					}
+				]
+			},
+			"toggleCommMode": {
+				"iconOn": "ic_toggle_on.png",
+				"iconOff": "ic_toggle_off.png"
+			},
+			"topicCommChannel": {
+				"label": [
+					{
+						"lang": "en",
+						"text": "Comm Channel:",
+						"fontFace": "THSarabunNew.ttf",
+						"fontSize": "14",
+						"fontColor": "#05508D",
+						"fontStyle": "bold",
+						"fontSizeUnit": "dp"
+					},
+					{
+						"lang": "th",
+						"text": "Comm Channel:",
+						"fontFace": "THSarabunNew.ttf",
+						"fontSize": "14",
+						"fontColor": "#05508D",
+						"fontStyle": "bold",
+						"fontSizeUnit": "dp"
+					}
+				]
+			}
+		},
+		"_comment": "Set commChannel = USB_TO_SERIAL when use USB-C cable to link POS",
+		"inputNav": {
+			"modeText": {
+				"label": [
+					{
+						"lang": "en",
+						"text": "Input time in 24 Hrs.",
+						"fontFace": "THSarabunNew.ttf",
+						"fontSize": "40",
+						"fontColor": "#FFFFFF",
+						"fontStyle": "Bold",
+						"fontSizeUnit": "px"
+					},
+					{
+						"lang": "th",
+						"text": "ระบุเวลาช่วง 24 ชม.",
+						"fontFace": "THSarabunNew.ttf",
+						"fontSize": "40",
+						"fontColor": "#FFFFFF",
+						"fontStyle": "Bold",
+						"fontSizeUnit": "px"
+					}
+				]
+			}
+		},
+		"protocol": "Hypercom",
+		"commChannel": "USB_TO_SERIAL",
+		"transCodeDef": [
+			{
+				"code": "20",
+				"desc": "Sale all payment types",
+				"pkgName": "com.evp.payment.evpttb",
+				"reqName": "request_payment_ttb"
+			},
+			{
+				"code": "26",
+				"desc": "Void",
+				"pkgName": "com.evp.payment.evpttb",
+				"reqName": "request_payment_ttb"
+			},
+			{
+				"code": "56",
+				"desc": "Sale all card scheme payment types",
+				"pkgName": "com.evp.payment.evpttb",
+				"reqName": "request_payment_ttb"
+			},
+			{
+				"code": "70",
+				"desc": "Sale QR Payment"
+			},
+			{
+				"code": "71",
+				"desc": "Sale QR Payment B2C"
+			},
+			{
+				"code": "50",
+				"desc": "Settlement",
+				"pkgName": "",
+				"reqName": ""
+			},
+			{
+				"code": "90",
+				"desc": "Summary Report",
+				"pkgName": "",
+				"reqName": ""
+			},
+			{
+				"code": "91",
+				"desc": "Detail Report",
+				"pkgName": "",
+				"reqName": ""
+			},
+			{
+				"code": "CB",
+				"desc": "Sale QR",
+				"pkgName": "com.evp.payment.evpksher",
+				"reqName": "request_payment_ksher"
+			},
+			{
+				"code": "D3",
+				"desc": "Sale QR C2B",
+				"pkgName": "com.evp.payment.evpksher",
+				"reqName": "request_payment_ksher"
+			},
+			{
+				"code": "D4",
+				"desc": "Sale QR B2C",
+				"pkgName": "com.evp.payment.evpksher",
+				"reqName": "request_payment_ksher"
+			}
+		],
+		"mapIssueIndex": [
+			{
+				"index": "01",
+				"issueCardName": "alipay"
+			},
+			{
+				"index": "02",
+				"issueCardName": "wechat"
+			},
+			{
+				"index": "03",
+				"issueCardName": "promptpay"
+			},
+			{
+				"index": "04",
+				"issueCardName": "emv"
+			},
+			{
+				"index": "05",
+				"issueCardName": "truemoney"
+			},
+			{
+				"index": "06",
+				"issueCardName": "linepay"
+			},
+			{
+				"index": "07",
+				"issueCardName": "airpay"
+			},
+			{
+				"index": "08",
+				"issueCardName": "dolfin"
+			},
+			{
+				"index": "09",
+				"issueCardName": "alipayplus"
+			},
+			{
+				"index": "10",
+				"issueCardName": "lazadapay"
+			}
+		],
+		"maxLinkPosUnlockTimeout": 30
+	},
+	"deviceSettings": {
+		"apnName": "evopay.edc",
+		"_comment_": "in case maximumLoginTimeout is set to 0 then automatic logout is disabled",
+		"apnAuthType": "",
+		"apnPassword": "",
+		"apnUserName": "",
+		"bottomInfoLine1": "รับความช่วยเหลือใช้งาน TID BAMTK0001002",
+		"bottomInfoLine2": "กรุณาติดต่อที่เบอร์โทร  02-026-3357",
+		"maximumLoginTimeout": 300,
+		"enableUserManagement": false
+	},
+	"viewWalletScan": {
+		"navBar": {
+			"label": [
+				{
+					"lang": "en",
+					"text": "Scan Payment Selection",
+					"fontFace": "THSfarabunNew.ttf",
+					"fontSize": "58",
+					"fontColor": "#FFFFFF",
+					"fontStyle": "Bold",
+					"fontSizeUnit": "px"
+				},
+				{
+					"lang": "th",
+					"text": "Scan Payment Selection",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "58",
+					"fontColor": "#FFFFFF",
+					"fontStyle": "Bold",
+					"fontSizeUnit": "px"
+				}
+			]
+		},
+		"content": [
+			{
+				"items": [
+					{
+						"icon": "ic_line_pay.png",
+						"index": 1,
+						"label": [
+							{
+								"lang": "en",
+								"text": "",
+								"fontFace": "THSarabunNew.ttf",
+								"fontSize": "58",
+								"fontColor": "#FFFFFF",
+								"fontStyle": "Bold",
+								"fontSizeUnit": "px"
+							},
+							{
+								"lang": "th",
+								"text": "",
+								"fontFace": "THSarabunNew.ttf",
+								"fontSize": "58",
+								"fontColor": "#FFFFFF",
+								"fontStyle": "Bold",
+								"fontSizeUnit": "px"
+							}
+						],
+						"status": "available",
+						"btnBase": "ic_base_border_btn.png",
+						"pkgName": "com.evp.payment.evpksher",
+						"reqName": "request_payment_ksher",
+						"navigate": "",
+						"transType": "",
+						"paymentType": "linepay"
+					},
+					{
+						"icon": "ic_alipay.png",
+						"index": 2,
+						"label": [
+							{
+								"lang": "en",
+								"text": "",
+								"fontFace": "THSarabunNew.ttf",
+								"fontSize": "58",
+								"fontColor": "#FFFFFF",
+								"fontStyle": "Bold",
+								"fontSizeUnit": "px"
+							},
+							{
+								"lang": "th",
+								"text": "",
+								"fontFace": "THSarabunNew.ttf",
+								"fontSize": "58",
+								"fontColor": "#FFFFFF",
+								"fontStyle": "Bold",
+								"fontSizeUnit": "px"
+							}
+						],
+						"status": "available",
+						"btnBase": "ic_base_border_btn.png",
+						"pkgName": "com.evp.payment.evpksher",
+						"reqName": "request_payment_ksher",
+						"navigate": "",
+						"transType": "",
+						"paymentType": "alipay"
+					},
+					{
+						"icon": "ic_wechat.png",
+						"index": 3,
+						"label": [
+							{
+								"lang": "en",
+								"text": "",
+								"fontFace": "THSarabunNew.ttf",
+								"fontSize": "58",
+								"fontColor": "#FFFFFF",
+								"fontStyle": "Bold",
+								"fontSizeUnit": "px"
+							},
+							{
+								"lang": "th",
+								"text": "",
+								"fontFace": "THSarabunNew.ttf",
+								"fontSize": "58",
+								"fontColor": "#FFFFFF",
+								"fontStyle": "Bold",
+								"fontSizeUnit": "px"
+							}
+						],
+						"status": "available",
+						"btnBase": "ic_base_border_btn.png",
+						"pkgName": "com.evp.payment.evpksher",
+						"reqName": "request_payment_ksher",
+						"navigate": "",
+						"transType": "",
+						"paymentType": "wechat"
+					},
+					{
+						"icon": "ic_true_wallet.png",
+						"index": 4,
+						"label": [
+							{
+								"lang": "en",
+								"text": "",
+								"fontFace": "THSarabunNew.ttf",
+								"fontSize": "58",
+								"fontColor": "#FFFFFF",
+								"fontStyle": "Bold",
+								"fontSizeUnit": "px"
+							},
+							{
+								"lang": "th",
+								"text": "",
+								"fontFace": "THSarabunNew.ttf",
+								"fontSize": "58",
+								"fontColor": "#FFFFFF",
+								"fontStyle": "Bold",
+								"fontSizeUnit": "px"
+							}
+						],
+						"status": "available",
+						"btnBase": "ic_base_border_btn.png",
+						"pkgName": "com.evp.payment.evpksher",
+						"reqName": "request_payment_ksher",
+						"navigate": "",
+						"transType": "",
+						"paymentType": "truemoney"
+					},
+					{
+						"icon": "ic_shopee.png",
+						"index": 5,
+						"label": [
+							{
+								"lang": "en",
+								"text": "",
+								"fontFace": "THSarabunNew.ttf",
+								"fontSize": "58",
+								"fontColor": "#FFFFFF",
+								"fontStyle": "Bold",
+								"fontSizeUnit": "px"
+							},
+							{
+								"lang": "th",
+								"text": "",
+								"fontFace": "THSarabunNew.ttf",
+								"fontSize": "58",
+								"fontColor": "#FFFFFF",
+								"fontStyle": "Bold",
+								"fontSizeUnit": "px"
+							}
+						],
+						"status": "available",
+						"btnBase": "ic_base_border_btn.png",
+						"pkgName": "com.evp.payment.evpksher",
+						"reqName": "request_payment_ksher",
+						"navigate": "",
+						"transType": "",
+						"paymentType": "airpay"
+					},
+					{
+						"icon": "ic_alipayplus.png",
+						"index": 6,
+						"label": [
+							{
+								"lang": "en",
+								"text": "",
+								"fontFace": "THSarabunNew.ttf",
+								"fontSize": "58",
+								"fontColor": "#FFFFFF",
+								"fontStyle": "Bold",
+								"fontSizeUnit": "px"
+							},
+							{
+								"lang": "th",
+								"text": "",
+								"fontFace": "THSarabunNew.ttf",
+								"fontSize": "58",
+								"fontColor": "#FFFFFF",
+								"fontStyle": "Bold",
+								"fontSizeUnit": "px"
+							}
+						],
+						"status": "unavailable",
+						"btnBase": "ic_base_border_btn.png",
+						"pkgName": "com.evp.payment.evpghl",
+						"reqName": "request_payment_ghl",
+						"navigate": "",
+						"transType": "",
+						"paymentType": "alipayplus"
+					}
+				],
+				"tabImage": "",
+				"tabIndex": 1
+			}
+		],
+		"tabActive": "ic_tab_active.png",
+		"tabInactive": "ic_tab_inactive.png"
+	},
+	"loginInfoDialog": {
+		"btnOk": {
+			"label": [
+				{
+					"lang": "en",
+					"text": "OK",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "16",
+					"fontColor": "#138F2D",
+					"fontStyle": "bold",
+					"fontSizeUnit": "dp"
+				},
+				{
+					"lang": "th",
+					"text": "OK",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "16",
+					"fontColor": "#138F2D",
+					"fontStyle": "bold",
+					"fontSizeUnit": "dp"
+				}
+			],
+			"btnBase": "ic_btn_round_ok.png"
+		},
+		"topic": {
+			"label": [
+				{
+					"lang": "en",
+					"text": "Please login first.",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "16",
+					"fontColor": "#000000",
+					"fontStyle": "normal",
+					"fontSizeUnit": "dp"
+				},
+				{
+					"lang": "th",
+					"text": "โปรดเข้าสู๋ระบบก่อนใช้งาน",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "16",
+					"fontColor": "#000000",
+					"fontStyle": "normal",
+					"fontSizeUnit": "dp"
+				}
+			]
+		},
+		"dialogBox": {
+			"color": "#E2F0F0",
+			"width": 645,
+			"height": 345,
+			"borderColor": "#000000"
+		}
+	},
+	"viewInputNumber": {
+		"btnOK": {
+			"label": [
+				{
+					"lang": "en",
+					"text": "OK",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "28",
+					"fontColor": "#138F2D",
+					"fontStyle": "Bold",
+					"fontSizeUnit": "dp"
+				},
+				{
+					"lang": "th",
+					"text": "ตกลง",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "28",
+					"fontColor": "#138F2D",
+					"fontStyle": "Bold",
+					"fontSizeUnit": "dp"
+				}
+			],
+			"btnBase": "ic_btn_pay.png"
+		},
+		"navBar": {
+			"label": [
+				{
+					"lang": "en",
+					"text": "",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "58",
+					"fontColor": "#FFFFFF",
+					"fontStyle": "Bold",
+					"fontSizeUnit": "px"
+				},
+				{
+					"lang": "th",
+					"text": "",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "58",
+					"fontColor": "#FFFFFF",
+					"fontStyle": "Bold",
+					"fontSizeUnit": "px"
+				}
+			]
+		}
+	},
+	"viewCustomerInfo": {
+		"info": {
+			"email": {
+				"icon": "",
+				"label": [
+					{
+						"lang": "en",
+						"text": "Email",
+						"fontFace": "THSarabunNew.ttf",
+						"fontSize": "58",
+						"fontColor": "#FFFFFF",
+						"fontStyle": "Bold",
+						"fontSizeUnit": "px"
+					},
+					{
+						"lang": "th",
+						"text": "Email",
+						"fontFace": "THSarabunNew.ttf",
+						"fontSize": "58",
+						"fontColor": "#FFFFFF",
+						"fontStyle": "Bold",
+						"fontSizeUnit": "px"
+					}
+				]
+			},
+			"mobile": {
+				"icon": "",
+				"label": [
+					{
+						"lang": "en",
+						"text": "Mobile No.",
+						"fontFace": "THSarabunNew.ttf",
+						"fontSize": "58",
+						"fontColor": "#FFFFFF",
+						"fontStyle": "Bold",
+						"fontSizeUnit": "px"
+					},
+					{
+						"lang": "th",
+						"text": "Input Password",
+						"fontFace": "THSarabunNew.ttf",
+						"fontSize": "58",
+						"fontColor": "#FFFFFF",
+						"fontStyle": "Bold",
+						"fontSizeUnit": "px"
+					}
+				]
+			},
+			"status": "unavailable"
+		},
+		"payment": {
+			"tip": {
+				"label": [
+					{
+						"lang": "en",
+						"text": "Tip",
+						"fontFace": "THSarabunNew.ttf",
+						"fontSize": "20",
+						"fontColor": "#FFFFFF",
+						"fontStyle": "normal",
+						"fontSizeUnit": "dp"
+					},
+					{
+						"lang": "th",
+						"text": "ทิป",
+						"fontFace": "THSarabunNew.ttf",
+						"fontSize": "20",
+						"fontColor": "#FFFFFF",
+						"fontStyle": "normal",
+						"fontSizeUnit": "dp"
+					}
+				],
+				"status": "unavailable"
+			},
+			"total": {
+				"label": [
+					{
+						"lang": "en",
+						"text": "THB",
+						"fontFace": "THSarabunNew.ttf",
+						"fontSize": "50",
+						"fontColor": "#FFFFFF",
+						"fontStyle": "normal",
+						"fontSizeUnit": "dp"
+					},
+					{
+						"lang": "th",
+						"text": "บาท",
+						"fontFace": "THSarabunNew.ttf",
+						"fontSize": "50",
+						"fontColor": "#FFFFFF",
+						"fontStyle": "normal",
+						"fontSizeUnit": "dp"
+					}
+				],
+				"status": "available"
+			},
+			"amount": {
+				"label": [
+					{
+						"lang": "en",
+						"text": "Amt",
+						"fontFace": "THSarabunNew.ttf",
+						"fontSize": "20",
+						"fontColor": "#FFFFFF",
+						"fontStyle": "normal",
+						"fontSizeUnit": "dp"
+					},
+					{
+						"lang": "th",
+						"text": "จำนวน",
+						"fontFace": "THSarabunNew.ttf",
+						"fontSize": "20",
+						"fontColor": "#FFFFFF",
+						"fontStyle": "normal",
+						"fontSizeUnit": "dp"
+					}
+				],
+				"status": "available"
+			},
+			"donate": {
+				"label": [
+					{
+						"lang": "en",
+						"text": "Donate",
+						"fontFace": "THSarabunNew.ttf",
+						"fontSize": "20",
+						"fontColor": "#FFFFFF",
+						"fontStyle": "normal",
+						"fontSizeUnit": "dp"
+					},
+					{
+						"lang": "th",
+						"text": "บริจาค",
+						"fontFace": "THSarabunNew.ttf",
+						"fontSize": "20",
+						"fontColor": "#FFFFFF",
+						"fontStyle": "normal",
+						"fontSizeUnit": "dp"
+					}
+				],
+				"status": "unavailable"
+			}
+		}
+	},
+	"baseMessageDialog": {
+		"btnOk": {
+			"label": [
+				{
+					"lang": "en",
+					"text": "Try again",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "28",
+					"fontColor": "#138F2D",
+					"fontStyle": "Bold",
+					"fontSizeUnit": "dp"
+				},
+				{
+					"lang": "th",
+					"text": "Try again",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "28",
+					"fontColor": "#138F2D",
+					"fontStyle": "Bold",
+					"fontSizeUnit": "dp"
+				}
+			],
+			"btnBase": "ic_btn_small_round_ok.png"
+		},
+		"topic": {
+			"title": [
+				{
+					"lang": "en",
+					"text": "Connection to base",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "25",
+					"fontColor": "#000000",
+					"fontStyle": "bold",
+					"fontSizeUnit": "dp"
+				},
+				{
+					"lang": "th",
+					"text": "Connection to base",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "25",
+					"fontColor": "#000000",
+					"fontStyle": "bold",
+					"fontSizeUnit": "dp"
+				}
+			],
+			"messageLabel": [
+				{
+					"lang": "en",
+					"text": "FAILED",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "25",
+					"fontColor": "#000000",
+					"fontStyle": "bold",
+					"fontSizeUnit": "dp"
+				},
+				{
+					"lang": "th",
+					"text": "FAILED",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "25",
+					"fontColor": "#000000",
+					"fontStyle": "bold",
+					"fontSizeUnit": "dp"
+				}
+			]
+		},
+		"btnCancel": {
+			"label": [
+				{
+					"lang": "en",
+					"text": "CANCEL",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "28",
+					"fontColor": "#626161",
+					"fontStyle": "bold",
+					"fontSizeUnit": "dp"
+				},
+				{
+					"lang": "th",
+					"text": "ยกเลิก",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "28",
+					"fontColor": "#626161",
+					"fontStyle": "bold",
+					"fontSizeUnit": "dp"
+				}
+			],
+			"btnBase": "ic_btn_small_round_cancel.png"
+		},
+		"dialogBox": {
+			"color": "#BEE6FF",
+			"width": 300,
+			"height": 150,
+			"borderColor": "#000000"
+		}
+	},
+	"linkPOSInfoDialog": {
+		"btnOk": {
+			"label": [
+				{
+					"lang": "en",
+					"text": "OK",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "16",
+					"fontColor": "#138F2D",
+					"fontStyle": "bold",
+					"fontSizeUnit": "dp"
+				},
+				{
+					"lang": "th",
+					"text": "ตกลง",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "16",
+					"fontColor": "#138F2D",
+					"fontStyle": "bold",
+					"fontSizeUnit": "dp"
+				}
+			],
+			"btnBase": "ic_btn_round_ok.png"
+		},
+		"topic": {
+			"label": [
+				{
+					"lang": "en",
+					"text": "This EDC is locked for manual entry\n under LinkPOS mode. \nIf you want to unlock screen please\nclick on icon LinkPOS.",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "18",
+					"fontColor": "#000000",
+					"fontStyle": "bold",
+					"fontSizeUnit": "dp"
+				},
+				{
+					"lang": "th",
+					"text": "เครื่อง EDC ถูกล็อคหน้าจอเนื่องจากอยู่ใน LinkPOS mode ถ้าต้องการปลดล็อคให้คลิกที่ไอคอน LinkPOS",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "18",
+					"fontColor": "#000000",
+					"fontStyle": "bold",
+					"fontSizeUnit": "dp"
+				}
+			]
+		},
+		"dialogBox": {
+			"color": "#E2F0F0",
+			"width": 645,
+			"height": 345,
+			"borderColor": "#000000"
+		}
+	},
+	"viewInputPassword": {
+		"btnOk": {
+			"label": [
+				{
+					"lang": "en",
+					"text": "OK",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "28",
+					"fontColor": "#138F2D",
+					"fontStyle": "Bold",
+					"fontSizeUnit": "dp"
+				},
+				{
+					"lang": "th",
+					"text": "ตกลง",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "28",
+					"fontColor": "#138F2D",
+					"fontStyle": "Bold",
+					"fontSizeUnit": "dp"
+				}
+			],
+			"btnBase": "ic_btn_small_round_ok.png"
+		},
+		"topic": {
+			"label": [
+				{
+					"lang": "en",
+					"text": "Input Password",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "22",
+					"fontColor": "#FFFDFD",
+					"fontStyle": "Bold",
+					"fontSizeUnit": "dp"
+				},
+				{
+					"lang": "th",
+					"text": "ใส่รหัสผ่าน",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "22",
+					"fontColor": "#FFFDFD",
+					"fontStyle": "Bold",
+					"fontSizeUnit": "dp"
+				}
+			]
+		},
+		"notify": {
+			"message": [
+				{
+					"lang": "en",
+					"text": "Wrong Password"
+				},
+				{
+					"lang": "th",
+					"text": "คุณป้อนรหัสผ่านผิด"
+				}
+			]
+		},
+		"numPad": {
+			"delIcon": "ic_del.png"
+		},
+		"password": "0921",
+		"btnCancel": {
+			"label": [
+				{
+					"lang": "en",
+					"text": "CANCEL",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "28",
+					"fontColor": "#FC0808",
+					"fontStyle": "Bold",
+					"fontSizeUnit": "dp"
+				},
+				{
+					"lang": "th",
+					"text": "ยกเลิก",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "28",
+					"fontColor": "#FC0808",
+					"fontStyle": "Bold",
+					"fontSizeUnit": "dp"
+				}
+			],
+			"btnBase": "ic_btn_small_round_cancel.png"
+		}
+	},
+	"loginMessageDialog": {
+		"btnOk": {
+			"label": [
+				{
+					"lang": "en",
+					"text": "OK",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "28",
+					"fontColor": "#138F2D",
+					"fontStyle": "Bold",
+					"fontSizeUnit": "dp"
+				},
+				{
+					"lang": "th",
+					"text": "ตกลง",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "28",
+					"fontColor": "#138F2D",
+					"fontStyle": "Bold",
+					"fontSizeUnit": "dp"
+				}
+			],
+			"btnBase": "ic_btn_small_round_ok.png"
+		},
+		"topic": {
+			"title": [
+				{
+					"lang": "en",
+					"text": "Login failed",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "25",
+					"fontColor": "#000000",
+					"fontStyle": "bold",
+					"fontSizeUnit": "dp"
+				},
+				{
+					"lang": "th",
+					"text": "Login failed",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "25",
+					"fontColor": "#000000",
+					"fontStyle": "bold",
+					"fontSizeUnit": "dp"
+				}
+			],
+			"message": [
+				{
+					"lang": "en",
+					"text": "Please input valid user id and password.",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "18",
+					"fontColor": "#000000",
+					"fontStyle": "bold",
+					"fontSizeUnit": "dp"
+				},
+				{
+					"lang": "th",
+					"text": "โปรดระบุชื่อผู้ใช้ และ รหัสผ่านให้ถูกต้อง",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "18",
+					"fontColor": "#000000",
+					"fontStyle": "bold",
+					"fontSizeUnit": "dp"
+				}
+			]
+		},
+		"dialogBox": {
+			"color": "#BEE6FF",
+			"width": 300,
+			"height": 250,
+			"borderColor": "#000000"
+		}
+	},
+	"settleOptionDialog": {
+		"btnOk": {
+			"label": [
+				{
+					"lang": "en",
+					"text": "OK",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "16",
+					"fontColor": "#FFFFFF",
+					"fontStyle": "bold",
+					"fontSizeUnit": "dp"
+				},
+				{
+					"lang": "th",
+					"text": "ตกลง",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "16",
+					"fontColor": "#FFFFFF",
+					"fontStyle": "bold",
+					"fontSizeUnit": "dp"
+				}
+			],
+			"btnBase": "ic_base_btn_ok.png"
+		},
+		"topic": {
+			"label": [
+				{
+					"lang": "en",
+					"text": "Auto Settlement\nAll sales on %DDMMYYYY%\nwill be settled.",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "18",
+					"fontColor": "#000000",
+					"fontStyle": "bold",
+					"fontSizeUnit": "dp"
+				},
+				{
+					"lang": "th",
+					"text": "ระบบอัตโนมัติ Settlement\nทั้งหมดเมื่อ %DDMMYYYY%\nกำลังจะดำเนินการ",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "18",
+					"fontColor": "#000000",
+					"fontStyle": "bold",
+					"fontSizeUnit": "dp"
+				}
+			]
+		},
+		"dialogBox": {
+			"color": "#BEE6FF",
+			"width": 300,
+			"height": 200,
+			"borderColor": "#000000"
+		},
+		"btnPostpone": {
+			"label": [
+				{
+					"lang": "en",
+					"text": "Postpone",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "14",
+					"fontColor": "#626161",
+					"fontStyle": "bold",
+					"fontSizeUnit": "dp"
+				},
+				{
+					"lang": "th",
+					"text": "เลื่อนเวลา",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "14",
+					"fontColor": "#626161",
+					"fontStyle": "bold",
+					"fontSizeUnit": "dp"
+				}
+			],
+			"btnBase": "ic_base_btn_cancel.png"
+		}
+	},
+	"linkPOSConfigDialog": {
+		"btnOk": {
+			"label": [
+				{
+					"lang": "en",
+					"text": "OK",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "16",
+					"fontColor": "#FFFFFF",
+					"fontStyle": "bold",
+					"fontSizeUnit": "dp"
+				},
+				{
+					"lang": "th",
+					"text": "ตกลง",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "16",
+					"fontColor": "#FFFFFF",
+					"fontStyle": "bold",
+					"fontSizeUnit": "dp"
+				}
+			],
+			"btnBase": "ic_base_btn_ok.png"
+		},
+		"topic": {
+			"label": [
+				{
+					"lang": "en",
+					"text": "Continue without save any change?",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "18",
+					"fontColor": "#000000",
+					"fontStyle": "bold",
+					"fontSizeUnit": "dp"
+				},
+				{
+					"lang": "th",
+					"text": "ดำเนินการต่อ โดยไม่บันทึกการเปลี่ยนแปลง",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "18",
+					"fontColor": "#000000",
+					"fontStyle": "bold",
+					"fontSizeUnit": "dp"
+				}
+			]
+		},
+		"btnCancel": {
+			"label": [
+				{
+					"lang": "en",
+					"text": "CANCEL",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "16",
+					"fontColor": "#626161",
+					"fontStyle": "bold",
+					"fontSizeUnit": "dp"
+				},
+				{
+					"lang": "th",
+					"text": "ยกเลิก",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "16",
+					"fontColor": "#626161",
+					"fontStyle": "bold",
+					"fontSizeUnit": "dp"
+				}
+			],
+			"btnBase": "ic_base_btn_cancel.png"
+		},
+		"dialogBox": {
+			"color": "#BEE6FF",
+			"width": 300,
+			"height": 200
+		}
+	},
+	"settleConfirmDialog": {
+		"btnOk": {
+			"label": [
+				{
+					"lang": "en",
+					"text": "OK",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "16",
+					"fontColor": "#FFFFFF",
+					"fontStyle": "bold",
+					"fontSizeUnit": "dp"
+				},
+				{
+					"lang": "th",
+					"text": "ตกลง",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "16",
+					"fontColor": "#FFFFFF",
+					"fontStyle": "bold",
+					"fontSizeUnit": "dp"
+				}
+			],
+			"btnBase": "ic_base_btn_ok.png"
+		},
+		"topic": {
+			"label": [
+				{
+					"lang": "en",
+					"text": "Auto Settlement\nis postponed to next\n%MIN% minutes.",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "18",
+					"fontColor": "#000000",
+					"fontStyle": "bold",
+					"fontSizeUnit": "dp"
+				},
+				{
+					"lang": "th",
+					"text": "ระบบอัตโนมัติ Settlement\nเลื่อนเวลาออกไป\n%MIN% นาที",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "18",
+					"fontColor": "#000000",
+					"fontStyle": "bold",
+					"fontSizeUnit": "dp"
+				}
+			]
+		},
+		"dialogBox": {
+			"color": "#BEE6FF",
+			"width": 300,
+			"height": 200,
+			"borderColor": "#000000"
+		}
+	},
+	"viewLinkPosPassword": {
+		"btnOk": {
+			"label": [
+				{
+					"lang": "en",
+					"text": "OK",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "28",
+					"fontColor": "#138F2D",
+					"fontStyle": "Bold",
+					"fontSizeUnit": "dp"
+				},
+				{
+					"lang": "th",
+					"text": "ตกลง",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "28",
+					"fontColor": "#138F2D",
+					"fontStyle": "Bold",
+					"fontSizeUnit": "dp"
+				}
+			],
+			"btnBase": "ic_btn_small_round_ok.png"
+		},
+		"topic": {
+			"label": [
+				{
+					"lang": "en",
+					"text": "Input password to unlock screen",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "22",
+					"fontColor": "#FFFDFD",
+					"fontStyle": "Bold",
+					"fontSizeUnit": "dp"
+				},
+				{
+					"lang": "th",
+					"text": "ใส่รหัสผ่านเพื่อปลดล็อคหน้าจอ",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "22",
+					"fontColor": "#FFFDFD",
+					"fontStyle": "Bold",
+					"fontSizeUnit": "dp"
+				}
+			]
+		},
+		"notify": {
+			"message": [
+				{
+					"lang": "en",
+					"text": "Wrong Password"
+				},
+				{
+					"lang": "th",
+					"text": "คุณป้อนรหัสผ่านผิด"
+				}
+			]
+		},
+		"numPad": {
+			"delIcon": "ic_del.png"
+		},
+		"password": "000000",
+		"btnCancel": {
+			"label": [
+				{
+					"lang": "en",
+					"text": "CANCEL",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "28",
+					"fontColor": "#FC0808",
+					"fontStyle": "Bold",
+					"fontSizeUnit": "dp"
+				},
+				{
+					"lang": "th",
+					"text": "ยกเลิก",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "28",
+					"fontColor": "#FC0808",
+					"fontStyle": "Bold",
+					"fontSizeUnit": "dp"
+				}
+			],
+			"btnBase": "ic_btn_small_round_cancel.png"
+		}
+	},
+	"baseConnectingDialog": {
+		"topic": {
+			"title": [
+				{
+					"lang": "en",
+					"text": "Connecting to base",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "25",
+					"fontColor": "#000000",
+					"fontStyle": "bold",
+					"fontSizeUnit": "dp"
+				},
+				{
+					"lang": "th",
+					"text": "Connecting to base",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "25",
+					"fontColor": "#000000",
+					"fontStyle": "bold",
+					"fontSizeUnit": "dp"
+				}
+			],
+			"waitLabel": [
+				{
+					"lang": "en",
+					"text": "please wait ...",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "20",
+					"fontColor": "#000000",
+					"fontStyle": "bold",
+					"fontSizeUnit": "dp"
+				},
+				{
+					"lang": "th",
+					"text": "please wait ...",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "20",
+					"fontColor": "#000000",
+					"fontStyle": "bold",
+					"fontSizeUnit": "dp"
+				}
+			]
+		},
+		"btnCancel": {
+			"label": [
+				{
+					"lang": "en",
+					"text": "CANCEL",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "28",
+					"fontColor": "#626161",
+					"fontStyle": "bold",
+					"fontSizeUnit": "dp"
+				},
+				{
+					"lang": "th",
+					"text": "ยกเลิก",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "28",
+					"fontColor": "#626161",
+					"fontStyle": "bold",
+					"fontSizeUnit": "dp"
+				}
+			],
+			"btnBase": "ic_btn_small_round_cancel.png"
+		},
+		"dialogBox": {
+			"color": "#BEE6FF",
+			"width": 300,
+			"height": 150,
+			"borderColor": "#000000"
+		}
+	},
+	"viewSettlementPassword": {
+		"btnOk": {
+			"label": [
+				{
+					"lang": "en",
+					"text": "OK",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "28",
+					"fontColor": "#138F2D",
+					"fontStyle": "Bold",
+					"fontSizeUnit": "dp"
+				},
+				{
+					"lang": "th",
+					"text": "ตกลง",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "28",
+					"fontColor": "#138F2D",
+					"fontStyle": "Bold",
+					"fontSizeUnit": "dp"
+				}
+			],
+			"btnBase": "ic_btn_small_round_ok.png"
+		},
+		"topic": {
+			"label": [
+				{
+					"lang": "en",
+					"text": "Input password for SETTLEMENT",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "22",
+					"fontColor": "#FFFDFD",
+					"fontStyle": "Bold",
+					"fontSizeUnit": "dp"
+				},
+				{
+					"lang": "th",
+					"text": "ใส่รหัสผ่าน SETTLEMENT",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "22",
+					"fontColor": "#FFFDFD",
+					"fontStyle": "Bold",
+					"fontSizeUnit": "dp"
+				}
+			]
+		},
+		"notify": {
+			"message": [
+				{
+					"lang": "en",
+					"text": "Wrong Password"
+				},
+				{
+					"lang": "th",
+					"text": "คุณป้อนรหัสผ่านผิด"
+				}
+			]
+		},
+		"numPad": {
+			"delIcon": "ic_del.png"
+		},
+		"password": "000000",
+		"btnCancel": {
+			"label": [
+				{
+					"lang": "en",
+					"text": "CANCEL",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "28",
+					"fontColor": "#FC0808",
+					"fontStyle": "Bold",
+					"fontSizeUnit": "dp"
+				},
+				{
+					"lang": "th",
+					"text": "ยกเลิก",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "28",
+					"fontColor": "#FC0808",
+					"fontStyle": "Bold",
+					"fontSizeUnit": "dp"
+				}
+			],
+			"btnBase": "ic_btn_small_round_cancel.png"
+		}
+	},
+	"wifiDirectMessageDialog": {
+		"btnOk": {
+			"label": [
+				{
+					"lang": "en",
+					"text": "Try again",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "28",
+					"fontColor": "#138F2D",
+					"fontStyle": "Bold",
+					"fontSizeUnit": "dp"
+				},
+				{
+					"lang": "th",
+					"text": "Try again",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "28",
+					"fontColor": "#138F2D",
+					"fontStyle": "Bold",
+					"fontSizeUnit": "dp"
+				}
+			],
+			"btnBase": "ic_btn_small_round_ok.png"
+		},
+		"topic": {
+			"title": [
+				{
+					"lang": "en",
+					"text": "Connection to POS",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "25",
+					"fontColor": "#000000",
+					"fontStyle": "bold",
+					"fontSizeUnit": "dp"
+				},
+				{
+					"lang": "th",
+					"text": "Connection to POS",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "25",
+					"fontColor": "#000000",
+					"fontStyle": "bold",
+					"fontSizeUnit": "dp"
+				}
+			],
+			"messageLabel": [
+				{
+					"lang": "en",
+					"text": "FAILED",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "25",
+					"fontColor": "#000000",
+					"fontStyle": "bold",
+					"fontSizeUnit": "dp"
+				},
+				{
+					"lang": "th",
+					"text": "FAILED",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "25",
+					"fontColor": "#000000",
+					"fontStyle": "bold",
+					"fontSizeUnit": "dp"
+				}
+			]
+		},
+		"btnCancel": {
+			"label": [
+				{
+					"lang": "en",
+					"text": "CANCEL",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "28",
+					"fontColor": "#626161",
+					"fontStyle": "bold",
+					"fontSizeUnit": "dp"
+				},
+				{
+					"lang": "th",
+					"text": "ยกเลิก",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "28",
+					"fontColor": "#626161",
+					"fontStyle": "bold",
+					"fontSizeUnit": "dp"
+				}
+			],
+			"btnBase": "ic_btn_small_round_cancel.png"
+		},
+		"dialogBox": {
+			"color": "#BEE6FF",
+			"width": 300,
+			"height": 150,
+			"borderColor": "#000000"
+		}
+	},
+	"wifiDirectConnectingDialog": {
+		"topic": {
+			"title": [
+				{
+					"lang": "en",
+					"text": "Connecting to POS",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "25",
+					"fontColor": "#000000",
+					"fontStyle": "bold",
+					"fontSizeUnit": "dp"
+				},
+				{
+					"lang": "th",
+					"text": "Connecting to POS",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "25",
+					"fontColor": "#000000",
+					"fontStyle": "bold",
+					"fontSizeUnit": "dp"
+				}
+			],
+			"waitLabel": [
+				{
+					"lang": "en",
+					"text": "please wait ...",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "20",
+					"fontColor": "#000000",
+					"fontStyle": "bold",
+					"fontSizeUnit": "dp"
+				},
+				{
+					"lang": "th",
+					"text": "please wait ...",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "20",
+					"fontColor": "#000000",
+					"fontStyle": "bold",
+					"fontSizeUnit": "dp"
+				}
+			]
+		},
+		"btnCancel": {
+			"label": [
+				{
+					"lang": "en",
+					"text": "CANCEL",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "28",
+					"fontColor": "#626161",
+					"fontStyle": "bold",
+					"fontSizeUnit": "dp"
+				},
+				{
+					"lang": "th",
+					"text": "ยกเลิก",
+					"fontFace": "THSarabunNew.ttf",
+					"fontSize": "28",
+					"fontColor": "#626161",
+					"fontStyle": "bold",
+					"fontSizeUnit": "dp"
+				}
+			],
+			"btnBase": "ic_btn_small_round_cancel.png"
+		},
+		"dialogBox": {
+			"color": "#BEE6FF",
+			"width": 300,
+			"height": 150,
+			"borderColor": "#000000"
+		}
+	}
+}

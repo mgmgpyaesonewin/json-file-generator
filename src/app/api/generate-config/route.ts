@@ -14,7 +14,9 @@ export async function POST(request: Request) {
     const reqBody: ConfigRequest = await request.json();
 
     const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/evp_store/${reqBody.templateFile}`);
+    console.log('res', res);
     if (!res.ok) {
+      console.error('Fetch failed:', res.status, res.statusText);
       throw new Error('Failed to fetch config file');
     }
 

@@ -17,7 +17,7 @@ export async function POST(request: Request) {
     console.log('res', res);
     if (!res.ok) {
       console.error('Fetch failed:', res.status, res.statusText);
-      throw new Error('Failed to fetch config file');
+      throw new Error(`Failed to fetch config file: ${res.status} ${res.statusText}`);
     }
 
     const config = await res.json();

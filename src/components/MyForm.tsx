@@ -118,138 +118,140 @@ const MyForm: React.FC = () => {
                             </FormItem>
                         )}
                     />
-                    <hr className="my-4" />
-                    <h2 className="text-2xl font-semibold my-2">Device Setting</h2>
-                    <FormField
-                        control={form.control}
-                        name="deviceSettingsOfBottomInfoLine1"
-                        render={({ field }) => (
-                            <FormItem>
-                                <FormLabel htmlFor={field.name}>TID ( deviceSettings {'>'} bottomInfoLine1 ) </FormLabel>
-                                <FormControl>
-                                    <Input {...field} />
-                                </FormControl>
-                                <FormMessage>
-                                    {form.formState.errors.deviceSettingsOfBottomInfoLine1?.message}
-                                </FormMessage>
-                            </FormItem>
-                        )}
-                    />
-                    <FormField
-                        control={form.control}
-                        name="deviceSettingsOfBottomInfoLine2"
-                        render={({ field }) => (
-                            <FormItem>
-                                <FormLabel htmlFor={field.name}>Phone Number ( Device Settings of Bottom Info Line 2 )</FormLabel>
-                                <FormControl>
-                                    <Input {...field} />
-                                </FormControl>
-                                <FormDescription>
-                                    {form.formState.errors.deviceSettingsOfBottomInfoLine2?.message}
-                                </FormDescription>
-                            </FormItem>
-                        )}
-                    />
-                    <FormField
-                        control={form.control}
-                        name="deviceSettingsOfEnableUserManagement"
-                        render={({ field }) => (
-                            <FormItem className="space-y-3">
-                                <FormLabel htmlFor={field.name}>Enable User Management ( deviceSettings {'>'} enableUserManagement )</FormLabel>
-                                <FormControl>
-                                    <RadioGroup
-                                        onValueChange={field.onChange}
-                                        defaultValue={field.value}
-                                        className="flex flex-col space-y-1"
-                                    >
-                                        <FormItem className="flex items-center space-x-3 space-y-0">
-                                            <FormControl>
-                                                <RadioGroupItem value="true" />
-                                            </FormControl>
-                                            <FormLabel className="font-normal">
-                                                true
-                                            </FormLabel>
-                                        </FormItem>
-                                        <FormItem className="flex items-center space-x-3 space-y-0">
-                                            <FormControl>
-                                                <RadioGroupItem value="false" />
-                                            </FormControl>
-                                            <FormLabel className="font-normal">
-                                                false
-                                            </FormLabel>
-                                        </FormItem>
-                                    </RadioGroup>
-                                </FormControl>
-                            </FormItem>
-                        )}
-                    />
-                    <FormField
-                        control={form.control}
-                        name="linkPOSConfigOfToggle"
-                        render={({ field }) => (
-                            <FormItem className="space-y-3">
-                                <FormLabel htmlFor={field.name}>Link POS Configuration Toggle ( linkPOSConfig {'>'} toggle )</FormLabel>
-                                <FormControl>
-                                    <RadioGroup
-                                        onValueChange={field.onChange}
-                                        defaultValue={field.value}
-                                        className="flex flex-col space-y-1"
-                                    >
-                                        <FormItem className="flex items-center space-x-3 space-y-0">
-                                            <FormControl>
-                                                <RadioGroupItem value="on" />
-                                            </FormControl>
-                                            <FormLabel className="font-normal">
-                                                on
-                                            </FormLabel>
-                                        </FormItem>
-                                        <FormItem className="flex items-center space-x-3 space-y-0">
-                                            <FormControl>
-                                                <RadioGroupItem value="off" />
-                                            </FormControl>
-                                            <FormLabel className="font-normal">
-                                                off
-                                            </FormLabel>
-                                        </FormItem>
-                                    </RadioGroup>
-                                </FormControl>
-                            </FormItem>
-                        )}
-                    />
-                    <FormField
-                        control={form.control}
-                        name="appThemeOfTransLogging"
-                        render={({ field }) => (
-                            <FormItem className="space-y-3">
-                                <FormLabel htmlFor={field.name}>App Theme of Transaction Logging ( appTheme {'>'} transLogging )</FormLabel>
-                                <FormControl>
-                                    <RadioGroup
-                                        onValueChange={field.onChange}
-                                        defaultValue={field.value}
-                                        className="flex flex-col space-y-1"
-                                    >
-                                        <FormItem className="flex items-center space-x-3 space-y-0">
-                                            <FormControl>
-                                                <RadioGroupItem value="on" />
-                                            </FormControl>
-                                            <FormLabel className="font-normal">
-                                                on
-                                            </FormLabel>
-                                        </FormItem>
-                                        <FormItem className="flex items-center space-x-3 space-y-0">
-                                            <FormControl>
-                                                <RadioGroupItem value="off" />
-                                            </FormControl>
-                                            <FormLabel className="font-normal">
-                                                off
-                                            </FormLabel>
-                                        </FormItem>
-                                    </RadioGroup>
-                                </FormControl>
-                            </FormItem>
-                        )}
-                    />
-                    <Button type="submit" className="mt-4">Generate my config</Button>
+                    <hr className="my-6" />
+                    <h2 className="text-2xl font-semibold my-4">Device Setting</h2>
+                    <div className="flex flex-col space-y-4">
+                        <FormField
+                            control={form.control}
+                            name="deviceSettingsOfBottomInfoLine1"
+                            render={({ field }) => (
+                                <FormItem>
+                                    <FormLabel htmlFor={field.name}>TID ( deviceSettings {'>'} bottomInfoLine1 ) </FormLabel>
+                                    <FormControl>
+                                        <Input {...field} />
+                                    </FormControl>
+                                    <FormMessage>
+                                        {form.formState.errors.deviceSettingsOfBottomInfoLine1?.message}
+                                    </FormMessage>
+                                </FormItem>
+                            )}
+                        />
+                        <FormField
+                            control={form.control}
+                            name="deviceSettingsOfBottomInfoLine2"
+                            render={({ field }) => (
+                                <FormItem>
+                                    <FormLabel htmlFor={field.name}>Phone Number ( Device Settings of Bottom Info Line 2 )</FormLabel>
+                                    <FormControl>
+                                        <Input {...field} />
+                                    </FormControl>
+                                    <FormDescription>
+                                        {form.formState.errors.deviceSettingsOfBottomInfoLine2?.message}
+                                    </FormDescription>
+                                </FormItem>
+                            )}
+                        />
+                        <FormField
+                            control={form.control}
+                            name="deviceSettingsOfEnableUserManagement"
+                            render={({ field }) => (
+                                <FormItem className="space-y-3">
+                                    <FormLabel htmlFor={field.name}>Enable User Management ( deviceSettings {'>'} enableUserManagement )</FormLabel>
+                                    <FormControl>
+                                        <RadioGroup
+                                            onValueChange={field.onChange}
+                                            defaultValue={field.value}
+                                            className="flex flex-col space-y-1"
+                                        >
+                                            <FormItem className="flex items-center space-x-3 space-y-0">
+                                                <FormControl>
+                                                    <RadioGroupItem value="true" />
+                                                </FormControl>
+                                                <FormLabel className="font-normal">
+                                                    true
+                                                </FormLabel>
+                                            </FormItem>
+                                            <FormItem className="flex items-center space-x-3 space-y-0">
+                                                <FormControl>
+                                                    <RadioGroupItem value="false" />
+                                                </FormControl>
+                                                <FormLabel className="font-normal">
+                                                    false
+                                                </FormLabel>
+                                            </FormItem>
+                                        </RadioGroup>
+                                    </FormControl>
+                                </FormItem>
+                            )}
+                        />
+                        <FormField
+                            control={form.control}
+                            name="linkPOSConfigOfToggle"
+                            render={({ field }) => (
+                                <FormItem className="space-y-3">
+                                    <FormLabel htmlFor={field.name}>Link POS Configuration Toggle ( linkPOSConfig {'>'} toggle )</FormLabel>
+                                    <FormControl>
+                                        <RadioGroup
+                                            onValueChange={field.onChange}
+                                            defaultValue={field.value}
+                                            className="flex flex-col space-y-1"
+                                        >
+                                            <FormItem className="flex items-center space-x-3 space-y-0">
+                                                <FormControl>
+                                                    <RadioGroupItem value="on" />
+                                                </FormControl>
+                                                <FormLabel className="font-normal">
+                                                    on
+                                                </FormLabel>
+                                            </FormItem>
+                                            <FormItem className="flex items-center space-x-3 space-y-0">
+                                                <FormControl>
+                                                    <RadioGroupItem value="off" />
+                                                </FormControl>
+                                                <FormLabel className="font-normal">
+                                                    off
+                                                </FormLabel>
+                                            </FormItem>
+                                        </RadioGroup>
+                                    </FormControl>
+                                </FormItem>
+                            )}
+                        />
+                        <FormField
+                            control={form.control}
+                            name="appThemeOfTransLogging"
+                            render={({ field }) => (
+                                <FormItem className="space-y-3">
+                                    <FormLabel htmlFor={field.name}>App Theme of Transaction Logging ( appTheme {'>'} transLogging )</FormLabel>
+                                    <FormControl>
+                                        <RadioGroup
+                                            onValueChange={field.onChange}
+                                            defaultValue={field.value}
+                                            className="flex flex-col space-y-1"
+                                        >
+                                            <FormItem className="flex items-center space-x-3 space-y-0">
+                                                <FormControl>
+                                                    <RadioGroupItem value="on" />
+                                                </FormControl>
+                                                <FormLabel className="font-normal">
+                                                    on
+                                                </FormLabel>
+                                            </FormItem>
+                                            <FormItem className="flex items-center space-x-3 space-y-0">
+                                                <FormControl>
+                                                    <RadioGroupItem value="off" />
+                                                </FormControl>
+                                                <FormLabel className="font-normal">
+                                                    off
+                                                </FormLabel>
+                                            </FormItem>
+                                        </RadioGroup>
+                                    </FormControl>
+                                </FormItem>
+                            )}
+                        />
+                        <Button type="submit" className="mt-4">Generate my config</Button>
+                    </div>
                 </form>
             </Form>
             <JsonPreview data={generatedConfig}/>

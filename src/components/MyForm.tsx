@@ -160,9 +160,9 @@ const MyForm: React.FC = () => {
                                     <FormControl>
                                         <Input {...field} />
                                     </FormControl>
-                                    <FormDescription>
+                                    <FormMessage>
                                         {form.formState.errors.deviceSettingsOfBottomInfoLine2?.message}
-                                    </FormDescription>
+                                    </FormMessage>
                                 </FormItem>
                             )}
                         />

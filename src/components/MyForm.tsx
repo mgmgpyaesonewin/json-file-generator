@@ -11,11 +11,16 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import {Select, SelectItem, SelectTrigger, SelectValue, SelectContent, SelectLabel, SelectGroup} from './ui/select';
 import {RadioGroup, RadioGroupItem} from "@/components/ui/radio-group";
+import {PulseLoader} from "react-spinners";
 
 const FormSchema = z.object({
     templateFile: z.enum([
         'config_EVPSTORE_only_KSher.json',
-        'config_EVPSTORE_onlyTTB.json', 'config_EVPSTORE_TTBcard_KSher.json', 'config_EVPSTORE_TTBcard_TTBPromptPay.json', 'config_EVPSTORE_TTBcard_TTBpromptPay_KSher.json']).default('config_EVPSTORE_only_KSher.json'),
+        'config_EVPSTORE_onlyTTB.json',
+        'config_EVPSTORE_TTBcard_KSher.json',
+        'config_EVPSTORE_TTBcard_TTBPromptPay.json',
+        'config_EVPSTORE_TTBcard_TTBpromptPay_KSher.json'
+    ]).default('config_EVPSTORE_only_KSher.json'),
     deviceSettingsOfBottomInfoLine1: z.string().min(3, {
         message: 'TID must be at least 3 characters long',
     }),
@@ -28,6 +33,9 @@ const FormSchema = z.object({
 });
 
 const MyForm: React.FC = () => {
+    // Form Loading State
+    const [loading, setLoading] = useState(false);
+
     const form = useForm<z.infer<typeof FormSchema>>({
         resolver: zodResolver(FormSchema),
         defaultValues: {
@@ -44,6 +52,10 @@ const MyForm: React.FC = () => {
 
     async function onSubmit(data: z.infer<typeof FormSchema>) {
         try {
+            // Set loading state to true
+            setLoading(true);
+            setGeneratedConfig(null);
+
             const raw = await fetch('/api/generate-config', {
                 method: 'POST',
                 headers: {
@@ -67,6 +79,9 @@ const MyForm: React.FC = () => {
         } catch (error) {
             alert('Error generating config');
             console.error(error);
+        } finally {
+            // Set loading state to false
+            setLoading(false);
         }
     };
 
@@ -250,7 +265,19 @@ const MyForm: React.FC = () => {
                                 </FormItem>
                             )}
                         />
-                        <Button type="submit" className="mt-4">Generate my config</Button>
+                        <Button type="submit" className="mt-4 relative" disabled={loading}>
+                            {loading ? (
+                                <>
+                                    <span className="opacity-0">Generate Config</span> {/* Invisible placeholder to keep size */}
+                                    <span className="absolute inset-0 flex items-center justify-center">
+                                        <PulseLoader color="#fff" size={10} />
+                                        <span className="ml-2">Generating Config</span>
+                                    </span>
+                                </>
+                            ) : (
+                                <span>Generate Config</span>
+                            )}
+                        </Button>
                     </div>
                 </form>
             </Form>

@@ -80,7 +80,6 @@ const MyForm: React.FC = () => {
             alert('Error generating config');
             console.error(error);
         } finally {
-            // Set loading state to false
             setLoading(false);
         }
     };

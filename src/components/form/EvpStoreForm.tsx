@@ -3,17 +3,17 @@
 import { z } from 'zod';
 
 import React, { useState } from 'react';
-import { Input } from './ui/input';
-import { Button } from './ui/button';
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from './ui/form';
-import JsonPreview from './JsonPreview';
+import { Input } from '../ui/input';
+import { Button } from '../ui/button';
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '../ui/form';
+import JsonPreview from '../JsonPreview';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
-import {Select, SelectItem, SelectTrigger, SelectValue, SelectContent, SelectLabel, SelectGroup} from './ui/select';
+import {Select, SelectItem, SelectTrigger, SelectValue, SelectContent, SelectLabel, SelectGroup} from '../ui/select';
 import {RadioGroup, RadioGroupItem} from "@/components/ui/radio-group";
 import {PulseLoader} from "react-spinners";
 
-const FormSchema = z.object({
+const FormSchema =  z.object({
     templateFile: z.enum([
         'config_EVPSTORE_only_KSher.json',
         'config_EVPSTORE_onlyTTB.json',
@@ -32,7 +32,7 @@ const FormSchema = z.object({
     appThemeOfTransLogging: z.enum(['on', 'off']).default('off')
 });
 
-const MyForm: React.FC = () => {
+const EvpStoreForm: React.FC = () => {
     // Form Loading State
     const [loading, setLoading] = useState(false);
 
@@ -88,7 +88,7 @@ const MyForm: React.FC = () => {
         <div className="flex justify-between">
             <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)} className="flex-1 mr-5">
-                <h2 className="text-2xl font-semibold mt-4 mb-2">Template File</h2>
+                    <h2 className="text-2xl font-semibold mt-4 mb-2">Ttb Template File</h2>
                     <FormField
                         control={form.control}
                         name="templateFile"
@@ -286,4 +286,4 @@ const MyForm: React.FC = () => {
     );
 };
 
-export default MyForm;
+export default EvpStoreForm;

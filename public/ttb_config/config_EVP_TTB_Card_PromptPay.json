@@ -1,0 +1,2261 @@
+{
+	"configuration": {
+		"deviceSettings": {
+			"defaultLanguage": "th",
+			"defaultCurrency": "0764",
+			"colorPrimary": "#0050f0",
+			"colorSecondary": "#8ab1ff",
+			"voidPassword": "000000",
+			"refundPassword": "000000",
+			"offlineSalePassword": "000000",
+			"settlementPassword": "000000",
+			"administratorPassword": "000000",
+			"merchantPassword": "000000",
+			"manualKeyInPassword": "000000",
+			"supportedLanguages": "en,th",
+			"keyboardIconForQrCsB": "keyboardIconQrCSB.png",
+			"keyboardIconForQrBsC": "keyboardIconQrBSC.png",
+			"keyboardIconForCard": "keyboardIconCardPay.png",
+			"bannerLinePay": "bannerLogoLinepay.png",
+			"bannerPromptpay": "bannerLogoPromptpay.png",
+			"bannerAlipay": "bannerLogoAlipay.png",
+			"bannerWechat": "bannerLogoWechat.png",
+			"bannerQrcs": "bannerLogoQrcs.png",
+			"bannerTrueMoney": "bannerLogoTrueMoney.png",
+			"bannerShopee": "bannerLogoShopee.png",
+			"enableForceSettlement": true,
+			"enableAutoSettlement": false,
+			"autoSettlementTime": "22:00",
+			"enableZeroAmountSettlement": true,
+			"defaultCommunicationType": "MOBILE",
+			"defaultCommunicationTimeout": "60",
+			"enableTip": false,
+			"enablePrintAcquirerConfig": true,
+			"disableQrCsBTransactions": false,
+			"disableQrBsCTransactions": true,
+			"maxDaysForPreAuthTrans": "30",
+			"maxPreAuthCompleteAmtPercent": "10",
+			"enableKeyInForPreAuthTrans": false,
+			"qrCodeExpireMinutes": 15
+		},
+		"printSettings": {
+			"headerLine1Label": "labelHeaderLine1",
+			"headerLine2Label": "labelHeaderLine2",
+			"headerLine3Label": "labelHeaderLine3",
+			"footerLine1Label": "labelFooterLine1",
+			"footerLine2Label": "labelFooterLine2",
+			"footerLine3Label": "labelFooterLine3",
+			"dccMiddleLine1Label": "labelDccMiddleLine1",
+			"dccMiddleLine2Label": "labelDccMiddleLine2",
+			"dccMiddleLine3Label": "labelDccMiddleLine3",
+			"dccFooterLine1Label": "labelDccFooterLine1",
+			"dccFooterLine2Label": "labelDccFooterLine2",
+			"dccRateSlipMiddleLineLabel": "labelDccRateSlipMiddleLine",
+			"headerLogo": "DGD2_logo.png",
+			"footerLogo": "",
+			"linePayLogo": "printLogoLinepay.png",
+			"promptpayLogo": "printLogoPromptpay.png",
+			"alipayLogo": "printLogoAlipay.png",
+			"wechatLogo": "printLogoWechat.png",
+			"qrcsLogo": "printLogoQrcs.png",
+			"trueMoneyLogo": "printLogoTrueMoney.png",
+			"shopeeLogo": "printLogoShopee.png",
+			"showScanForVoidQrCode": true
+		},
+		"mainMenu": [
+			{
+				"transactionId": "transactionVoid",
+				"icon": "menuIconVoid.png",
+				"label": "labelTransactionVoid",
+				"enabled": true
+			},
+			{
+				"transactionId": "transactionRefund",
+				"icon": "menuIconRefund.png",
+				"label": "labelTransactionRefund",
+				"enabled": true
+			},
+			{
+				"transactionId": "transactionInstallment",
+				"icon": "menuIconInstallment.png",
+				"label": "labelTransactionInstallment",
+				"enabled": true
+			},
+			{
+				"transactionId": "transactionSettlement",
+				"icon": "menuIconSettlement.png",
+				"label": "labelTransactionSettlement",
+				"enabled": true
+			},
+			{
+				"transactionId": "transactionQuery",
+				"icon": "menuIconQuery.png",
+				"label": "labelTransactionQuery",
+				"enabled": true
+			},
+			{
+				"transactionId": "transactionPrint",
+				"icon": "menuIconPrint.png",
+				"label": "labelTransactionPrint",
+				"enabled": true
+			},
+			{
+				"transactionId": "transactionReport",
+				"icon": "menuIconReport.png",
+				"label": "labelTransactionReport",
+				"enabled": true
+			},
+			{
+				"transactionId": "transactionRedeem",
+				"icon": "menuIconRedeem.png",
+				"label": "labelTransactionRedeem",
+				"enabled": true
+			},
+			{
+				"transactionId": "transactionPointInquiry",
+				"icon": "menuIconPointInquiry.png",
+				"label": "labelTransactionPointInquiry",
+				"enabled": false
+			},
+			{
+				"transactionId": "transactionOfflineSale",
+				"icon": "menuIconOfflineSale.png",
+				"label": "labelTransactionOfflineSale",
+				"enabled": false
+			},
+			{
+				"transactionId": "transactionAdjust",
+				"icon": "menuIconAdjust.png",
+				"label": "labelTransactionAdjust",
+				"enabled": true
+			},
+			{
+				"transactionId": "transactionPreAuth",
+				"icon": "menuIconPreAuth.png",
+				"label": "labelTransactionPreAuth",
+				"enabled": true
+			},
+			{
+				"transactionId": "transactionPreAuthCancel",
+				"icon": "menuIconPreAuthCancel.png",
+				"label": "labelTransactionPreAuthCancel",
+				"enabled": false
+			},
+			{
+				"transactionId": "transactionPreAuthComplete",
+				"icon": "menuIconPreAuthComplete.png",
+				"label": "labelTransactionPreAuthComplete",
+				"enabled": true
+			},
+			{
+				"transactionId": "transactionManualKeyIn",
+				"icon": "menuIconManualKeyIn.png",
+				"label": "labelTransactionManualKeyIn",
+				"enabled": false
+			},
+			{
+				"transactionId": "transactionManagement",
+				"icon": "menuIconManagement.png",
+				"label": "labelTransactionManagement",
+				"enabled": true
+			},
+			{
+				"transactionId": "transactionEcho",
+				"icon": "menuIconEcho.png",
+				"label": "labelTransactionEcho",
+				"enabled": true
+			}
+		],
+		"managementMenu": [
+			{
+				"transactionId": "transactionPassword",
+				"icon": "menuIconPassword.png",
+				"label": "labelTransactionPassword",
+				"enabled": true
+			},
+			{
+				"transactionId": "transactionConfig",
+				"icon": "menuIconConfig.png",
+				"label": "labelTransactionConfig",
+				"enabled": true
+			},
+			{
+				"transactionId": "transactionHistory",
+				"icon": "menuIconQuery.png",
+				"label": "labelTransactionHistory",
+				"enabled": true
+			},
+			{
+				"transactionId": "transactionVersion",
+				"icon": "menuIconVersion.png",
+				"label": "labelTransactionVersion",
+				"enabled": true
+			},
+			{
+				"transactionId": "transactionUpdate",
+				"icon": "menuIconUpdate.png",
+				"label": "labelTransactionUpdate",
+				"enabled": true
+			},
+			{
+				"transactionId": "transactionLanguage",
+				"icon": "menuIconLanguage.png",
+				"label": "labelTransactionLanguage",
+				"enabled": true
+			}
+		],
+		"passwordMenu": [
+			{
+				"transactionId": "transactionPwdMerchant",
+				"icon": "menuIconMerchant.png",
+				"label": "merchantLabel",
+				"enabled": true
+			},
+			{
+				"transactionId": "transactionPwdVoid",
+				"icon": "menuIconVoid.png",
+				"label": "labelTransactionVoid",
+				"enabled": true
+			},
+			{
+				"transactionId": "transactionPwdRefund",
+				"icon": "menuIconRefund.png",
+				"label": "labelTransactionRefund",
+				"enabled": true
+			},
+			{
+				"transactionId": "transactionPwdOfflineSale",
+				"icon": "menuIconOfflineSale.png",
+				"label": "labelTransactionOfflineSale",
+				"enabled": true
+			},
+			{
+				"transactionId": "transactionPwdSettlement",
+				"icon": "menuIconSettlement.png",
+				"label": "labelTransactionSettlement",
+				"enabled": true
+			},
+			{
+				"transactionId": "transactionPwdAdministrator",
+				"icon": "menuIconAdministrator.png",
+				"label": "labelTransactionAdministrator",
+				"enabled": true
+			},
+			{
+				"transactionId": "transactionPwdManualKeyIn",
+				"icon": "menuIconManualKeyIn.png",
+				"label": "labelTransactionManualKeyIn",
+				"enabled": true
+			}
+		],
+		"qrBSCMenu": [
+			{
+				"transactionId": "transactionLinepay",
+				"icon": "menuIconLinepay.png",
+				"label": "labelTransactionLinepay",
+				"enabled": false
+			},
+			{
+				"transactionId": "transactionPromptpay",
+				"icon": "menuIconPromptpay.png",
+				"label": "labelTransactionPromptpay",
+				"enabled": false
+			},
+			{
+				"transactionId": "transactionAlipay",
+				"icon": "menuIconAlipay.png",
+				"label": "labelTransactionAlipay",
+				"enabled": false
+			},
+			{
+				"transactionId": "transactionWechat",
+				"icon": "menuIconWechat.png",
+				"label": "labelTransactionWechat",
+				"enabled": false
+			}
+		],
+		"qrCSBMenu": [
+			{
+				"transactionId": "transactionPromptpay",
+				"icon": "menuIconPromptpay.png",
+				"label": "labelTransactionPromptpay",
+				"enabled": false
+			},
+			{
+				"transactionId": "transactionAlipay",
+				"icon": "menuIconAlipay.png",
+				"label": "labelTransactionAlipay",
+				"enabled": false
+			},
+			{
+				"transactionId": "transactionWechat",
+				"icon": "menuIconWechat.png",
+				"label": "labelTransactionWechat",
+				"enabled": false
+			},
+			{
+				"transactionId": "transactionTrueMoney",
+				"icon": "menuIconTrueMoney.png",
+				"label": "labelTransactionTrueMoney",
+				"enabled": false
+			},
+			{
+				"transactionId": "transactionQRCS",
+				"icon": "menuIconQrcs.png",
+				"label": "labelTransactionQRCS",
+				"enabled": false
+			}
+		],
+		"acquirer": [
+			{
+				"name": "TTB",
+				"nii": "250",
+				"terminalId": "82104335",
+				"merchantId": "000041911113618",
+				"currBatchNo": 1,
+				"ip": "172.29.16.73",
+				"port": 9000,
+				"ipBackup": "172.29.16.81",
+				"portBackup": 9000,
+				"sslType": "NO SSL",
+				"tleEnabled": true,
+				"tleVersion": "04",
+				"tleNii": "257",
+				"tleKmsNii": "251",
+				"tleVendorId": "25000002",
+				"tleAcquirerId": "250",
+				"tleKeySetId": "Set 6",
+				"tleTeId": "25021003",
+				"tleTePin": "88990011",
+				"tleSensitiveFields": "2,14,35,45,48,55",
+				"alipayTerminalId": "",
+				"alipayMerchantId": "",
+				"alipayAcquirer": "",
+				"wechatTerminalId": "",
+				"wechatMerchantId": "",
+				"wechatAcquirer": "",
+				"tag30TerminalId": "",
+				"tag30MerchantId": "",
+				"tag30BillerId": "",
+				"tag30MerchantName": "",
+				"tag30PartnerCode": "",
+				"tag30Ref2": false,
+				"qrcsTerminalId": "",
+				"qrcsMerchantId": "",
+				"qrcsPartnerCode": "",
+				"inquiryTimeout": 30,
+				"inquiryRetries": 10,
+				"apiPublicKey": "",
+				"apiUrl": "",
+				"hostTimeout": 60,
+				"merchantName": "",
+				"tpdu": "6002510000"
+			},
+			{
+				"name": "TTB QR",
+				"nii": "250",
+				"terminalId": "82104335",
+				"merchantId": "000041911113618",
+				"currBatchNo": 1,
+				"ip": "172.29.16.81",
+				"port": 9000,
+				"ipBackup": "172.29.16.73",
+				"portBackup": 9000,
+				"sslType": "NO SSL",
+				"tleEnabled": false,
+				"tleVersion": "04",
+				"tleNii": "257",
+				"tleKmsNii": "251",
+				"tleVendorId": "25000002",
+				"tleAcquirerId": "250",
+				"tleKeySetId": "Set 6",
+				"tleTeId": "25021003",
+				"tleTePin": "88990011",
+				"tleSensitiveFields": "2,14,35,45,48,55",
+				"alipayTerminalId": "",
+				"alipayMerchantId": "",
+				"alipayAcquirer": "",
+				"wechatTerminalId": "",
+				"wechatMerchantId": "",
+				"wechatAcquirer": "",
+				"tag30TerminalId": "82104335",
+				"tag30MerchantId": "EVP",
+				"tag30BillerId": "010556309155300",
+				"tag30MerchantName": "Doggiedoo-Rangsit",
+				"tag30PartnerCode": "",
+				"tag30Ref2": true,
+				"qrcsTerminalId": "",
+				"qrcsMerchantId": "",
+				"qrcsPartnerCode": "",
+				"inquiryTimeout": 30,
+				"inquiryRetries": 3,
+				"apiPublicKey": "",
+				"apiUrl": "https://dgw.ttbbank.com:9643", 
+				"hostTimeout": 60,
+				"merchantName": "Doggiedoo-Rangsit",
+				"tpdu": ""
+			}
+		],
+		"emvTerminal": [
+			{
+				"terminalType": "22",
+				"terminalAdditionalCapabilities": "6000F0A001",
+				"merchantCategoryCode": "1520"
+			}
+		],
+		"aid": [
+			{
+				"appName": "VISA",
+				"aid": "A0000000031010",
+				"selFlag": 0,
+				"priority": 0,
+				"targetPer": 0,
+				"maxTargetPer": 0,
+				"floorLimit": 0,
+				"floorLimitCheckFlg": 1,
+				"rdClssTxnLmt": 150001,
+				"rdClssTxnLmtFlg": 0,
+				"rdClssFLmt": 0,
+				"rdClssFLmtFlg": 1,
+				"rdCVMLmt": 150001,
+				"rdCVMLmtFlg": 1,
+				"randTransSel": true,
+				"velocityCheck": true,
+				"threshold": 0,
+				"tacDenial": "0010000000",
+				"tacOnline": "DC4004F800",
+				"tacDefault": "DC4000A800",
+				"acquirerId": "000000123456",
+				"dDOL": "039F3704",
+				"tDOL": "0F9F02065F2A029A039C0195059F3704",
+				"version": "00A0",
+				"riskManageData": null,
+				"jcbClssTermIntProfile": null,
+				"jcbClssTermCompatIndicator": 0,
+				"jcbClssCombinationOpt": null,
+				"terminalCapabilities": "E0B8C8",
+				"enableClss": true,
+				"ttq": "3220C000"
+			},
+			{
+				"appName": "VISA Electron",
+				"aid": "A0000000032010",
+				"selFlag": 0,
+				"priority": 0,
+				"targetPer": 0,
+				"maxTargetPer": 0,
+				"floorLimit": 0,
+				"floorLimitCheckFlg": 1,
+				"rdClssTxnLmt": 150001,
+				"rdClssTxnLmtFlg": 0,
+				"rdClssFLmt": 0,
+				"rdClssFLmtFlg": 1,
+				"rdCVMLmt": 150001,
+				"rdCVMLmtFlg": 1,
+				"randTransSel": true,
+				"velocityCheck": true,
+				"threshold": 0,
+				"tacDenial": "0010000000",
+				"tacOnline": "DC4004F800",
+				"tacDefault": "DC4000A800",
+				"acquirerId": "000000123456",
+				"dDOL": "039F3704",
+				"tDOL": "0F9F02065F2A029A039C0195059F3704",
+				"version": "00A0",
+				"riskManageData": null,
+				"jcbClssTermIntProfile": null,
+				"jcbClssTermCompatIndicator": 0,
+				"jcbClssCombinationOpt": null,
+				"terminalCapabilities": "E0B8C8",
+				"enableClss": true,
+				"ttq": "3220C000"
+			},
+			{
+				"appName": "MasterCard",
+				"aid": "A0000000041010",
+				"selFlag": 0,
+				"priority": 0,
+				"targetPer": 0,
+				"maxTargetPer": 0,
+				"floorLimit": 0,
+				"floorLimitCheckFlg": 1,
+				"rdClssTxnLmt": 150001,
+				"rdClssTxnLmtFlg": 0,
+				"rdClssFLmt": 0,
+				"rdClssFLmtFlg": 1,
+				"rdCVMLmt": 150001,
+				"rdCVMLmtFlg": 1,
+				"randTransSel": true,
+				"velocityCheck": true,
+				"threshold": 0,
+				"tacDenial": "0400000000",
+				"tacOnline": "F850ACF800",
+				"tacDefault": "FC50ACA000",
+				"acquirerId": "000000123456",
+				"dDOL": "039F3704",
+				"tDOL": "0F9F02065F2A029A039C0195059F3704",
+				"version": "0002",
+				"riskManageData": null,
+				"jcbClssTermIntProfile": null,
+				"jcbClssTermCompatIndicator": 0,
+				"jcbClssCombinationOpt": null,
+				"terminalCapabilities": "E0B8C8",
+				"enableClss": true,
+				"ttq": "3200C000"
+			},
+			{
+				"appName": "TPN",
+				"aid": "A0000006770101",
+				"selFlag": 0,
+				"priority": 0,
+				"targetPer": 99,
+				"maxTargetPer": 99,
+				"floorLimit": 0,
+				"floorLimitCheckFlg": 1,
+				"rdClssTxnLmt": 150001,
+				"rdClssTxnLmtFlg": 0,
+				"rdClssFLmt": 0,
+				"rdClssFLmtFlg": 1,
+				"rdCVMLmt": 150001,
+				"rdCVMLmtFlg": 1,
+				"randTransSel": true,
+				"velocityCheck": true,
+				"threshold": 40,
+				"tacDenial": "0010000000",
+				"tacOnline": "D84004F800",
+				"tacDefault": "D84000A800",
+				"acquirerId": "000000000000",
+				"dDOL": "9F3704",
+				"tDOL": "9F3704",
+				"version": "0030",
+				"riskManageData": null,
+				"jcbClssTermIntProfile": null,
+				"jcbClssTermCompatIndicator": 0,
+				"jcbClssCombinationOpt": null,
+				"terminalCapabilities": "E0F8C8",
+				"enableClss": true,
+				"ttq": "3600C000"
+			}
+		],
+		"issuer": [
+			{
+				"name": "VISA",
+				"nonEmvTranRequirePIN": false,
+				"adjustPercent": 10,
+				"isAllowManualPan": false,
+				"panMaskPattern": "(?<=\\d{6})\\d(?=\\d{4})",
+				"bindToAcquirer": "TTB",
+				"smallAmtLimit": 150000,
+				"isEnableOffline": false,
+				"isEnableAdjust": false,
+				"isEnableRefund": true,
+				"isAllowCheckExpiry": true,
+				"isEnablePreAuth": false
+			},
+			{
+				"name": "MASTER",
+				"nonEmvTranRequirePIN": false,
+				"adjustPercent": 10,
+				"isAllowManualPan": false,
+				"panMaskPattern": "(?<=\\d{6})\\d(?=\\d{4})",
+				"bindToAcquirer": "TTB",
+				"smallAmtLimit": 150000,
+				"isEnableOffline": false,
+				"isEnableAdjust": false,
+				"isEnableRefund": true,
+				"isAllowCheckExpiry": true,
+				"isEnablePreAuth": false
+			},
+			{
+				"name": "TPN",
+				"nonEmvTranRequirePIN": true,
+				"adjustPercent": 10,
+				"isAllowManualPan": false,
+				"panMaskPattern": "(?<=\\d{6})\\d(?=\\d{4})",
+				"bindToAcquirer": "TTB",
+				"smallAmtLimit": 150000,
+				"isEnableOffline": false,
+				"isEnableAdjust": false,
+				"isEnableRefund": true,
+				"isAllowCheckExpiry": true,
+				"isEnablePreAuth": false
+			},
+			{
+				"name": "TSC",
+				"nonEmvTranRequirePIN": false,
+				"adjustPercent": 10,
+				"isAllowManualPan": false,
+				"panMaskPattern": "(?<=\\d{6})\\d(?=\\d{4})",
+				"bindToAcquirer": "TTB",
+				"smallAmtLimit": 150000,
+				"isEnableOffline": false,
+				"isEnableAdjust": false,
+				"isEnableRefund": true,
+				"isAllowCheckExpiry": true,
+				"isEnablePreAuth": false
+			}
+		],
+		"cardRange": [
+			{
+				"name": "TSC",
+				"panRangeLow": "2221000000",
+				"panRangeHigh": "2222999999",
+				"panLength": 0
+			},
+			{
+				"name": "MASTER",
+				"panRangeLow": "2223000000",
+				"panRangeHigh": "2223699999",
+				"panLength": 0
+			},
+			{
+				"name": "TSC",
+				"panRangeLow": "2223700000",
+				"panRangeHigh": "2720999999",
+				"panLength": 0
+			},
+			{
+				"name": "VISA",
+				"panRangeLow": "4000000000",
+				"panRangeHigh": "4124359999",
+				"panLength": 0
+			},
+			{
+				"name": "TSC",
+				"panRangeLow": "4124360000",
+				"panRangeHigh": "4124369999",
+				"panLength": 0
+			},
+			{
+				"name": "VISA",
+				"panRangeLow": "4124370000",
+				"panRangeHigh": "4124659999",
+				"panLength": 0
+			},
+			{
+				"name": "TSC",
+				"panRangeLow": "4124660000",
+				"panRangeHigh": "4124669999",
+				"panLength": 0
+			},
+			{
+				"name": "VISA",
+				"panRangeLow": "4124670000",
+				"panRangeHigh": "4162019999",
+				"panLength": 0
+			},
+			{
+				"name": "TSC",
+				"panRangeLow": "4162020000",
+				"panRangeHigh": "4162029999",
+				"panLength": 0
+			},
+			{
+				"name": "VISA",
+				"panRangeLow": "4162030000",
+				"panRangeHigh": "4199559999",
+				"panLength": 0
+			},
+			{
+				"name": "TSC",
+				"panRangeLow": "4199560000",
+				"panRangeHigh": "4199569999",
+				"panLength": 0
+			},
+			{
+				"name": "VISA",
+				"panRangeLow": "4199570000",
+				"panRangeHigh": "4214649999",
+				"panLength": 0
+			},
+			{
+				"name": "TSC",
+				"panRangeLow": "4214650000",
+				"panRangeHigh": "4214659999",
+				"panLength": 0
+			},
+			{
+				"name": "VISA",
+				"panRangeLow": "4214660000",
+				"panRangeHigh": "4283799999",
+				"panLength": 0
+			},
+			{
+				"name": "TSC",
+				"panRangeLow": "4283800000",
+				"panRangeHigh": "4283809999",
+				"panLength": 0
+			},
+			{
+				"name": "VISA",
+				"panRangeLow": "4283810000",
+				"panRangeHigh": "4303059999",
+				"panLength": 0
+			},
+			{
+				"name": "TSC",
+				"panRangeLow": "4303060000",
+				"panRangeHigh": "4303069999",
+				"panLength": 0
+			},
+			{
+				"name": "VISA",
+				"panRangeLow": "4303070000",
+				"panRangeHigh": "4340759999",
+				"panLength": 0
+			},
+			{
+				"name": "TSC",
+				"panRangeLow": "4340760000",
+				"panRangeHigh": "4340769999",
+				"panLength": 0
+			},
+			{
+				"name": "VISA",
+				"panRangeLow": "4340770000",
+				"panRangeHigh": "4532099999",
+				"panLength": 0
+			},
+			{
+				"name": "VISA",
+				"panRangeLow": "4532200000",
+				"panRangeHigh": "4732519999",
+				"panLength": 0
+			},
+			{
+				"name": "TSC",
+				"panRangeLow": "4732520000",
+				"panRangeHigh": "4732529999",
+				"panLength": 0
+			},
+			{
+				"name": "VISA",
+				"panRangeLow": "4732530000",
+				"panRangeHigh": "4788669999",
+				"panLength": 0
+			},
+			{
+				"name": "TSC",
+				"panRangeLow": "4788670000",
+				"panRangeHigh": "4788679999",
+				"panLength": 0
+			},
+			{
+				"name": "VISA",
+				"panRangeLow": "4788680000",
+				"panRangeHigh": "4909369999",
+				"panLength": 0
+			},
+			{
+				"name": "TSC",
+				"panRangeLow": "4909370000",
+				"panRangeHigh": "4909379999",
+				"panLength": 0
+			},
+			{
+				"name": "VISA",
+				"panRangeLow": "4909380000",
+				"panRangeHigh": "4999999999",
+				"panLength": 0
+			},
+			{
+				"name": "MASTER",
+				"panRangeLow": "5000000000",
+				"panRangeHigh": "5099999999",
+				"panLength": 0
+			},
+			{
+				"name": "TSC",
+				"panRangeLow": "5100000000",
+				"panRangeHigh": "5109999999",
+				"panLength": 0
+			},
+			{
+				"name": "MASTER",
+				"panRangeLow": "5110000000",
+				"panRangeHigh": "5222299999",
+				"panLength": 0
+			},
+			{
+				"name": "TSC",
+				"panRangeLow": "5222300000",
+				"panRangeHigh": "5222399999",
+				"panLength": 0
+			},
+			{
+				"name": "MASTER",
+				"panRangeLow": "5222400000",
+				"panRangeHigh": "5577549999",
+				"panLength": 0
+			},
+			{
+				"name": "TSC",
+				"panRangeLow": "5577550000",
+				"panRangeHigh": "5577559999",
+				"panLength": 0
+			},
+			{
+				"name": "MASTER",
+				"panRangeLow": "5577560000",
+				"panRangeHigh": "5577719999",
+				"panLength": 0
+			},
+			{
+				"name": "TSC",
+				"panRangeLow": "5577720000",
+				"panRangeHigh": "5577729999",
+				"panLength": 0
+			},
+			{
+				"name": "MASTER",
+				"panRangeLow": "5577730000",
+				"panRangeHigh": "5598869999",
+				"panLength": 0
+			},
+			{
+				"name": "TSC",
+				"panRangeLow": "5598870000",
+				"panRangeHigh": "5598879999",
+				"panLength": 0
+			},
+			{
+				"name": "TPN",
+				"panRangeLow": "5598880000",
+				"panRangeHigh": "5598889999",
+				"panLength": 0
+			},
+			{
+				"name": "TSC",
+				"panRangeLow": "5598890000",
+				"panRangeHigh": "5598899999",
+				"panLength": 0
+			},
+			{
+				"name": "MASTER",
+				"panRangeLow": "5598900000",
+				"panRangeHigh": "5999999999",
+				"panLength": 0
+			},
+			{
+				"name": "TPN",
+				"panRangeLow": "6200030000",
+				"panRangeHigh": "6210946799",
+				"panLength": 0
+			},
+			{
+				"name": "TPN",
+				"panRangeLow": "6210948700",
+				"panRangeHigh": "6210949999",
+				"panLength": 0
+			},
+			{
+				"name": "TPN",
+				"panRangeLow": "6213340000",
+				"panRangeHigh": "6216549999",
+				"panLength": 0
+			},
+			{
+				"name": "TPN",
+				"panRangeLow": "6233200000",
+				"panRangeHigh": "6233559999",
+				"panLength": 0
+			},
+			{
+				"name": "TPN",
+				"panRangeLow": "6292420000",
+				"panRangeHigh": "6292429999",
+				"panLength": 0
+			},
+			{
+				"name": "TPN",
+				"panRangeLow": "8100000000",
+				"panRangeHigh": "8171999999",
+				"panLength": 0
+			},
+			{
+				"name": "TPN",
+				"panRangeLow": "9000000000",
+				"panRangeHigh": "9199999999",
+				"panLength": 0
+			},
+			{
+				"name": "TPN",
+				"panRangeLow": "9200000000",
+				"panRangeHigh": "9299999999",
+				"panLength": 0
+			},
+			{
+				"name": "TSC",
+				"panRangeLow": "9300000000",
+				"panRangeHigh": "9399999999",
+				"panLength": 0
+			},
+			{
+				"name": "TSC",
+				"panRangeLow": "9400000000",
+				"panRangeHigh": "9499999999",
+				"panLength": 0
+			},
+			{
+				"name": "TSC",
+				"panRangeLow": "9900140000",
+				"panRangeHigh": "9900149999",
+				"panLength": 0
+			},
+			{
+				"name": "TSC",
+				"panRangeLow": "9910140000",
+				"panRangeHigh": "9910149999",
+				"panLength": 0
+			}
+		],
+		"dccCardRange": {
+			"412322000000": "412322009999",
+			"476134000000": "476134009999",
+			"476136000000": "476136009999",
+			"541333000000": "541333009999",
+			"559418000000": "559418009999"
+		},
+		"specialCardRange": [
+			{
+				"name": "NOT IN USE",
+				"panRangeLow": "557755000000",
+				"panRangeHigh": "557755999999",
+				"panLength": 0
+			}
+		],
+		"capk": [
+			{
+				"name": "VISA_v08",
+				"rID": "A000000003",
+				"keyID": 8,
+				"hashInd": 1,
+				"arithInd": 1,
+				"module": "D9FD6ED75D51D0E30664BD157023EAA1FFA871E4DA65672B863D255E81E137A51DE4F72BCC9E44ACE12127F87E263D3AF9DD9CF35CA4A7B01E907000BA85D24954C2FCA3074825DDD4C0C8F186CB020F683E02F2DEAD3969133F06F7845166ACEB57CA0FC2603445469811D293BFEFBAFAB57631B3DD91E796BF850A25012F1AE38F05AA5C4D6D03B1DC2E568612785938BBC9B3CD3A910C1DA55A5A9218ACE0F7A21287752682F15832A678D6E1ED0B",
+				"exponent": "03",
+				"expDate": "141231",
+				"checkSum": "20D213126955DE205ADC2FD2822BD22DE21CF9A8"
+			},
+			{
+				"name": "VISA_v09",
+				"rID": "A000000003",
+				"keyID": 9,
+				"hashInd": 1,
+				"arithInd": 1,
+				"module": "9D912248DE0A4E39C1A7DDE3F6D2588992C1A4095AFBD1824D1BA74847F2BC4926D2EFD904B4B54954CD189A54C5D1179654F8F9B0D2AB5F0357EB642FEDA95D3912C6576945FAB897E7062CAA44A4AA06B8FE6E3DBA18AF6AE3738E30429EE9BE03427C9D64F695FA8CAB4BFE376853EA34AD1D76BFCAD15908C077FFE6DC5521ECEF5D278A96E26F57359FFAEDA19434B937F1AD999DC5C41EB11935B44C18100E857F431A4A5A6BB65114F174C2D7B59FDF237D6BB1DD0916E644D709DED56481477C75D95CDD68254615F7740EC07F330AC5D67BCD75BF23D28A140826C026DBDE971A37CD3EF9B8DF644AC385010501EFC6509D7A41",
+				"exponent": "03",
+				"expDate": "161231",
+				"checkSum": "1FF80A40173F52D7D27E0F26A146A1C8CCB29046"
+			},
+			{
+				"name": "MASTER_v05",
+				"rID": "A000000004",
+				"keyID": 5,
+				"hashInd": 1,
+				"arithInd": 1,
+				"module": "B8048ABC30C90D976336543E3FD7091C8FE4800DF820ED55E7E94813ED00555B573FECA3D84AF6131A651D66CFF4284FB13B635EDD0EE40176D8BF04B7FD1C7BACF9AC7327DFAA8AA72D10DB3B8E70B2DDD811CB4196525EA386ACC33C0D9D4575916469C4E4F53E8E1C912CC618CB22DDE7C3568E90022E6BBA770202E4522A2DD623D180E215BD1D1507FE3DC90CA310D27B3EFCCD8F83DE3052CAD1E48938C68D095AAC91B5F37E28BB49EC7ED597",
+				"exponent": "03",
+				"expDate": "311224",
+				"checkSum": "EBFA0D5D06D8CE702DA3EAE890701D45E274C845"
+			},
+			{
+				"name": "MASTER_v06",
+				"rID": "A000000004",
+				"keyID": 6,
+				"hashInd": 1,
+				"arithInd": 1,
+				"module": "CB26FC830B43785B2BCE37C81ED334622F9622F4C89AAE641046B2353433883F307FB7C974162DA72F7A4EC75D9D657336865B8D3023D3D645667625C9A07A6B7A137CF0C64198AE38FC238006FB2603F41F4F3BB9DA1347270F2F5D8C606E420958C5F7D50A71DE30142F70DE468889B5E3A08695B938A50FC980393A9CBCE44AD2D64F630BB33AD3F5F5FD495D31F37818C1D94071342E07F1BEC2194F6035BA5DED3936500EB82DFDA6E8AFB655B1EF3D0D7EBF86B66DD9F29F6B1D324FE8B26CE38AB2013DD13F611E7A594D675C4432350EA244CC34F3873CBA06592987A1D7E852ADC22EF5A2EE28132031E48F74037E3B34AB747F",
+				"exponent": "03",
+				"expDate": "311234",
+				"checkSum": "F910A1504D5FFB793D94F3B500765E1ABCAD72D9"
+			},
+			{
+				"name": "JCB_t12",
+				"rID": "A000000065",
+				"keyID": 18,
+				"hashInd": 1,
+				"arithInd": 1,
+				"module": "ADF05CD4C5B490B087C3467B0F3043750438848461288BFEFD6198DD576DC3AD7A7CFA07DBA128C247A8EAB30DC3A30B02FCD7F1C8167965463626FEFF8AB1AA61A4B9AEF09EE12B009842A1ABA01ADB4A2B170668781EC92B60F605FD12B2B2A6F1FE734BE510F60DC5D189E401451B62B4E06851EC20EBFF4522AACC2E9CDC89BC5D8CDE5D633CFD77220FF6BBD4A9B441473CC3C6FEFC8D13E57C3DE97E1269FA19F655215B23563ED1D1860D8681",
+				"exponent": "03",
+				"expDate": "141231",
+				"checkSum": "874B379B7F607DC1CAF87A19E400B6A9E25163E8"
+			},
+			{
+				"name": "JCB_t14",
+				"rID": "A000000065",
+				"keyID": 20,
+				"hashInd": 1,
+				"arithInd": 1,
+				"module": "AEED55B9EE00E1ECEB045F61D2DA9A66AB637B43FB5CDBDB22A2FBB25BE061E937E38244EE5132F530144A3F268907D8FD648863F5A96FED7E42089E93457ADC0E1BC89C58A0DB72675FBC47FEE9FF33C16ADE6D341936B06B6A6F5EF6F66A4EDD981DF75DA8399C3053F430ECA342437C23AF423A211AC9F58EAF09B0F837DE9D86C7109DB1646561AA5AF0289AF5514AC64BC2D9D36A179BB8A7971E2BFA03A9E4B847FD3D63524D43A0E8003547B94A8A75E519DF3177D0A60BC0B4BAB1EA59A2CBB4D2D62354E926E9C7D3BE4181E81BA60F8285A896D17DA8C3242481B6C405769A39D547C74ED9FF95A70A796046B5EFF36682DC29",
+				"exponent": "03",
+				"expDate": "161231",
+				"checkSum": "C0D15F6CD957E491DB56DCDD1CA87A03EBE06B7B"
+			},
+			{
+				"name": "PBOC_v03",
+				"rID": "A000000333",
+				"keyID": 3,
+				"hashInd": 1,
+				"arithInd": 1,
+				"module": "B0627DEE87864F9C18C13B9A1F025448BF13C58380C91F4CEBA9F9BCB214FF8414E9B59D6ABA10F941C7331768F47B2127907D857FA39AAF8CE02045DD01619D689EE731C551159BE7EB2D51A372FF56B556E5CB2FDE36E23073A44CA215D6C26CA68847B388E39520E0026E62294B557D6470440CA0AEFC9438C923AEC9B2098D6D3A1AF5E8B1DE36F4B53040109D89B77CAFAF70C26C601ABDF59EEC0FDC8A99089140CD2E817E335175B03B7AA33D",
+				"exponent": "03",
+				"expDate": "221231",
+				"checkSum": "87F0CD7C0E86F38F89A66F8C47071A8B88586F26"
+			},
+			{
+				"name": "PBOC_v04",
+				"rID": "A000000333",
+				"keyID": 4,
+				"hashInd": 1,
+				"arithInd": 1,
+				"module": "BC853E6B5365E89E7EE9317C94B02D0ABB0DBD91C05A224A2554AA29ED9FCB9D86EB9CCBB322A57811F86188AAC7351C72BD9EF196C5A01ACEF7A4EB0D2AD63D9E6AC2E7836547CB1595C68BCBAFD0F6728760F3A7CA7B97301B7E0220184EFC4F653008D93CE098C0D93B45201096D1ADFF4CF1F9FC02AF759DA27CD6DFD6D789B099F16F378B6100334E63F3D35F3251A5EC78693731F5233519CDB380F5AB8C0F02728E91D469ABD0EAE0D93B1CC66CE127B29C7D77441A49D09FCA5D6D9762FC74C31BB506C8BAE3C79AD6C2578775B95956B5370D1D0519E37906B384736233251E8F09AD79DFBE2C6ABFADAC8E4D8624318C27DAF1",
+				"exponent": "03",
+				"expDate": "221231",
+				"checkSum": "F527081CF371DD7E1FD4FA414A665036E0F5E6E5"
+			},
+			{
+				"name": "TPN_v03",
+				"rID": "A000000677",
+				"keyID": 3,
+				"hashInd": 1,
+				"arithInd": 1,
+				"module": "8CFC37515D0E9B594360FB810EC8F8E32F7F932A5CC79429B3861B1DF4D0B3D68EEE1CE03123E1E40A70B72B00B866DABBD720AE0BEB4BF8E7DC1233D1E1B72B8C3A7E683F882C692C3DF1C53FE1F05769216637EF6B23F6CA654FE0F704CBD22496619E66558A5C1F9EA048B0E35A4ED6A62A4E8B7EA5AD67E5F0FB272A133E4CC8BE924EA33761060282276CAA992392646BDF29A90307A72D0AC8338ACCCA0CFB43D63F604C7767B7FDA3692A4493",
+				"exponent": "03",
+				"expDate": "311231",
+				"checkSum": "B402CF25762276CBB9DC20E40B9A7DEE2CB48F51"
+			},
+			{
+				"name": "TPN_v04",
+				"rID": "A000000677",
+				"keyID": 4,
+				"hashInd": 1,
+				"arithInd": 1,
+				"module": "88BC4CAE126FAB559B8022CADAE9B6D258A348116317584DBCE8FD1B6E2FC1D8D8A3AEF8D09BB5608C959410811F6CDD571989C0E2C85F91441D633690D92CF6F981208884362D5C554D671B00723994BD4C145C1648FB872F407F5F14E91B22BE54AA7A2D6BB7900CABAC008ABE55A52A71C600A666B203EE51003967BB696AE1310E78A73BB89BBDA224918F3305A10CEC165F345DE418A1A0A9772B9FA367C3DDD5AF6B9BB769ADDAED6EE6A57F9CAF7A3F99617B4B32DAED5B0582D61FC27A34E7B1AF683C51F44D7FECE66181E673F6BADD4AE70074FCA65599335FA581FD9726739218D8D079786390A547B2AD4BF697B9C11081E5",
+				"exponent": "03",
+				"expDate": "311231",
+				"checkSum": "35FA471DD4058CF4319B59032D58CFBCE4EED62A"
+			},
+			{
+				"name": "TPN_v05",
+				"rID": "A000000677",
+				"keyID": 5,
+				"hashInd": 1,
+				"arithInd": 1,
+				"module": "869D8F57D908ECFC726CCB4BFDCB4831C7E0166281BC482C552D19687CCA62D31AB51CB48D8FA9A1767EE9DEF4D3FD207A17D1FFFA594797A7A291AF1420887133DADBFC171DC57E163BDA40114C02E98D83CA4CC992D7619B684367C2163C55BD09091A777E1FBFFEEB47194A50AA76307D6C77E52339277B29CD41D100001D8BB0AF6D13F171EB83874E3005A313C91CED6A9C08D4E11DBE94324519284EF02758C536BE05980134D885C10CD3485C590B496E58FDC29F0C120F73167C3E39AD0C5ED3C0F7302B5DB831251C8A7B3F3CD07D5CB9D337B254A2F5DBCC92CCAC5B8AE825FFA47392A0BD42795C579C0BDD43B6FAFC0F1271",
+				"exponent": "03",
+				"expDate": "311231",
+				"checkSum": "EBEE8CC68E6CB50CB1E309864500849065C29C96"
+			}
+		],
+		"translation": {
+			"updateVersionLabel": {
+				"en": "If empty will update all parameters",
+				"th": "If empty will update all parameters"
+			},
+			"forceSettlementLabel": {
+				"en": "Force Settlement",
+				"th": "Force Settlement"
+			},
+			"processLabel": {
+				"en": "Processing ...",
+				"th": "Processing ..."
+			},
+			"selectPaymentTypeLabel": {
+				"en": "Select Payment Type",
+				"th": "Select Payment Type"
+			},
+			"amountConfirmationLabel": {
+				"en": "Amount Confirmation",
+				"th": "Amount Confirmation"
+			},
+			"pressOkToPrintSlipLabel": {
+				"en": "Press OK to print slip",
+				"th": "Press OK to print slip"
+			},
+			"inputPasswordForVoidLabel": {
+				"en": "Input password for VOID",
+				"th": "Input password for VOID"
+			},
+			"inputPasswordForRefundLabel": {
+				"en": "Input password for Refund",
+				"th": "Input password for Refund"
+			},
+			"voidLabel": {
+				"en": "VOID",
+				"th": "VOID"
+			},
+			"refundLabel": {
+				"en": "Refund",
+				"th": "Refund"
+			},
+			"inputTraceNumberLabel": {
+				"en": "Input Trace number or scan QRCode on sale slip for VOID/REFUND",
+				"th": "Input Trace number or scan QRCode on sale slip for VOID/REFUND"
+			},
+			"transTypeLabel": {
+				"en": "Trans Type",
+				"th": "Trans Type"
+			},
+			"walletLabel": {
+				"en": "Wallet",
+				"th": "Wallet"
+			},
+			"amountLabel": {
+				"en": "Amount",
+				"th": "Amount"
+			},
+			"selectReportTypeLabel": {
+				"en": "Select Report Type",
+				"th": "Select Report Type"
+			},
+			"summaryReportLabel": {
+				"en": "Summary Report",
+				"th": "Summary Report"
+			},
+			"summaryReportAllPaymentLabel": {
+				"en": "Summary Report All Payment",
+				"th": "Summary Report All Payment"
+			},
+			"auditReportLabel": {
+				"en": "Audit Report",
+				"th": "Audit Report"
+			},
+			"auditReportAllPaymentLabel": {
+				"en": "Audit Report All Payment",
+				"th": "Audit Report All Payment"
+			},
+			"inputPasswordForSettlementLabel": {
+				"en": "Input Password for Settlement",
+				"th": "Input Password for Settlement"
+			},
+			"settlementLabel": {
+				"en": "Settlement",
+				"th": "Settlement"
+			},
+			"checkSuspendedQrLabel": {
+				"en": "Check Suspended QR...",
+				"th": "Check Suspended QR..."
+			},
+			"messageInquirySuspendedQrLabel": {
+				"en": "Inquiry suspended QR?",
+				"th": "Inquiry suspended QR?"
+			},
+			"inquirySuspendedQrLabel": {
+				"en": "Inquiry Suspended QR...",
+				"th": "Inquiry Suspended QR..."
+			},
+			"messageSettlementSuspendedQrLabel": {
+				"en": "Found %1s items for suspended QR, you have to settlement now.",
+				"th": "Found %1s items for suspended QR, you have to settlement now."
+			},
+			"messageSettlementSuspendedQrInquiryNowLabel": {
+				"en": "Found %1s items for suspended QR, Inquiry now.",
+				"th": "Found %1s items for suspended QR, Inquiry now."
+			},
+			"settlementStartLabel": {
+				"en": "Start Settlement...",
+				"th": "Start Settlement..."
+			},
+			"settlementSuccessLabel": {
+				"en": "Settlement Success",
+				"th": "Settlement Success"
+			},
+			"settlementFailLabel": {
+				"en": "Settlement Fail",
+				"th": "Settlement Fail"
+			},
+			"queryTransactionLabel": {
+				"en": "Query Transaction...",
+				"th": "Query Transaction..."
+			},
+			"messageTransactionFoundLabel": {
+				"en": "No Transaction Found.",
+				"th": "No Transaction Found."
+			},
+			"qrInquiryLastTranLabel": {
+				"en": "QR Inquiry Last transaction",
+				"th": "QR Inquiry Last transaction"
+			},
+			"qrInquirySuspendedLabel": {
+				"en": "QR Inquiry Suspended QR",
+				"th": "QR Inquiry Suspended QR"
+			},
+			"qrInquiryAnyTransactionLabel": {
+				"en": "QR Inquiry Any transaction",
+				"th": "QR Inquiry Any transaction"
+			},
+			"qrInquiryLabel": {
+				"en": "QR Inquiry",
+				"th": "QR Inquiry"
+			},
+			"inputTraceLabel": {
+				"en": "Input Trace No.",
+				"th": "Input Trace No."
+			},
+			"inputRrnLabel": {
+				"en": "Input RRN",
+				"th": "ระบุ RRN"
+			},
+			"inputOrigDateLabel": {
+				"en": "Input original date (DDMMYYYY)",
+				"th": "Input original date (DDMMYYYY)"
+			},
+			"transactionFailLabel": {
+				"en": "Transaction Failure.",
+				"th": "Transaction Failure."
+			},
+			"transactionTimeoutLabel": {
+				"en": "Transaction Timeout",
+				"th": "Transaction Timeout"
+			},
+			"noTransactionLabel": {
+				"en": "No Transaction",
+				"th": "No Transaction"
+			},
+			"printLabel": {
+				"en": "Print",
+				"th": "พิมพ์"
+			},
+			"selectChoiceToPrintLabel": {
+				"en": "Select choice to print",
+				"th": "เลือกรายการที่จะพิมพ์"
+			},
+			"lastTransactionLabel": {
+				"en": "Last Transaction",
+				"th": "รายการล่าสุด"
+			},
+			"AnyTransactionLabel": {
+				"en": "Any Transaction",
+				"th": "ระบุ Trace No."
+			},
+			"lastSettlementLabel": {
+				"en": "Last Settlement",
+				"th": "รายการสรุปยอดล่าสุด"
+			},
+			"dataNotFoundLabel": {
+				"en": "Data not found",
+				"th": "ไม่พบข้อมูล"
+			},
+			"clickAgainToExitLabel": {
+				"en": "Click again to exit",
+				"th": "Click again to exit"
+			},
+			"pleaseDoSettlementLabel": {
+				"en": "Please do settlement",
+				"th": "Please do settlement"
+			},
+			"passwordEnterMerchantLabel": {
+				"en": "Please enter Merchant password",
+				"th": "Please enter Merchant password"
+			},
+			"passwordEnterAdminLabel": {
+				"en": "Please enter System Administrator password",
+				"th": "Please enter System Administrator password"
+			},
+			"passwordNewLabel": {
+				"en": "New Password",
+				"th": "New Password"
+			},
+			"passwordVerifyNewLabel": {
+				"en": "Verify New Password",
+				"th": "Verify New Password"
+			},
+			"passwordOldLabel": {
+				"en": "Old Password",
+				"th": "Old Password"
+			},
+			"passwordSuccessLabel": {
+				"en": "Update password success",
+				"th": "Update password success"
+			},
+			"passwordFailLabel": {
+				"en": "Update password fail",
+				"th": "Update password fail"
+			},
+			"settingLabel": {
+				"en": "Setting",
+				"th": "Setting"
+			},
+			"passwordLabel": {
+				"en": "Password",
+				"th": "Password"
+			},
+			"merchantLabel": {
+				"en": "Merchant",
+				"th": "Merchant"
+			},
+			"voidAndRefundLabel": {
+				"en": "Void/Refund",
+				"th": "Void/Refund"
+			},
+			"moreLabel": {
+				"en": "More",
+				"th": "อื่นๆ"
+			},
+			"transactionHistoryLabel": {
+				"en": "Transaction History",
+				"th": "ประวัติทำรายการ"
+			},
+			"detailLabel": {
+				"en": "Detail",
+				"th": "Detail"
+			},
+			"summaryLabel": {
+				"en": "Summary",
+				"th": "Summary"
+			},
+			"tranSummaryByDateLabel": {
+				"en": "Transaction Summary By Date",
+				"th": "Transaction Summary By Date"
+			},
+			"tranSummaryByPaymentLabel": {
+				"en": "Transaction Summary By Payment",
+				"th": "Transaction Summary By Payment"
+			},
+			"declinedLabel": {
+				"en": "Declined",
+				"th": "Declined"
+			},
+			"aboutLabel": {
+				"en": "About",
+				"th": "About"
+			},
+			"softwareVersionLabel": {
+				"en": "Software Version No.",
+				"th": "Software Version No."
+			},
+			"configurationLabel": {
+				"en": "Configuration File",
+				"th": "Configuration File"
+			},
+			"resourceLabel": {
+				"en": "Resource File",
+				"th": "Resource File"
+			},
+			"configLabel": {
+				"en": "Config",
+				"th": "Config"
+			},
+			"communicationLabel": {
+				"en": "Communication Type",
+				"th": "Communication Type"
+			},
+			"commLabel": {
+				"en": "Comm Detail",
+				"th": "Comm Detail"
+			},
+			"acquirerLabel": {
+				"en": "Acquirer",
+				"th": "Acquirer"
+			},
+			"TransactionSettingLabel": {
+				"en": "Transaction Setting",
+				"th": "Transaction Setting"
+			},
+			"otherLabel": {
+				"en": "Other",
+				"th": "อื่นๆ"
+			},
+			"connectionTimeoutLabel": {
+				"en": "Connection Timeout",
+				"th": "Connection Timeout"
+			},
+			"apnLabel": {
+				"en": "APN",
+				"th": "APN"
+			},
+			"openWifiLabel": {
+				"en": "Open Wifi Setting",
+				"th": "Open Wifi Setting"
+			},
+			"traceNoLabel": {
+				"en": "Trace No.",
+				"th": "Trace No."
+			},
+			"dateTimeLabel": {
+				"en": "Date/Time",
+				"th": "Date/Time"
+			},
+			"terminalIDLabel": {
+				"en": "Terminal ID",
+				"th": "Terminal ID"
+			},
+			"merchantIDLabel": {
+				"en": "Merchant ID",
+				"th": "Merchant ID"
+			},
+			"batchNoLabel": {
+				"en": "BATCH No.",
+				"th": "BATCH No."
+			},
+			"pleaseInputLabel": {
+				"en": "Please input",
+				"th": "Please input"
+			},
+			"selectFunctionLabel": {
+				"en": "Select Function",
+				"th": "Select Function"
+			},
+			"printCustomerCopyLabel": {
+				"en": "Print Customer copy",
+				"th": "Print Customer copy"
+			},
+			"inputPasswordLabel": {
+				"en": "Input password",
+				"th": "Input password"
+			},
+			"transactionNotFoundLabel": {
+				"en": "Transaction not found",
+				"th": "Transaction not found"
+			},
+			"transactionAlreadyVoidLabel": {
+				"en": "Transaction already void",
+				"th": "Transaction already void"
+			},
+			"transactionAlreadyRefundLabel": {
+				"en": "Transaction already refund",
+				"th": "Transaction already refund"
+			},
+			"approvedLabel": {
+				"en": "Approved",
+				"th": "Approved"
+			},
+			"secondsLabel": {
+				"en": "Seconds",
+				"th": "Seconds"
+			},
+			"checkTransactionLabel": {
+				"en": "Check transaction...",
+				"th": "Check transaction..."
+			},
+			"queryHistoryLabel": {
+				"en": "Query History...",
+				"th": "Query History..."
+			},
+			"noTransactionFoundLabel": {
+				"en": "No Transactions Found for SETTLEMENT",
+				"th": "No Transactions Found for SETTLEMENT"
+			},
+			"deleteSuspendQRTracNoLabel": {
+				"en": "Delete Suspended QR Trace No.",
+				"th": "Delete Suspended QR Trace No."
+			},
+			"inquiryLabel": {
+				"en": "Inquiry...",
+				"th": "Inquiry..."
+			},
+			"querySuspendedQRLabel": {
+				"en": "Query Suspended QR...",
+				"th": "Query Suspended QR..."
+			},
+			"noSuspendedQRFoundLabel": {
+				"en": "No Suspended QR Found.",
+				"th": "No Suspended QR Found."
+			},
+			"unknownErrorLabel": {
+				"en": "Unknown Error",
+				"th": "Unknown Error"
+			},
+			"suspendedLabel": {
+				"en": "Suspended",
+				"th": "Suspended"
+			},
+			"pleaseContactAdminLabel": {
+				"en": "Please contact administrator",
+				"th": "Please contact administrator"
+			},
+			"generateQRLabel": {
+				"en": "Generate QR",
+				"th": "Generate QR"
+			},
+			"processErrorLabel": {
+				"en": "processError",
+				"th": "processError"
+			},
+			"noQRImageFromHostLabel": {
+				"en": "No QR Image From HOST",
+				"th": "No QR Image From HOST"
+			},
+			"passwordIsIncorrectLabel": {
+				"en": "Password is incorrect.",
+				"th": "Password is incorrect."
+			},
+			"languageLabel": {
+				"en": "Language",
+				"th": "ภาษา"
+			},
+			"updateSuccessLabel": {
+				"en": "Update Success",
+				"th": "Update Success"
+			},
+			"updateFailedLabel": {
+				"en": "Update Failed",
+				"th": "Update Failed"
+			},
+			"loadingLabel": {
+				"en": "Loading...",
+				"th": "Loading..."
+			},
+			"allTransactionNeedSettledLabel": {
+				"en": "Settles all transaction before starting this function",
+				"th": "Settles all transaction before starting this function"
+			},
+			"autoSettlementLabel": {
+				"en": "Auto Settlement in (%ss.)",
+				"th": "Auto Settlement in (%ss.)"
+			},
+			"installment_normal": {
+				"en": "DEJUNG 0%",
+				"th": "ดีจัง 0%"
+			},
+			"installment_fix_rate": {
+				"en": "DEJUNG",
+				"th": "ดีจัง"
+			},
+			"installment_special": {
+				"en": "DEJUNG SPECIAL",
+				"th": "ดีจัง สเปเชียล"
+			},
+			"installment_promo": {
+				"en": "Input Promotion Code",
+				"th": "Input Promotion Code"
+			},
+			"trans_installment": {
+				"en": "Installment",
+				"th": "ผ่อนชำระ"
+			},
+			"prompt_input_ipp_term": {
+				"en": "Installment #Month",
+				"th": "Installment #Month"
+			},
+			"installment_input_reward": {
+				"en": "Input Reward Code",
+				"th": "Input Reward Code"
+			},
+			"select_installment_type": {
+				"en": "Select Installment Type",
+				"th": "Select Installment Type"
+			},
+			"referenceNoLabel": {
+				"en": "Reference No.",
+				"th": "Reference No."
+			},
+			"getLastTransactionByPressOK": {
+				"en": "Press OK to Get Last Transaction",
+				"th": "Press OK to Get Last Transaction"
+			},
+			"selectAcquirer": {
+				"en": "Select Acquirer",
+				"th": "Select Acquirer"
+			},
+			"allLabel": {
+				"en": "All",
+				"th": "ทั้งหมด"
+			},
+			"queryLabel": {
+				"en": "Query",
+				"th": "ค้นข้อมูล"
+			},
+			"enterTransRef": {
+				"en": "Please Enter Trans Ref.",
+				"th": "Please Enter Trans Ref."
+			},
+			"enterRef1": {
+				"en": "Please Enter Ref.1",
+				"th": "Please Enter Ref.1"
+			},
+			"enterRef2": {
+				"en": "Please Enter Ref.2 or Leave it Blank",
+				"th": "Please Enter Ref.2 or Leave it Blank"
+			},
+			"enterRef3": {
+				"en": "Please Enter Ref.3",
+				"th": "Please Enter Ref.3"
+			},
+			"errOperationMessage": {
+				"en": "App is updating, not allow operation",
+				"th": "App is updating, not allow operation"
+			},
+			"transactionSuccess": {
+				"en": "Transaction Success!",
+				"th": "Transaction Success!"
+			},
+			"sendError": {
+				"en": "Send Error",
+				"th": "Send Error"
+			},
+			"receiveError": {
+				"en": "Send Error",
+				"th": "Send Error"
+			},
+			"packError": {
+				"en": "Pack Error",
+				"th": "Pack Error"
+			},
+			"unpackError": {
+				"en": "Unpack Error",
+				"th": "Unpack Error"
+			},
+			"illegalPackError": {
+				"en": "Illegal Pack Error",
+				"th": "Illegal Pack Error"
+			},
+			"macError": {
+				"en": "Unpack MAC Error",
+				"th": "Unpack MAC Error"
+			},
+			"processCodeError": {
+				"en": "Unpack Process Code Error",
+				"th": "Unpack Process Code Error"
+			},
+			"unpackMessageTypeCodeError": {
+				"en": "Unpack Message Type Code Error",
+				"th": "Unpack Message Type Code Error"
+			},
+			"unpackAmountError": {
+				"en": "Unpack Amount Error",
+				"th": "Unpack Amount Error"
+			},
+			"unpackTraceNoError": {
+				"en": "Unpack Trace No. Error",
+				"th": "Unpack Trace No. Error"
+			},
+			"unpackStanNoError": {
+				"en": "Unpack Stan No. Error",
+				"th": "Unpack Stan No. Error"
+			},
+			"enteredDateError": {
+				"en": "Invalid date",
+				"th": "Invalid date"
+			},
+			"unpackTerminalIdError": {
+				"en": "Unpack Terminal ID Error",
+				"th": "Unpack Terminal ID Error"
+			},
+			"unpackMerchantIdError": {
+				"en": "Unpack Merchant ID Error",
+				"th": "Unpack Merchant ID Error"
+			},
+			"noTransError": {
+				"en": "No Transaction",
+				"th": "No Transaction"
+			},
+			"originalTransNotExistError": {
+				"en": "Original Transaction Not Existed",
+				"th": "Original Transaction Not Existed"
+			},
+			"voidedTransactionError": {
+				"en": "Transaction is already voided",
+				"th": "Transaction is already voided"
+			},
+			"voidedTransactionNotSupportError": {
+				"en": "Transaction cannot be Voided",
+				"th": "Transaction cannot be Voided"
+			},
+			"openCommunicationError": {
+				"en": "Open Communication Channel Error",
+				"th": "Open Communication Channel Error"
+			},
+			"hostRejectedError": {
+				"en": "Host Rejected",
+				"th": "Host Rejected"
+			},
+			"transactionCancelError": {
+				"en": "Transaction Canceled",
+				"th": "Transaction Canceled"
+			},
+			"transactionExistedNowError": {
+				"en": "Transaction Number Exceed,\\nPlease Settle Now",
+				"th": "Transaction Number Exceed,\\nPlease Settle Now"
+			},
+			"transactionExistedLaterError": {
+				"en": "Transaction Number Exceed,\\nPlease Settle Later",
+				"th": "Transaction Number Exceed,\\nPlease Settle Later"
+			},
+			"lastSettleFailedError": {
+				"en": "Last settlement failed,\\nPlease Settle Now",
+				"th": "Last settlement failed,\\nPlease Settle Now"
+			},
+			"lastNoSettleFromYesterday": {
+				"en": "Previous day settlement missing,\\nPlease Settle Now",
+				"th": "Previous day settlement missing,\\nPlease Settle Now"
+			},
+			"noFreeSpaceError": {
+				"en": "No Free Space,\\nPlease Settle Now",
+				"th": "No Free Space,\\nPlease Settle Now"
+			},
+			"unsupportedTransaction": {
+				"en": "Unsupported Transaction",
+				"th": "Unsupported Transaction"
+			},
+			"lastBatchSettleError": {
+				"en": "Last Batch Up Break,\\Please Click Settle Continue",
+				"th": "Last Batch Up Break,\\Please Click Settle Continue"
+			},
+			"noMatchOriginalCardError": {
+				"en": "Cannot Match the Original Card NO.",
+				"th": "Cannot Match the Original Card NO."
+			},
+			"parameterError": {
+				"en": "Parameter Error",
+				"th": "Parameter Error"
+			},
+			"amountExceed": {
+				"en": "Amount Exceed",
+				"th": "Amount Exceed"
+			},
+			"deniedCard": {
+				"en": "Host Approval,Card Denied\\nPlease Contact Issuer",
+				"th": "Host Approval,Card Denied\\nPlease Contact Issuer"
+			},
+			"notAdjustableTransError": {
+				"en": "Transaction cannot be Adjusted",
+				"th": "Transaction cannot be Adjusted"
+			},
+			"unSupportedCardError": {
+				"en": "Unsupported Card",
+				"th": "Unsupported Card"
+			},
+			"expiredCardError": {
+				"en": "Expired Card",
+				"th": "Expired Card"
+			},
+			"cardPanError": {
+				"en": "Error Card PAN",
+				"th": "Error Card PAN"
+			},
+			"unsupportedFunError": {
+				"en": "Unsupported Function",
+				"th": "Unsupported Function"
+			},
+			"clssPreProcError": {
+				"en": "Clss PreProc Fail",
+				"th": "Clss PreProc Fail"
+			},
+			"invalidQrCode": {
+				"en": "Invalid QR Code",
+				"th": "Invalid QR Code"
+			},
+			"transNotFound": {
+				"en": "Payment reference does not exist",
+				"th": "Payment reference does not exist"
+			},
+			"invalidBluetoothPrinter": {
+				"en": "Invalid Bluetooth Printer",
+				"th": "Invalid Bluetooth Printer"
+			},
+			"printCancel": {
+				"en": "Print Canceled",
+				"th": "Print Canceled"
+			},
+			"bluetoothConnError": {
+				"en": "Bluetooth Connect Error",
+				"th": "Bluetooth Connect Error"
+			},
+			"tmkDownloadError": {
+				"en": "TMK download failed",
+				"th": "TMK download failed"
+			},
+			"tleDownloadError": {
+				"en": "TLE key download required",
+				"th": "TLE key download required"
+			},
+			"tleKcvError": {
+				"en": "TLE key KCV error",
+				"th": "TLE key KCV error"
+			},
+			"redeem_quantity": {
+				"en": "Quantity",
+				"th": "Quantity"
+			},
+			"select_redemption_type": {
+				"en": "Select Redemption Type",
+				"th": "Select Redemption Type"
+			},
+			"confirm_redeem": {
+				"en": "REDEEM",
+				"th": "REDEEM"
+			},
+			"confirm_credit_total": {
+				"en": "CREDIT TOTAL",
+				"th": "CREDIT TOTAL"
+			},
+			"confirm_reward_code": {
+				"en": "REWARD CODE",
+				"th": "REWARD CODE"
+			},
+			"confirm_reward_name": {
+				"en": "NAME",
+				"th": "NAME"
+			},
+			"confirm_redeem_point": {
+				"en": "REDEEM POINT",
+				"th": "REDEEM POINT"
+			},
+			"confirm_redeem_amount": {
+				"en": "REDEEM AMT",
+				"th": "REDEEM AMT"
+			},
+			"confirm_redeem_balance": {
+				"en": "Current balance",
+				"th": "Current balance"
+			},
+			"confirm_credit_amount": {
+				"en": "CREDIT AMT",
+				"th": "CREDIT AMT"
+			},
+			"confirm_num_of_item": {
+				"en": "NO. OF ITEMS",
+				"th": "NO. OF ITEMS"
+			},
+			"confirm_discount_rate": {
+				"en": "DISCOUNT%",
+				"th": "DISCOUNT%"
+			},
+			"confirm_discount": {
+				"en": "DISCOUNT",
+				"th": "DISCOUNT"
+			},
+			"confirm_amount": {
+				"en": "AMOUNT",
+				"th": "AMOUNT"
+			},
+			"prompt_pin": {
+				"en": "Please Enter PIN",
+				"th": "Please Enter PIN"
+			},
+			"prompt_no_pin": {
+				"en": "If No PIN, Please Press Enter",
+				"th": "If No PIN, Please Press Enter"
+			},
+			"trans_signature": {
+				"en": "Signature",
+				"th": "Signature"
+			},
+			"trans_point": {
+				"en": "Point",
+				"th": "Point"
+			},
+			"print_customer_copy": {
+				"en": "Print Customer Copy",
+				"th": "Print Customer Copy"
+			},
+			"error_abort": {
+				"en": "Error Aborted",
+				"th": "Error Aborted"
+			},
+			"labelConfirm": {
+				"en": "Confirm",
+				"th": "Confirm"
+			},
+			"labelSupportedLanguages": {
+				"en": "English",
+				"th": "ภาษาไทย"
+			},
+			"labelTransactionSale": {
+				"en": "Sale",
+				"th": "ขาย"
+			},
+			"labelTransactionVoid": {
+				"en": "Void",
+				"th": "ยกเลิกรายการ"
+			},
+			"labelTransactionRefund": {
+				"en": "Refund",
+				"th": "คืนเงิน"
+			},
+			"labelTransactionInstallment": {
+				"en": "Installment",
+				"th": "ผ่อนชำระ"
+			},
+			"labelTransactionSettlement": {
+				"en": "Settlement",
+				"th": "สรุปยอด"
+			},
+			"labelTransactionAutoSettlement": {
+				"en": "Auto Settlement",
+				"th": "Auto สรุปยอด"
+			},
+			"labelTransactionQuery": {
+				"en": "Query",
+				"th": "ค้นข้อมูล"
+			},
+			"labelTransactionPrint": {
+				"en": "Print",
+				"th": "พิมพ์"
+			},
+			"labelTransactionReport": {
+				"en": "Report",
+				"th": "รายงาน"
+			},
+			"labelTransactionRedeem": {
+				"en": "Redeem",
+				"th": "แลกคะแนน"
+			},
+			"labelTransactionManualKeyIn": {
+				"en": "Key-In",
+				"th": "Key-In"
+			},
+			"labelTransactionPointInquiry": {
+				"en": "Point Inquiry",
+				"th": "เช็คคะแนน"
+			},
+			"labelTransactionOfflineSale": {
+				"en": "Offline",
+				"th": "Offline"
+			},
+			"labelTransactionPreAuth": {
+				"en": "Pre-auth",
+				"th": "Pre-auth"
+			},
+			"labelTransactionPreAuthComplete": {
+				"en": "Pre-auth completion",
+				"th": "Pre-auth completion"
+			},
+			"labelTransactionPreAuthCancel": {
+				"en": "Pre-auth cancellation",
+				"th": "Pre-auth cancellation"
+			},
+			"labelTransactionAdjust": {
+				"en": "Adjust",
+				"th": "Adjust"
+			},
+			"labelTransactionManagement": {
+				"en": "Management",
+				"th": "Management"
+			},
+			"labelTransactionEcho": {
+				"en": "Echo test",
+				"th": "Echo test"
+			},
+			"labelPassword": {
+				"en": "Password",
+				"th": "รหัสผ่าน"
+			},
+			"labelKeyboardIconForQrCsB": {
+				"en": "QR",
+				"th": "QR"
+			},
+			"labelKeyboardIconForQrBsC": {
+				"en": "Scan",
+				"th": "แสกน"
+			},
+			"labelKeyboardIconForCard": {
+				"en": "Card",
+				"th": "บัตร"
+			},
+			"labelTransactionPassword": {
+				"en": "Password",
+				"th": "รหัสผ่าน"
+			},
+			"labelTransactionConfig": {
+				"en": "Config",
+				"th": "Config"
+			},
+			"labelTransactionHistory": {
+				"en": "History",
+				"th": "ประวัติทำรายการ"
+			},
+			"labelTransactionVersion": {
+				"en": "Version",
+				"th": "เวอร์ชั่น"
+			},
+			"labelTransactionUpdate": {
+				"en": "Update Param",
+				"th": "Update Param"
+			},
+			"labelTransactionLanguage": {
+				"en": "Language",
+				"th": "ภาษา"
+			},
+			"labelTransactionAdministrator": {
+				"en": "Administrator",
+				"th": "Administrator"
+			},
+			"buttonOk": {
+				"en": "OK",
+				"th": "ตกลง"
+			},
+			"buttonCancel": {
+				"en": "Cancel",
+				"th": "ยกเลิก"
+			},
+			"buttonShow": {
+				"en": "Show",
+				"th": "แสดง"
+			},
+			"buttonPrint": {
+				"en": "Print",
+				"th": "พิมพ์"
+			},
+			"buttonDelete": {
+				"en": "Delete",
+				"th": "ลบ"
+			},
+			"buttonPay": {
+				"en": "Pay",
+				"th": "จ่าย"
+			},
+			"buttonAllPayment": {
+				"en": "All Payment Type",
+				"th": "All Payment Type"
+			},
+			"buttonSelectPayment": {
+				"en": "Select Payment Type",
+				"th": "Select Payment Type"
+			},
+			"buttonSummaryReport": {
+				"en": "Summary Report",
+				"th": "Summary Report"
+			},
+			"buttonAuditReport": {
+				"en": "Audit Report",
+				"th": "Audit Report"
+			},
+			"buttonLastTransaction": {
+				"en": "Last Transaction",
+				"th": "Last Transaction"
+			},
+			"buttonSuspendedQR": {
+				"en": "Suspended QR",
+				"th": "Suspended QR"
+			},
+			"buttonSuspended": {
+				"en": "Suspended",
+				"th": "Suspended"
+			},
+			"buttonPullSlip": {
+				"en": "Pull Slip",
+				"th": "Pull Slip"
+			},
+			"buttonAnyTransaction": {
+				"en": "Any Transaction",
+				"th": "Any Transaction"
+			},
+			"buttonLastSettlement": {
+				"en": "Last Settlement",
+				"th": "รายงานสรุปยอดล่าสุด"
+			},
+			"buttonPostpone": {
+				"en": "Postpone",
+				"th": "เลื่อน"
+			},
+			"buttonSummaryByDate": {
+				"en": "Summary by Date",
+				"th": "Summary by Date"
+			},
+			"buttonSummaryPayment": {
+				"en": "Summary by Payment type",
+				"th": "Summary by Payment type"
+			},
+			"buttonDetailByDate": {
+				"en": "Detail by Date",
+				"th": "Detail by Date"
+			},
+			"buttonDetailPayment": {
+				"en": "Detail by Payment type",
+				"th": "Detail by Payment type"
+			},
+			"buttonCommunication": {
+				"en": "Communication Type",
+				"th": "Communication Type"
+			},
+			"buttonCommDetail": {
+				"en": "Comm Detail",
+				"th": "Comm Detail"
+			},
+			"buttonAcquirer": {
+				"en": "Acquirer",
+				"th": "Acquirer"
+			},
+			"buttonPassword": {
+				"en": "Password",
+				"th": "Password"
+			},
+			"buttonTransactionSetting": {
+				"en": "Transaction Setting",
+				"th": "Transaction Setting"
+			},
+			"buttonOther": {
+				"en": "Other",
+				"th": "อื่นๆ"
+			},
+			"buttonConfirm": {
+				"en": "Confirm",
+				"th": "Confirm"
+			},
+			"buttonSettle": {
+				"en": "Settle",
+				"th": "Settle"
+			},
+			"labelTransactionLinepay": {
+				"en": "LinePay",
+				"th": "LinePay"
+			},
+			"labelTransactionPromptpay": {
+				"en": "PromptPay",
+				"th": "PromptPay"
+			},
+			"labelTransactionAlipay": {
+				"en": "Alipay",
+				"th": "Alipay"
+			},
+			"labelTransactionWechat": {
+				"en": "WeChat",
+				"th": "WeChat"
+			},
+			"labelTransactionTrueMoney": {
+				"en": "TrueMoney",
+				"th": "TrueMoney"
+			},
+			"labelTransactionQRCS": {
+				"en": "QRCS",
+				"th": "QRCS"
+			},
+			"labelTransactionShopee": {
+				"en": "Shopee",
+				"th": "Shopee"
+			},
+			"labelHeaderLine1": {
+				"en": "Doggie Doo",
+				"th": "Doggie Doo"
+			},
+			"labelHeaderLine2": {
+				"en": "Thank you",
+				"th": "Thank you"
+			},
+			"labelHeaderLine3": {
+				"en": "",
+				"th": ""
+			},
+			"labelFooterLine1": {
+				"en": "I ACKNOWLEDGE SATISFACTORY",
+				"th": "I ACKNOWLEDGE SATISFACTORY"
+			},
+			"labelFooterLine2": {
+				"en": "RECEIPT GOODS/SERVICE AND AGREE",
+				"th": "RECEIPT GOODS/SERVICE AND AGREE"
+			},
+			"labelFooterLine3": {
+				"en": "TO PAY TOTAL AMOUNT",
+				"th": "TO PAY TOTAL AMOUNT"
+			},
+			"labelDccMiddleLine1": {
+				"en": "I have been offered a choice of currencies that is conducted by the merchant, the mark up on exchange rate is",
+				"th": "I have been offered a choice of currencies that is conducted by the merchant, the mark up on exchange rate is"
+			},
+			"labelDccMiddleLine2": {
+				"en": "and is not endorsed by Visa/MasterCard for payment converted from Thai Baht Currency and agree to the transaction receipt information. I choose the transaction currency by checking one of the boxes below to be the final acknowledgement of the choice I have been offered:",
+				"th": "and is not endorsed by Visa/MasterCard for payment converted from Thai Baht Currency and agree to the transaction receipt information. I choose the transaction currency by checking one of the boxes below to be the final acknowledgement of the choice I have been offered:"
+			},
+			"labelDccMiddleLine3": {
+				"en": "I choose the transaction currency by checking one of the boxes below:",
+				"th": "I choose the transaction currency by checking one of the boxes below:"
+			},
+			"labelDccFooterLine1": {
+				"en": "I ACKNOWLEDGE SATISFACTORY RECEIPT OF RELATIVE GOODS/SERVICES",
+				"th": "I ACKNOWLEDGE SATISFACTORY RECEIPT OF RELATIVE GOODS/SERVICES"
+			},
+			"labelDccFooterLine2": {
+				"en": "",
+				"th": ""
+			},
+			"labelDccRateSlipMiddleLine": {
+				"en": "Choose to guarantee today’s rate with no extra cost",
+				"th": "Choose to guarantee today’s rate with no extra cost"
+			},
+			"messageForManualRetry": {
+				"en": "Do you want to perform manual inquiry?",
+				"th": "Do you want to perform manual inquiry?"
+			},
+			"point_redemption": {
+				"en": "POINT REDEMPTION",
+				"th": "POINT REDEMPTION"
+			},
+			"point_and_sale": {
+				"en": "REDEEM POINT+SALE",
+				"th": "REDEEM POINT+SALE"
+			},
+			"redeem_discount": {
+				"en": "REDEEM Discount%",
+				"th": "REDEEM ส่วนลด%"
+			},
+			"point_inquiry": {
+				"en": "Point Inquiry",
+				"th": "เช็คคะแนน"
+			},
+			"redeem_input_points": {
+				"en": "Please input points",
+				"th": "Please input points"
+			},
+			"redeem_cash": {
+				"en": "REDEEM CASH",
+				"th": "REDEEM CASH"
+			},
+			"redeem_purchase": {
+				"en": "REDEEM PURCHASE",
+				"th": "REDEEM PURCHASE"
+			},
+			"redeem_voucher": {
+				"en": "REDEEM VOUCHER",
+				"th": "REDEEM VOUCHER"
+			},
+			"confirm_principle": {
+				"en": "PRINCIPLE",
+				"th": "PRINCIPLE"
+			},
+			"confirm_months": {
+				"en": "MONTHS",
+				"th": "MONTHS"
+			},
+			"confirm_payment_term": {
+				"en": "PAYMENT TERM",
+				"th": "PAYMENT TERM"
+			},
+			"confirm_ipp_code": {
+				"en": "IPP CODE",
+				"th": "IPP CODE"
+			},
+			"confirm_total": {
+				"en": "TOTAL",
+				"th": "TOTAL"
+			},
+			"confirm_total_interest": {
+				"en": "Total interest",
+				"th": "Total interest"
+			},
+			"confirm_term_int": {
+				"en": "TERM Int",
+				"th": "TERM Int"
+			},
+			"confirm_first_pay": {
+				"en": "First pay",
+				"th": "First pay"
+			},
+			"declinedTransactionLabel": {
+				"en": "Transaction Declined",
+				"th": "Transaction Declined"
+			},
+			"noPendingTransactionLabel": {
+				"en": "Pending transaction not found",
+				"th": "Pending transaction not found"
+			},
+			"redeem_purchase_print": {
+				"en": "REDEEM DISCOUNT AMOUNT",
+				"th": "REDEEM DISCOUNT AMOUNT"
+			},
+			"redeem_cash_print": {
+				"en": "REDEEM CASH VALUE",
+				"th": "REDEEM CASH VALUE"
+			},
+			"redeem_discount_print": {
+				"en": "REDEEM DISCOUNT %",
+				"th": "REDEEM DISCOUNT %"
+			},
+			"pre_auth_complete_amt_too_much": {
+				"en": "Exceeded max amount.",
+				"th": "Exceeded max amount."
+			}
+		}
+	}
+}

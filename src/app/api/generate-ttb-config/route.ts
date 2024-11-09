@@ -31,6 +31,7 @@ export async function POST(request: Request) {
         const reqBody: ConfigRequest = await request.json();
 
         const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/ttb_config/${reqBody.templateFile}`);
+        console.log('Fetch response:', res.status, res.statusText);
         if (!res.ok) {
             console.error('Fetch failed:', res.status, res.statusText);
             throw new Error(`Failed to fetch config file: ${res.status} ${res.statusText}`);

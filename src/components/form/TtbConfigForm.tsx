@@ -139,11 +139,14 @@ const TtbConfigForm: React.FC = () => {
 
     // Based on Selected Template File, we can set the default values for the form fields by loading the JSON file
     // This can be done by using the `useEffect` hook
+    const { watch, setValue, getValues } = form;
+    const templateFile = watch('templateFile');
+
     useEffect(() => {
         async function loadTemplateFile() {
-            form.setValue('issuer', []);
+            setValue('issuer', []);
             try {
-                const raw = await fetch(`/ttb_config/${form.getValues('templateFile')}`);
+                const raw = await fetch(`/ttb_config/${templateFile}`);
                 if (!raw.ok) {
                     const errorResponse = await raw.json();
                     toast(errorResponse.message, { type: 'error' });
@@ -152,7 +155,7 @@ const TtbConfigForm: React.FC = () => {
                 const response = await raw.json();
                 const { configuration } = response;
                 if (configuration.issuer.length > 0) {
-                    form.setValue('issuer', configuration.issuer);
+                    setValue('issuer', configuration.issuer);
                 }
             } catch (error) {
                 toast('Error loading template file', { type: 'error' });
@@ -160,8 +163,8 @@ const TtbConfigForm: React.FC = () => {
             }
         }
 
-        loadTemplateFile().then(r => r);
-    }, [form.watch('templateFile')]);
+        loadTemplateFile();
+    }, [templateFile, setValue, getValues]);
 
 
     return (
@@ -357,7 +360,7 @@ const TtbConfigForm: React.FC = () => {
                                                 />
                                             </FormControl>
                                             <FormMessage>
-                                                {(form.formState.errors.issuer?.[index]?.name as any)?.message}
+                                                {(form.formState.errors.issuer?.[index]?.name)?.message}
                                             </FormMessage>
                                         </FormItem>
                                     )}
@@ -399,7 +402,7 @@ const TtbConfigForm: React.FC = () => {
                                                 <Input {...field} type="number" />
                                             </FormControl>
                                             <FormMessage>
-                                                {(form.formState.errors.issuer?.[index]?.adjustPercent as any)?.message}
+                                                {(form.formState.errors.issuer?.[index]?.adjustPercent)?.message}
                                             </FormMessage>
                                         </FormItem>
                                     )}
@@ -465,7 +468,7 @@ const TtbConfigForm: React.FC = () => {
                                                 <Input {...field} type="number" />
                                             </FormControl>
                                             <FormMessage>
-                                                {(form.formState.errors.issuer?.[index]?.smallAmtLimit as any)?.message}
+                                                {(form.formState.errors.issuer?.[index]?.smallAmtLimit)?.message}
                                             </FormMessage>
                                         </FormItem>
                                     )}

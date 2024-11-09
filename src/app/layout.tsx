@@ -1,7 +1,7 @@
-import type {Metadata} from "next";
+import type { Metadata } from "next";
 import localFont from "next/font/local";
 import React from "react";
-import {ToastContainer} from "react-toastify";
+import { ToastContainer } from "react-toastify";
 import "./globals.css";
 import 'react-toastify/dist/ReactToastify.min.css';
 
@@ -30,7 +30,7 @@ export default function RootLayout({ children }: Readonly<{
                 className={`${geistSans.variable} ${geistMono.variable} antialiased`}
             >
                 {children}
-            <ToastContainer />
+                <ToastContainer />
             </body>
         </html>
     );

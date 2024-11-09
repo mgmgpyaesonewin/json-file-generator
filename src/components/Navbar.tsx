@@ -2,6 +2,7 @@
 
 import React, {useState} from "react";
 import {usePathname} from "next/navigation";
+import Link from "next/link";
 
 const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -88,16 +89,16 @@ const Navbar = () => {
 
             {/* Desktop menu */}
             <div className="hidden w-full lg:flex lg:items-center lg:w-auto">
-                <a
+                <Link
                     href="/"
                     className={`whitespace-nowrap text-base font-medium hover:text-gray-900 ${isActiveLink('/')}`}>
                     EVP Store Config
-                </a>
-                <a
+                </Link>
+                <Link
                     href="/ttb/config"
                     className={`ml-8 whitespace-nowrap text-base font-medium hover:text-gray-900 ${isActiveLink('/ttb/config')}`}>
                     TTB Config
-                </a>
+                </Link>
             </div>
         </nav>
     );

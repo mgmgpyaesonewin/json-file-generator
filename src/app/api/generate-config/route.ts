@@ -24,8 +24,8 @@ export async function POST(request: Request) {
 
     // Update config with new values from the request body
     if (config.deviceSettings) {
-      config.deviceSettings.bottomInfoLine1 = reqBody.deviceSettingsOfBottomInfoLine1;
-      config.deviceSettings.bottomInfoLine2 = reqBody.deviceSettingsOfBottomInfoLine2;
+      config.deviceSettings.bottomInfoLine1 = `รับความช่วยเหลือใช้งาน TID ${reqBody.deviceSettingsOfBottomInfoLine1}`;
+      config.deviceSettings.bottomInfoLine2 = `กรุณาติดต่อที่เบอร์โทร ${reqBody.deviceSettingsOfBottomInfoLine2}`;
       config.deviceSettings.enableUserManagement = Boolean(reqBody.deviceSettingsOfEnableUserManagement);
     }
 

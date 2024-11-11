@@ -12,6 +12,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import {Select, SelectItem, SelectTrigger, SelectValue, SelectContent, SelectLabel, SelectGroup} from '../ui/select';
 import {RadioGroup, RadioGroupItem} from "@/components/ui/radio-group";
 import {PulseLoader} from "react-spinners";
+import {toast} from "react-toastify";
 
 const FormSchema =  z.object({
     templateFile: z.enum([
@@ -73,6 +74,7 @@ const EvpStoreForm: React.FC = () => {
             const response = await raw.json();
             if (raw.ok) {
                 setGeneratedConfig(response.updatedConfig); // Display the updated JSON config for preview
+                toast('Config generated successfully', { type: 'success' });
             } else {
                 alert(response.message);
             }

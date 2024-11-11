@@ -15,6 +15,18 @@ interface Issuer {
     isEnablePreAuth: boolean;
 }
 
+interface Capk {
+    name: string;
+    rID: string;
+    keyID: number;
+    hashInd: number;
+    arithInd: number;
+    modul: string;
+    exponent: string;
+    expDate: string;
+    checkSum: string;
+}
+
 interface ConfigRequest {
     templateFile: string;
     translationOfLabelHeaderLine1En: string;
@@ -24,6 +36,7 @@ interface ConfigRequest {
     translationOfLabelHeaderLine3En: string;
     translationOfLabelHeaderLine3Th: string;
     issuer: Array<Issuer>;
+    capk: Array<Capk>;
 }
 
 export async function POST(request: Request) {
@@ -49,6 +62,7 @@ export async function POST(request: Request) {
             config.configuration.translation.labelHeaderLine3.th = reqBody.translationOfLabelHeaderLine3Th;
 
             config.configuration.issuer = reqBody.issuer;
+            config.configuration.capk = reqBody.capk;
         }
 
         // Return the updated config for preview, without writing it to the file

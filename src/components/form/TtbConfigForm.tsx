@@ -15,6 +15,7 @@ import acquirerSchema from "@/schemas/acquirerSchema";
 import issuerSchema from "@/schemas/issuerSchema";
 import {toast} from "react-toastify";
 import capkSchema from "@/schemas/capkSchema";
+import {Textarea} from "@/components/ui/textarea";
 
 const FormSchema =  z.object({
     templateFile: z.enum([
@@ -71,6 +72,11 @@ const TtbConfigForm: React.FC = () => {
         name: 'issuer',
     });
 
+    const { fields: capkFields, append: appendCapk, remove: removeCapk } = useFieldArray({
+        control: form.control,
+        name: 'capk',
+    });
+
     const handleAddIssuer = () => {
         append({
             name: '',
@@ -88,8 +94,26 @@ const TtbConfigForm: React.FC = () => {
         });
     };
 
+    const handleAddCapk = () => {
+        appendCapk({
+            name: '',
+            rID: '',
+            keyID: 0,
+            hashInd: 0,
+            arithInd: 0,
+            module: '',
+            exponent: '',
+            expDate: '',
+            checkSum: '',
+        });
+    };
+
     const handleRemoveIssuer = (index: number) => {
         remove(index);
+    };
+
+    const handleRemoveCapk = (index: number) => {
+        removeCapk(index);
     };
 
     const [generatedConfig, setGeneratedConfig] = useState(null);
@@ -156,6 +180,9 @@ const TtbConfigForm: React.FC = () => {
                 const { configuration } = response;
                 if (configuration.issuer.length > 0) {
                     setValue('issuer', configuration.issuer);
+                }
+                if (configuration.capk.length > 0) {
+                    setValue('capk', configuration.capk);
                 }
             } catch (error) {
                 toast('Error loading template file', { type: 'error' });
@@ -399,7 +426,11 @@ const TtbConfigForm: React.FC = () => {
                                         <FormItem>
                                             <FormLabel htmlFor={field.name}>Adjust Percent</FormLabel>
                                             <FormControl>
-                                                <Input {...field} type="number" />
+                                                <Input
+                                                    {...field}
+                                                    type="number"
+                                                    className={`${form.formState.errors.issuer?.[index]?.adjustPercent && 'ring-2 focus:outline-none ring-red-500'}`}
+                                                />
                                             </FormControl>
                                             <FormMessage>
                                                 {(form.formState.errors.issuer?.[index]?.adjustPercent)?.message}
@@ -441,8 +472,15 @@ const TtbConfigForm: React.FC = () => {
                                         <FormItem>
                                             <FormLabel htmlFor={field.name}>PAN Mask Pattern</FormLabel>
                                             <FormControl>
-                                                <Input {...field} placeholder="PAN Mask Pattern" />
+                                                <Input
+                                                    {...field}
+                                                    placeholder="PAN Mask Pattern"
+                                                    className={`${form.formState.errors.issuer?.[index]?.panMaskPattern && 'ring-2 focus:outline-none ring-red-500'}`}
+                                                />
                                             </FormControl>
+                                            <FormMessage>
+                                                {(form.formState.errors.issuer?.[index]?.panMaskPattern)?.message}
+                                            </FormMessage>
                                         </FormItem>
                                     )}
                                 />
@@ -453,8 +491,15 @@ const TtbConfigForm: React.FC = () => {
                                         <FormItem>
                                             <FormLabel htmlFor={field.name}>Bind to Acquirer</FormLabel>
                                             <FormControl>
-                                                <Input {...field} placeholder="Bind to Acquirer" />
+                                                <Input
+                                                    {...field}
+                                                    placeholder="Bind to Acquirer"
+                                                    className={`${form.formState.errors.issuer?.[index]?.bindToAcquirer && 'ring-2 focus:outline:none ring-red-500'}`}
+                                                />
                                             </FormControl>
+                                            <FormMessage>
+                                                {(form.formState.errors.issuer?.[index]?.bindToAcquirer)?.message}
+                                            </FormMessage>
                                         </FormItem>
                                     )}
                                 />
@@ -465,7 +510,11 @@ const TtbConfigForm: React.FC = () => {
                                         <FormItem>
                                             <FormLabel htmlFor={field.name}>Small Amount Limit</FormLabel>
                                             <FormControl>
-                                                <Input {...field} type="number" />
+                                                <Input
+                                                    {...field}
+                                                    type="number"
+                                                    className={`${form.formState.errors.issuer?.[index]?.smallAmtLimit && 'ring-2 focus:outline-none ring-red-500'}`}
+                                                />
                                             </FormControl>
                                             <FormMessage>
                                                 {(form.formState.errors.issuer?.[index]?.smallAmtLimit)?.message}
@@ -621,6 +670,198 @@ const TtbConfigForm: React.FC = () => {
                                 }
                             </div>
                         ))}
+
+                        <div className="flex justify-between items-center">
+                            <h2 className="text-2xl font-semibold my-4">CAPK Configuration</h2>
+                        </div>
+                        {capkFields.map((field, index) => (
+                            <div key={field.id} className="flex flex-col space-y-4 border p-4 mb-4 rounded-lg">
+                                <h3 className="font-semibold">CAPK {index + 1}</h3>
+                                <FormField
+                                    control={form.control}
+                                    name={`capk.${index}.name`}
+                                    render={({ field }) => (
+                                        <FormItem>
+                                            <FormLabel htmlFor={field.name}>Name</FormLabel>
+                                            <FormControl>
+                                                <Input
+                                                    {...field}
+                                                    placeholder="CAPK Name"
+                                                    className={`${form.formState.errors.capk?.[index]?.name && 'ring-2 focus:outline-none ring-red-500'}`}
+                                                />
+                                            </FormControl>
+                                            <FormMessage>
+                                                {(form.formState.errors.capk?.[index]?.name)?.message}
+                                            </FormMessage>
+                                        </FormItem>
+                                    )}
+                                />
+                                <FormField
+                                    control={form.control}
+                                    name={`capk.${index}.rID`}
+                                    render={({ field }) => (
+                                        <FormItem>
+                                            <FormLabel htmlFor={field.name}>RID</FormLabel>
+                                            <FormControl>
+                                                <Input
+                                                    {...field}
+                                                    placeholder="RID"
+                                                    className={`${form.formState.errors.capk?.[index]?.rID && 'ring-2 focus:outline-none ring-red-500'}`}
+                                                />
+                                            </FormControl>
+                                            <FormMessage>
+                                                {(form.formState.errors.capk?.[index]?.rID)?.message}
+                                            </FormMessage>
+                                        </FormItem>
+                                    )}
+                                />
+                                <FormField
+                                    control={form.control}
+                                    name={`capk.${index}.keyID`}
+                                    render={({ field }) => (
+                                        <FormItem>
+                                            <FormLabel htmlFor={field.name}>Key ID</FormLabel>
+                                            <FormControl>
+                                                <Input
+                                                    {...field}
+                                                    type="number"
+                                                    className={`${form.formState.errors.capk?.[index]?.keyID && 'ring-2 focus:outline-none ring-red-500'}`}
+                                                />
+                                            </FormControl>
+                                            <FormMessage>
+                                                {(form.formState.errors.capk?.[index]?.keyID)?.message}
+                                            </FormMessage>
+                                        </FormItem>
+                                    )}
+                                />
+                                <FormField
+                                    control={form.control}
+                                    name={`capk.${index}.hashInd`}
+                                    render={({ field }) => (
+                                        <FormItem>
+                                            <FormLabel htmlFor={field.name}>Hash Ind</FormLabel>
+                                            <FormControl>
+                                                <Input
+                                                    {...field}
+                                                    type="number"
+                                                    className={`${form.formState.errors.capk?.[index]?.hashInd && 'ring-2 focus:outline-none ring-red-500'}`}
+                                                />
+                                            </FormControl>
+                                            <FormMessage>
+                                                {(form.formState.errors.capk?.[index]?.hashInd)?.message}
+                                            </FormMessage>
+                                        </FormItem>
+                                    )}
+                                />
+                                <FormField
+                                    control={form.control}
+                                    name={`capk.${index}.arithInd`}
+                                    render={({ field }) => (
+                                        <FormItem>
+                                            <FormLabel htmlFor={field.name}>Arith Ind</FormLabel>
+                                            <FormControl>
+                                                <Input
+                                                    {...field}
+                                                    type="number"
+                                                    className={`${form.formState.errors.capk?.[index]?.arithInd && 'ring-2 focus:outline-none ring-red-500'}`}
+                                                />
+                                            </FormControl>
+                                            <FormMessage>
+                                                {(form.formState.errors.capk?.[index]?.arithInd)?.message}
+                                            </FormMessage>
+                                        </FormItem>
+                                    )}
+                                />
+                                <FormField
+                                    control={form.control}
+                                    name={`capk.${index}.module`}
+                                    render={({ field }) => (
+                                        <FormItem>
+                                            <FormLabel htmlFor={field.name}>Module</FormLabel>
+                                            <FormControl>
+                                                <Textarea
+                                                    {...field}
+                                                    placeholder="Module"
+                                                    rows={7}
+                                                    className={`${form.formState.errors.capk?.[index]?.module && 'ring-2 focus:outline-none ring-red-500'}`}
+                                                />
+                                            </FormControl>
+                                            <FormMessage>
+                                                {(form.formState.errors.capk?.[index]?.module)?.message}
+                                            </FormMessage>
+                                        </FormItem>
+                                    )}
+                                />
+                                <FormField
+                                    control={form.control}
+                                    name={`capk.${index}.exponent`}
+                                    render={({ field }) => (
+                                        <FormItem>
+                                            <FormLabel htmlFor={field.name}>Exponent</FormLabel>
+                                            <FormControl>
+                                                <Input
+                                                    {...field}
+                                                    placeholder="Exponent"
+                                                    className={`${form.formState.errors.capk?.[index]?.exponent && 'ring-2 focus:outline-none ring-red-500'}`}
+                                                />
+                                            </FormControl>
+                                            <FormMessage>
+                                                {(form.formState.errors.capk?.[index]?.exponent)?.message}
+                                            </FormMessage>
+                                        </FormItem>
+                                    )}
+                                />
+                                <FormField
+                                    control={form.control}
+                                    name={`capk.${index}.expDate`}
+                                    render={({ field }) => (
+                                        <FormItem>
+                                            <FormLabel htmlFor={field.name}>Exp Date</FormLabel>
+                                            <FormControl>
+                                                <Input
+                                                    {...field}
+                                                    placeholder="Exp Date"
+                                                    className={`${form.formState.errors.capk?.[index]?.expDate && 'ring-2 focus:outline-none ring-red-500'}`}
+                                                />
+                                            </FormControl>
+                                            <FormMessage>
+                                                {(form.formState.errors.capk?.[index]?.expDate)?.message}
+                                            </FormMessage>
+                                        </FormItem>
+                                    )}
+                                />
+                                <FormField
+                                    control={form.control}
+                                    name={`capk.${index}.checkSum`}
+                                    render={({ field }) => (
+                                        <FormItem>
+                                            <FormLabel htmlFor={field.name}>Check Sum</FormLabel>
+                                            <FormControl>
+                                                <Input
+                                                    {...field}
+                                                    placeholder="Check Sum"
+                                                    className={`${form.formState.errors.capk?.[index]?.checkSum && 'ring-2 focus:outline-none ring-red-500'}`}
+                                                />
+                                            </FormControl>
+                                            <FormMessage>
+                                                {(form.formState.errors.capk?.[index]?.checkSum)?.message}
+                                            </FormMessage>
+                                        </FormItem>
+                                    )}
+                                />
+                                <Button type="button" onClick={() => handleRemoveCapk(index)} className="mt-2">
+                                    Remove CAPK
+                                </Button>
+                                {
+                                    index === capkFields.length - 1 && (
+                                        <Button type="button" onClick={handleAddCapk} className="mt-2">
+                                            Add CAPK
+                                        </Button>
+                                    )
+                                }
+                            </div>
+                        ))}
+
 
                         <Button type="submit" className="mt-4 relative" disabled={loading}>
                             {loading ? (

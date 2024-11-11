@@ -6,7 +6,7 @@ const capkSchema = z.object({
     keyID: z.number(),
     hashInd: z.number(),
     arithInd: z.number(),
-    modul: z.string(),
+    module: z.string(),
     exponent: z.string(),
     expDate: z.string(),
     checkSum: z.string(),

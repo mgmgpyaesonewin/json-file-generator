@@ -109,11 +109,15 @@ const TtbConfigForm: React.FC = () => {
     };
 
     const handleRemoveIssuer = (index: number) => {
+        const issuerName = form.getValues('issuer')[index].name;
         remove(index);
+        toast(`Issuer ${issuerName} removed`, { type: 'success' });
     };
 
     const handleRemoveCapk = (index: number) => {
+        const capkName = form.getValues('capk')[index].name;
         removeCapk(index);
+        toast(`CAPK ${capkName} removed`, { type: 'success' });
     };
 
     const [generatedConfig, setGeneratedConfig] = useState(null);

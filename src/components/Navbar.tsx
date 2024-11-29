@@ -20,7 +20,7 @@ const Navbar = () => {
             {/* Left nav */}
             <div className="flex items-center">
                 <a href="#" className="text-3xl tracking-wide">
-                    EDC Config Gen
+                    EVP Ops Portal
                 </a>
             </div>
 

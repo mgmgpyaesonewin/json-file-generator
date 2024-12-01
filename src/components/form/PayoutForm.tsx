@@ -59,7 +59,11 @@ export function PayoutForm() {
       const uploadOutputFilesResult = await uploadOutputFiles(trxnDate);
       setPayOutProgress([copyFolderResult, downloadFilesResult, executeDbScriptsResult, uploadOutputFilesResult]);
 
-      toast('Payout process completed. All steps have been completed successfully.', { type: 'success' });
+      if (uploadOutputFilesResult.status === "success") {
+        toast("Payout process completed successfully", { type: 'success' });
+      } else {
+        toast("Payout process failed", { type: 'error' });
+      }
 
     } catch (error) {
       console.error(error)

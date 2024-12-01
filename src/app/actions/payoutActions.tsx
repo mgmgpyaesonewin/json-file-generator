@@ -1,18 +1,18 @@
 'use server';
 
+import { PayoutStepResult } from "@/types";
+
 /**
  * Copy folder
- * @param {string} trxnDate
- * @returns {Promise}
  */
-async function copyFolder(trxnDate: string) {
+async function copyFolder(trxnDate: string): Promise<PayoutStepResult> {
     try {
         const copyFolderResult = await fetch(`${process.env.NEXT_PAYOUT_API_URL}/copy-folder`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({ trxnDate: trxnDate }),
+            body: JSON.stringify({ trxnDate }),
         });
         
         const data = await copyFolderResult.json();
@@ -24,21 +24,20 @@ async function copyFolder(trxnDate: string) {
             data
         }
     } catch (error) {
+        console.error("Error copying folder:", error);
         return {
             status: "error",
             step: "Copy Folder",
             message: "Error copying folder",
-            data: error
+            error: error instanceof Error ? error.message : String(error)
         }
     }
 }
 
 /**
  * Download files
- * @param {string} trxnDate
- * @returns {Promise}
  */
-async function downloadFiles(trxnDate: string) {
+async function downloadFiles(trxnDate: string): Promise<PayoutStepResult> {
     try {
         const downloadFilesResult = await fetch(`${process.env.NEXT_PAYOUT_API_URL}/download-files`, {
             method: 'POST',
@@ -57,21 +56,20 @@ async function downloadFiles(trxnDate: string) {
             data
         }
     } catch (error) {
+        console.error("Error downloading files:", error);
         return {
             status: "error",
             step: "Download Files",
             message: "Error downloading files",
-            data: error
+            error: error instanceof Error ? error.message : String(error)
         }
     }
 }
 
 /**
  * Execute db scripts
- * @param {string} trxnDate
- * @returns {Promise}
  */
-async function executeDbScripts(trxnDate: string) {
+async function executeDbScripts(trxnDate: string): Promise<PayoutStepResult> {
     try {
         const executeDbScriptsResult = await fetch(`${process.env.NEXT_PAYOUT_API_URL}/execute-db`, {
             method: 'POST',
@@ -90,11 +88,12 @@ async function executeDbScripts(trxnDate: string) {
             data
         }
     } catch (error) {
+        console.error("Error executing DB scripts:", error);
         return {
             status: "error",
             step: "Execute DB Scripts",
             message: "Error executing DB scripts",
-            data: error
+            error: error instanceof Error ? error.message : String(error)
         }
     }
 }
@@ -104,7 +103,7 @@ async function executeDbScripts(trxnDate: string) {
  * @param {string} trxnDate
  * @returns {Promise}
  */
-async function uploadOutputFiles(trxnDate: string) {
+async function uploadOutputFiles(trxnDate: string): Promise<PayoutStepResult> {
     try {
         const uploadOutputFilesResult = await fetch(`${process.env.NEXT_PAYOUT_API_URL}/upload-output-files`, {
             method: 'POST',
@@ -123,11 +122,12 @@ async function uploadOutputFiles(trxnDate: string) {
             data
         }
     } catch (error) {
+        console.error("Error uploading files:", error);
         return {
             status: "error",
             step: "Upload Output Files",
             message: "Error uploading files",
-            data: error
+            error: error instanceof Error ? error.message : String(error)
         }
     }
 }

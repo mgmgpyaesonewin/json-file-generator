@@ -1,17 +1,11 @@
 import React from "react";
+import { PayoutStepResult } from "@/types";
 
-interface PayoutStepProps {
-    status: "success" | "error";
-    step: string;
-    message: string;
-    data: never | null;
-}
-
-const PayoutStep: React.FC<{ steps: PayoutStepProps[] }> = ({ steps }) => {
+const PayoutStep: React.FC<{ steps: PayoutStepResult[] }> = ({ steps }) => {
     return (
         <div className="grid grid-cols-4 gap-4 text-base text-gray-600">
             {
-                steps.map((step: PayoutStepProps, index: number) => (
+                steps.map((step: PayoutStepResult, index: number) => (
                     <React.Fragment key={step.step}>
                         <div className="flex items-center">
                             <div>

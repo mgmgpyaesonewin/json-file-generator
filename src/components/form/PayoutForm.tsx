@@ -33,13 +33,14 @@ import {
   uploadOutputFiles
 } from "@/app/actions/payoutActions";
 import PayoutStep from "@/components/PayoutStep";
+import { PayoutStepResult } from "@/types"
 
 export function PayoutForm() {
   const form = useForm<z.infer<typeof PayoutFormSchema>>({
     resolver: zodResolver(PayoutFormSchema),
   })
 
-  const [payoutProgress, setPayOutProgress] = useState<unknown[]>([]);
+  const [payoutProgress, setPayOutProgress] = useState<PayoutStepResult[]>([]);
 
   async function onSubmit(data: z.infer<typeof PayoutFormSchema>) {
     try {

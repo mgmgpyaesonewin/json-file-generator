@@ -82,6 +82,7 @@ const Navbar = () => {
                 className={`relative w-full overflow-hidden transition-all duration-700 lg:hidden ${menuOpen ? "max-h-screen" : "max-h-0"}`}
             >
                 <div className="flex flex-col my-3 space-y-2 text-lg text-gray-600">
+                    <a href="/payout" className={`${isActiveLink('/payout')} hover:text-gray-900`}>Payout</a>
                     <a href="/evp" className={`${isActiveLink('/evp')} hover:text-gray-900`}>EVP Store Config</a>
                     <a href="/ttb" className={`${isActiveLink('/ttb')} hover:text-gray-900`}>TTB Config</a>
                 </div>
@@ -90,8 +91,13 @@ const Navbar = () => {
             {/* Desktop menu */}
             <div className="hidden w-full lg:flex lg:items-center lg:w-auto">
                 <Link
+                    href="/payout"
+                    className={`whitespace-nowrap text-base font-medium hover:text-gray-900 ${isActiveLink('/payout')}`}>
+                    Payout
+                </Link>
+                <Link
                     href="/"
-                    className={`whitespace-nowrap text-base font-medium hover:text-gray-900 ${isActiveLink('/')}`}>
+                    className={`ml-8 whitespace-nowrap text-base font-medium hover:text-gray-900 ${isActiveLink('/')}`}>
                     EVP Store Config
                 </Link>
                 <Link

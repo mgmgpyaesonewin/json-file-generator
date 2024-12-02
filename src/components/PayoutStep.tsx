@@ -1,8 +1,33 @@
 import React from "react";
+import { Button } from '@/components/ui/button';
 import { PayoutStepResult } from "@/types";
 import { extractFileName } from "@/lib/utils";
+import { downloadUrlsAsZip } from "@/app/actions/payoutActions";
 
 const PayoutStep: React.FC<{ steps: PayoutStepResult[] }> = ({ steps }) => {
+    const handleDownload = async ({ urls }: { urls: string[] }) => {
+        try {
+            const zipFile = await downloadUrlsAsZip(urls);
+            // Convert the Uint8Array into a Blob
+            const blob = new Blob([zipFile], { type: "application/zip" });
+
+            // Create an object URL from the Blob
+            const url = URL.createObjectURL(blob);
+
+            // Create a temporary anchor element and trigger the download
+            const link = document.createElement("a");
+            link.href = url;
+            link.download = "files.zip";
+            document.body.appendChild(link); // Append to body for Firefox compatibility
+            link.click();
+            document.body.removeChild(link); // Cleanup the temporary anchor
+
+            // Revoke the object URL to free memory
+            URL.revokeObjectURL(url);
+        } catch (error) {
+            console.error("Error downloading zip:", error);
+        }
+    };
 
     return (
         <div className="grid grid-cols-4 gap-4 text-base text-gray-600">
@@ -35,6 +60,15 @@ const PayoutStep: React.FC<{ steps: PayoutStepResult[] }> = ({ steps }) => {
                                                             ="_blank" className="text-blue-500">File: {extractFileName(file)}</a>
                                                     </div>
                                                 ))}
+                                                {step.data.files && step.data.files.length > 1 && (
+                                                    <Button onClick={async (e) => {
+                                                        e.preventDefault();
+                                                        const urls = step.data && step.data.files && step.data.files.length > 1 && step.data.files.map((file: string) => file);
+                                                        if (urls && Array.isArray(urls)) {
+                                                            await handleDownload({ urls: urls });
+                                                        }
+                                                    }} className="mt-4">Download All</Button>
+                                                )}
                                             </div>
                                         ) : null
                                     }

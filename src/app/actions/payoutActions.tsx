@@ -1,6 +1,8 @@
 'use server';
 
+import { extractFileName } from "@/lib/utils";
 import { PayoutStepResult } from "@/types";
+import JSZip from 'jszip';
 
 /**
  * Copy folder
@@ -132,10 +134,34 @@ async function uploadOutputFiles(trxnDate: string): Promise<PayoutStepResult> {
     }
 }
 
+/**
+ * Download AWS signed urls as zip
+ */
+async function downloadUrlsAsZip(urls: string[]): Promise<Buffer> {
+    const zip = new JSZip();
+
+    await Promise.all(urls.map(async (url, index) => {
+        try {
+            const response = await fetch(url);
+            if (!response.ok) throw new Error(`Failed to fetch ${url}`);
+
+            const arrayBuffer = await response.arrayBuffer();
+            const fileName = extractFileName(url) || `file-${index + 1}`;
+            zip.file(fileName, arrayBuffer);
+        } catch (error) {
+            console.error("Error downloading file:", error);
+        }
+    }));
+
+    const zipFile = await zip.generateAsync({ type: 'nodebuffer' });
+    return zipFile;
+}
+
 
 export { 
     copyFolder,
     downloadFiles,
     executeDbScripts,
-    uploadOutputFiles
+    uploadOutputFiles,
+    downloadUrlsAsZip
 };

@@ -5,7 +5,7 @@ import { extractFileName } from "@/lib/utils";
 import { downloadUrlsAsZip } from "@/app/actions/payoutActions";
 
 const PayoutStep: React.FC<{ steps: PayoutStepResult[] }> = ({ steps }) => {
-    const handleDownload = async ({ urls }: { urls: string[] }) => {
+    const handleDownload = async (urls: string[]) => {
         try {
             const zipFile = await downloadUrlsAsZip(urls);
             // Convert the Uint8Array into a Blob
@@ -29,6 +29,28 @@ const PayoutStep: React.FC<{ steps: PayoutStepResult[] }> = ({ steps }) => {
         }
     };
 
+    const StepFiles: React.FC<{ files: string[] }> = ({ files }) => (
+        <div className="ml-4 my-4 text-sm">
+            {files.map((file, index) => (
+                <div key={index}>
+                    <a 
+                        href={file} 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="text-blue-500"
+                    >
+                        File: {extractFileName(file)}
+                    </a>
+                </div>
+            ))}
+            {files.length > 1 && (
+                <Button onClick={() => handleDownload(files)} className="mt-4">
+                    Download All
+                </Button>
+            )}
+        </div>
+    );
+
     return (
         <div className="grid grid-cols-4 gap-4 text-base text-gray-600">
             {
@@ -43,35 +65,15 @@ const PayoutStep: React.FC<{ steps: PayoutStepResult[] }> = ({ steps }) => {
                                     <span className="ml-4 font-medium">Step: {step.step}</span>
                                 </div>
                                 <div className="mt-8">
-                                    {
-                                        step.status === "success" ? (
-                                            <span className="ml-4 text-green-500">✅</span>
-                                        ) : (
-                                            <span className="ml-4 text-red-500">❌</span>
-                                        )
-                                    }
+                                    {step.status === "success" ? (
+                                        <span className="ml-4 text-green-500">✅</span>
+                                    ) : (
+                                        <span className="ml-4 text-red-500">❌</span>
+                                    )}
                                     <span className="ml-4 text-sm">{step.message}</span>
-                                    {
-                                        step.data && step.step === 'Upload Output Files' ? (
-                                            <div className="ml-4 my-4 text-sm">
-                                                {step.data.files && step.data.files.map((file: string, index: number) => (
-                                                    <div key={index}>
-                                                        <a href={file} target
-                                                            ="_blank" className="text-blue-500">File: {extractFileName(file)}</a>
-                                                    </div>
-                                                ))}
-                                                {step.data.files && step.data.files.length > 1 && (
-                                                    <Button onClick={async (e) => {
-                                                        e.preventDefault();
-                                                        const urls = step.data && step.data.files && step.data.files.length > 1 && step.data.files.map((file: string) => file);
-                                                        if (urls && Array.isArray(urls)) {
-                                                            await handleDownload({ urls: urls });
-                                                        }
-                                                    }} className="mt-4">Download All</Button>
-                                                )}
-                                            </div>
-                                        ) : null
-                                    }
+                                    {step.data?.files && step.step === "Upload Output Files" && (
+                                        <StepFiles files={step.data.files} />
+                                    )}
                                 </div>
                             </div>
                         </div>

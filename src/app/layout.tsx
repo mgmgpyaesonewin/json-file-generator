@@ -2,8 +2,10 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import React from "react";
 import { ToastContainer } from "react-toastify";
+import AmplifyInit from "@/components/AmplifyInit";
 import "./globals.css";
 import 'react-toastify/dist/ReactToastify.min.css';
+import '@aws-amplify/ui-react/styles.css';
 
 const geistSans = localFont({
     src: "./fonts/GeistVF.woff",
@@ -30,6 +32,7 @@ export default function RootLayout({ children }: Readonly<{
                 className={`${geistSans.variable} ${geistMono.variable} antialiased`}
             >
                 {children}
+                <AmplifyInit />
                 <ToastContainer />
             </body>
         </html>

@@ -1,5 +1,7 @@
 import { clsx, type ClassValue } from "clsx"
 import { twMerge } from "tailwind-merge"
+import { createServerRunner } from "@aws-amplify/adapter-nextjs";
+import config from "../../amplify_outputs.json";
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
@@ -14,3 +16,7 @@ export function extractFileName(url: string) {
     return null;
   }
 }
+
+export const { runWithAmplifyServerContext } = createServerRunner({
+  config,
+});

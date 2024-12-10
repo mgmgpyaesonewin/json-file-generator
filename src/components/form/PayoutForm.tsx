@@ -34,7 +34,6 @@ import {
 } from "@/app/actions/payoutActions";
 import PayoutStep from "@/components/PayoutStep";
 import { PayoutStepResult } from "@/types"
-import { Authenticator } from "@aws-amplify/ui-react"
 
 export function PayoutForm() {
   const form = useForm<z.infer<typeof PayoutFormSchema>>({
@@ -73,14 +72,6 @@ export function PayoutForm() {
 
   return (
     <>
-      <Authenticator>
-        {({ signOut, user }) => (
-          <main>
-            <h1>Hello {user?.username}</h1>
-            <button onClick={signOut}>Sign out</button>
-          </main>
-        )}
-      </Authenticator>
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
           <FormField

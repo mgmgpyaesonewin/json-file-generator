@@ -43,7 +43,7 @@ const AuthenticatedLayout = ({ children }: { children: React.ReactNode }) => {
           </div>
         </header>
 
-        <div className="flex flex-1 flex-col gap-4 p-4 pt-0">
+        <div className="h-full p-4 md:px-6">
           {children}
         </div>
         {/* 

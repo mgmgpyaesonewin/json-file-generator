@@ -7,29 +7,39 @@ import {
     AlertDialogHeader,
     AlertDialogTitle,
     AlertDialogTrigger,
-} from "@/components/ui/alert-dialog"
+} from "@/components/ui/alert-dialog";
+import { z } from "zod";
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
-import { Label } from "../ui/label"
-import { Input } from "../ui/input"
+import { Input } from "@/components/ui/input"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "../ui/select"
 import { emailMerchant } from "@/app/actions/payoutActions"
+import { Form, FormControl, FormField, FormItem, FormLabel } from '@/components/ui/form';
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form";
+
+const emailMerchantsFormSchema = z.object({
+    email: z.string().email(),
+    merchant: z.string(),
+});
 
 export function EmailMerchantsForm() {
     const [isOpen, setIsOpen] = useState(false);
+    const form = useForm<z.infer<typeof emailMerchantsFormSchema>>({
+        resolver: zodResolver(emailMerchantsFormSchema),
+        defaultValues: {
+            email: '',
+            merchant: '',
+        },
+    });
 
     const handleOpen = () => setIsOpen(true);
 
-    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-        e.preventDefault();
-        const formData = new FormData(e.currentTarget);
-        const email = formData.get("email") as string;
-        const merchant = formData.get("merchant") as string;
-        console.log({ email, merchant });
+    async function handleSubmit(data: z.infer<typeof emailMerchantsFormSchema>) {
+        setIsOpen(false);
 
         // Call emailMerchant Server Action
-        await emailMerchant('pyae@evp-pay.com', 'AMTK');
-        setIsOpen(false);
+        await emailMerchant(data.email, data.merchant);
     };
 
     return (
@@ -38,43 +48,56 @@ export function EmailMerchantsForm() {
                 <Button onClick={handleOpen}>Email Merchants</Button>
             </AlertDialogTrigger>
             <AlertDialogContent>
-                <form onSubmit={handleSubmit}>
-                    <AlertDialogHeader>
-                        <AlertDialogTitle>Email Merchants</AlertDialogTitle>
-                    </AlertDialogHeader>
-                    <div className="flex flex-col gap-6 my-4">
-                        <div className="grid gap-2">
-                            <Label htmlFor="email">Enter Merchant Email</Label>
-                            <Input
-                                id="email"
-                                type="email"
-                                placeholder="m@example.com"
-                                required
+                <Form {...form}>
+                    <form onSubmit={form.handleSubmit(handleSubmit)}>
+                        <AlertDialogHeader>
+                            <AlertDialogTitle>Email Merchants</AlertDialogTitle>
+                        </AlertDialogHeader>
+                        <div className="flex flex-col gap-6 my-4">
+                            <FormField
+                                control={form.control}
+                                name="email"
+                                render={({ field }) => (
+                                    <FormItem>
+                                        <FormLabel htmlFor="email">Email</FormLabel>
+                                        <FormControl>
+                                            <Input {...field} type="email" placeholder="Enter your email" />
+                                        </FormControl>
+                                    </FormItem>
+                                )}
+                            />
+                            <FormField
+                                control={form.control}
+                                name="merchant"
+                                render={({ field }) => (
+                                    <FormItem>
+                                        <FormLabel htmlFor="merchant">Merchant</FormLabel>
+                                        <FormControl>
+                                            <Select onValueChange={field.onChange} value={field.value}>
+                                                <SelectTrigger>
+                                                    <SelectValue placeholder="Merchant" />
+                                                </SelectTrigger>
+                                                <SelectContent>
+                                                    <SelectItem value="AMTK">AMTK</SelectItem>
+                                                    <SelectItem value="AWIN">AWIN</SelectItem>
+                                                    <SelectItem value="DGDO">DGDO</SelectItem>
+                                                    <SelectItem value="MICR">MICR</SelectItem>
+                                                    <SelectItem value="SAPP">SAPP</SelectItem>
+                                                </SelectContent>
+                                            </Select>
+                                        </FormControl>
+                                    </FormItem>
+                                )}
                             />
                         </div>
-                        <div className="grid gap-2">
-                            <Label htmlFor="merchant">Choose Merchant</Label>
-                            <Select>
-                                <SelectTrigger>
-                                    <SelectValue placeholder="Merchant" />
-                                </SelectTrigger>
-                                <SelectContent>
-                                    <SelectItem value="AMTK">AMTK</SelectItem>
-                                    <SelectItem value="AWIN">AWIN</SelectItem>
-                                    <SelectItem value="DGDO">DGDO</SelectItem>
-                                    <SelectItem value="MICR">MICR</SelectItem>
-                                    <SelectItem value="SAPP">SAPP</SelectItem>
-                                </SelectContent>
-                            </Select>
+                        <div className="flex justify-end gap-4 py-4">
+                            <AlertDialogFooter>
+                                <AlertDialogCancel>Cancel</AlertDialogCancel>
+                                <AlertDialogAction type="submit">Send</AlertDialogAction>
+                            </AlertDialogFooter>
                         </div>
-                    </div>
-                    <div className="flex justify-end gap-4 py-4">
-                        <AlertDialogFooter>
-                            <AlertDialogCancel>Cancel</AlertDialogCancel>
-                            <AlertDialogAction type="submit">Send</AlertDialogAction>
-                        </AlertDialogFooter>
-                    </div>
-                </form>
+                    </form>
+                </Form>
             </AlertDialogContent>
         </AlertDialog>
     )

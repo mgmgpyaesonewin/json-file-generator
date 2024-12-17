@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import { PayoutStepResult } from "@/types";
 import { extractFileName } from "@/lib/utils";
 import { downloadUrlsAsZip } from "@/app/actions/payoutActions";
+import { EmailMerchantsForm } from "./form/email-merchants-form";
 
 const PayoutStep: React.FC<{ steps: PayoutStepResult[] }> = ({ steps }) => {
     const handleDownload = async (urls: string[]) => {
@@ -33,10 +34,10 @@ const PayoutStep: React.FC<{ steps: PayoutStepResult[] }> = ({ steps }) => {
         <div className="ml-4 my-4 text-sm">
             {files.map((file, index) => (
                 <div key={index}>
-                    <a 
-                        href={file} 
-                        target="_blank" 
-                        rel="noopener noreferrer" 
+                    <a
+                        href={file}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="text-blue-500"
                     >
                         File: {extractFileName(file)}
@@ -44,9 +45,14 @@ const PayoutStep: React.FC<{ steps: PayoutStepResult[] }> = ({ steps }) => {
                 </div>
             ))}
             {files.length > 1 && (
-                <Button onClick={() => handleDownload(files)} className="mt-4">
-                    Download All
-                </Button>
+                <div className="flex items-center">
+                    <Button onClick={() => handleDownload(files)} className="mt-4">
+                        Download All
+                    </Button>
+                    <div className="ml-4 mt-4">
+                        <EmailMerchantsForm />
+                    </div>
+                </div>
             )}
         </div>
     );

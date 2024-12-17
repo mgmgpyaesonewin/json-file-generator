@@ -157,11 +157,43 @@ async function downloadUrlsAsZip(urls: string[]): Promise<Buffer> {
     return zipFile;
 }
 
+async function emailMerchant(email: string, merchant: string): Promise<PayoutStepResult> {
+    try {
+        await fetch('https://32stnjm7q6.execute-api.ap-southeast-1.amazonaws.com/develop/documents/mails', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                email,
+                name: merchant
+            }),
+        });
+
+        // Send email to merchant
+        console.log({ email, merchant });
+
+        return {
+            status: "success",
+            step: "Email Merchant",
+            message: "Email sent successfully"
+        }
+    } catch (error) {
+        console.error("Error sending email:", error);
+        return {
+            status: "error",
+            step: "Email Merchant",
+            message: "Error sending email",
+            error: error instanceof Error ? error.message : String(error)
+        }
+    }
+}
 
 export { 
     copyFolder,
     downloadFiles,
     executeDbScripts,
     uploadOutputFiles,
-    downloadUrlsAsZip
+    downloadUrlsAsZip,
+    emailMerchant
 };

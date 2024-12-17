@@ -36,8 +36,8 @@ import {
   Card,
   CardContent
 } from "@/components/ui/card";
-import PayoutStep from "@/components/PayoutStep";
-import { PayoutStepResult } from "@/types"
+import PayoutStep from "@/components/payout-step";
+import { PayoutStepResult } from "@/types";
 
 export function PayoutForm() {
   const form = useForm<z.infer<typeof PayoutFormSchema>>({

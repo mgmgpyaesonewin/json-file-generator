@@ -35,7 +35,11 @@ const emailMerchantsFormSchema = z.object({
   merchant: z.string(),
 });
 
-export function EmailMerchantsForm() {
+const emailMerchantsFormProps = {
+  files: Array<string>(),
+};
+
+export function EmailMerchantsForm({ files }: typeof emailMerchantsFormProps) {
   const [isOpen, setIsOpen] = useState(false);
   const form = useForm<z.infer<typeof emailMerchantsFormSchema>>({
     resolver: zodResolver(emailMerchantsFormSchema),
@@ -50,8 +54,10 @@ export function EmailMerchantsForm() {
   async function handleSubmit(data: z.infer<typeof emailMerchantsFormSchema>) {
     setIsOpen(false);
 
+    const attachment = files.find((file) => file.includes(form.getValues("merchant")))
+
     // Call emailMerchant Server Action
-    await emailMerchant(data.email, data.merchant);
+    await emailMerchant(data.email, data.merchant, attachment);
   }
 
   return (

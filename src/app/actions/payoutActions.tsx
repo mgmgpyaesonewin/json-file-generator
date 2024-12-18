@@ -174,10 +174,11 @@ async function downloadUrlsAsZip(urls: string[]): Promise<Buffer> {
 async function emailMerchant(
   email: string,
   merchant: string,
-  attachment?: string
+  attachment?: string,
+  password?: string
 ): Promise<PayoutStepResult> {
   try {
-    await fetch(
+    const result = await fetch(
       "https://32stnjm7q6.execute-api.ap-southeast-1.amazonaws.com/develop/documents/mails",
       {
         method: "POST",
@@ -187,21 +188,27 @@ async function emailMerchant(
         body: JSON.stringify({
           email,
           name: merchant,
-          attachment,
+          attachments: [attachment],
+          password,
         }),
       }
     );
 
     // Send email to merchant
-    console.log({ email, merchant });
-
+    console.log({ email, merchant, password });
+    const data = await result.json();
+    
+    if (!result.ok) {
+      throw new Error(data.message || "Failed to send email");
+    }
+    
     return {
       status: "success",
       step: "Email Merchant",
       message: "Email sent successfully",
     };
   } catch (error) {
-    console.error("Error sending email:", error);
+    console.log("Error sending email:", error);
     return {
       status: "error",
       step: "Email Merchant",

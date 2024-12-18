@@ -29,23 +29,26 @@ import {
 } from "@/components/ui/form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
+import { toast } from "react-toastify";
 
 const emailMerchantsFormSchema = z.object({
   email: z.string().email(),
   merchant: z.string(),
+  password: z.string(),
 });
 
-const emailMerchantsFormProps = {
-  files: Array<string>(),
+type EmailMerchantsFormProps = {
+  files: string[];
 };
 
-export function EmailMerchantsForm({ files }: typeof emailMerchantsFormProps) {
+export function EmailMerchantsForm({ files }: EmailMerchantsFormProps) {
   const [isOpen, setIsOpen] = useState(false);
   const form = useForm<z.infer<typeof emailMerchantsFormSchema>>({
     resolver: zodResolver(emailMerchantsFormSchema),
     defaultValues: {
       email: "",
       merchant: "",
+      password: "",
     },
   });
 
@@ -53,11 +56,22 @@ export function EmailMerchantsForm({ files }: typeof emailMerchantsFormProps) {
 
   async function handleSubmit(data: z.infer<typeof emailMerchantsFormSchema>) {
     setIsOpen(false);
+    toast('Sending email...', { type: 'info' });
 
     const attachment = files.find((file) => file.includes(form.getValues("merchant")))
 
     // Call emailMerchant Server Action
-    await emailMerchant(data.email, data.merchant, attachment);
+    const result = await emailMerchant(data.email, data.merchant, attachment, data.password);
+
+    if (result.status === "success") {
+      toast("Email sent successfully", {
+        type: "success",
+      });
+    } else {
+      toast("Error sending email", {
+        type: "error",
+      });
+    }
   }
 
   return (
@@ -110,6 +124,22 @@ export function EmailMerchantsForm({ files }: typeof emailMerchantsFormProps) {
                           <SelectItem value="SAPP">SAPP</SelectItem>
                         </SelectContent>
                       </Select>
+                    </FormControl>
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="password"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel htmlFor="password">Password</FormLabel>
+                    <FormControl>
+                      <Input
+                        {...field}
+                        type="password"
+                        placeholder="Enter your password"
+                      />
                     </FormControl>
                   </FormItem>
                 )}

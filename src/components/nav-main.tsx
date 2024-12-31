@@ -24,7 +24,7 @@ export function NavMain({
   items: {
     title: string
     url: string
-    icon?: LucideIcon
+    icon?: LucideIcon | React.ComponentType,
     isActive?: boolean
     items?: {
       title: string

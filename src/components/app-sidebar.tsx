@@ -1,6 +1,7 @@
 "use client"
 
 import React, { useEffect, useState } from "react"
+import { usePathname } from "next/navigation"
 import {
   Bot,
   GalleryVerticalEnd,
@@ -20,13 +21,23 @@ import {
 } from "@/components/ui/sidebar"
 import { User } from "@/types/user";
 
-const data = {
+interface NavItem {
+  title: string;
+  url: string;
+  icon?: React.ComponentType;
+  items?: {
+    title: string;
+    url: string;
+  }[];
+}
+
+const getNavData = (currentPath: string): { navMain: NavItem[] } => ({
   navMain: [
     {
       title: "Platform",
       url: "#",
       icon: SquareTerminal,
-      isActive: true,
+      isActive: currentPath.startsWith('/payout'),
       items: [
         {
           title: "Payouts Calculator",
@@ -38,6 +49,7 @@ const data = {
       title: "EDC Utilities",
       url: "#",
       icon: Bot,
+      isActive: currentPath.startsWith('/edc'),
       items: [
         {
           title: "EVP Store Config",
@@ -50,10 +62,10 @@ const data = {
       ],
     }
   ]
-}
+});
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
-
+  const pathname = usePathname();
   const [user, setUser] = useState<GetCurrentUserOutput | null>(null);
   const [userDetail, setUserDetail] = useState<User | null>(null);
 
@@ -77,6 +89,8 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
     }
   }, [user]);
 
+  const navigationData = getNavData(pathname);
+
   return (
     <Sidebar collapsible="icon" {...props}>
       <SidebarHeader>
@@ -96,7 +110,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         </SidebarMenuButton>
       </SidebarHeader>
       <SidebarContent>
-        <NavMain items={data.navMain} />
+        <NavMain items={navigationData.navMain} />
       </SidebarContent>
       <SidebarFooter>
         <NavUser user={userDetail} />

@@ -74,6 +74,11 @@ export function EmailMerchantsForm({ files }: EmailMerchantsFormProps) {
     }
   }
 
+  function handleReset() {
+    form.reset();
+    setIsOpen(false);
+  }
+
   return (
     <AlertDialog open={isOpen}>
       <AlertDialogTrigger asChild>
@@ -81,7 +86,7 @@ export function EmailMerchantsForm({ files }: EmailMerchantsFormProps) {
       </AlertDialogTrigger>
       <AlertDialogContent>
         <Form {...form}>
-          <form onSubmit={form.handleSubmit(handleSubmit)}>
+          <form onSubmit={form.handleSubmit(handleSubmit)} onReset={handleReset}>
             <AlertDialogHeader>
               <AlertDialogTitle>Email Merchants</AlertDialogTitle>
             </AlertDialogHeader>
@@ -147,7 +152,7 @@ export function EmailMerchantsForm({ files }: EmailMerchantsFormProps) {
             </div>
             <div className="flex justify-end gap-4 py-4">
               <AlertDialogFooter>
-                <AlertDialogCancel>Cancel</AlertDialogCancel>
+                <AlertDialogCancel type="reset">Cancel</AlertDialogCancel>
                 <AlertDialogAction type="submit">Send</AlertDialogAction>
               </AlertDialogFooter>
             </div>

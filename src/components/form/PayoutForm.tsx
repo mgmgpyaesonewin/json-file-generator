@@ -130,7 +130,7 @@ export function PayoutForm() {
         </CardContent>
       </Card>
       <div className="mt-8">
-        <PayoutStep steps={payoutProgress} />
+        <PayoutStep steps={payoutProgress} fileName={form.getValues("dob")} />
       </div>
     </>
   )

@@ -5,8 +5,8 @@ import { extractFileName } from "@/lib/utils";
 import { downloadUrlsAsZip } from "@/app/actions/payoutActions";
 import { EmailMerchantsForm } from "./form/email-merchants-form";
 
-const PayoutStep: React.FC<{ steps: PayoutStepResult[] }> = ({ steps }) => {
-  const handleDownload = async (urls: string[]) => {
+const PayoutStep: React.FC<{ steps: PayoutStepResult[], fileName: Date }> = ({ steps, fileName }) => {
+  const handleDownload = async (urls: string[], fileName: string) => {
     try {
       const zipFile = await downloadUrlsAsZip(urls);
       // Convert the Uint8Array into a Blob
@@ -18,7 +18,7 @@ const PayoutStep: React.FC<{ steps: PayoutStepResult[] }> = ({ steps }) => {
       // Create a temporary anchor element and trigger the download
       const link = document.createElement("a");
       link.href = url;
-      link.download = "files.zip";
+      link.download = `${fileName}.zip`;
       document.body.appendChild(link); // Append to body for Firefox compatibility
       link.click();
       document.body.removeChild(link); // Cleanup the temporary anchor
@@ -30,7 +30,11 @@ const PayoutStep: React.FC<{ steps: PayoutStepResult[] }> = ({ steps }) => {
     }
   };
 
-  const StepFiles: React.FC<{ files: string[] }> = ({ files }) => (
+  const getFileName = (fileName: Date) => {
+    return fileName.toISOString().split("T")[0];
+  }
+
+  const StepFiles: React.FC<{ files: string[], fileName: string }> = ({ files, fileName }) => (
     <div className="ml-4 my-4 text-sm">
       {files.map((file, index) => (
         <div key={index}>
@@ -46,7 +50,7 @@ const PayoutStep: React.FC<{ steps: PayoutStepResult[] }> = ({ steps }) => {
       ))}
       {files.length > 1 && (
         <div className="flex items-center">
-          <Button onClick={() => handleDownload(files)} className="mt-4">
+          <Button onClick={() => handleDownload(files, fileName)} className="mt-4">
             Download All
           </Button>
           <div className="ml-4 mt-4">
@@ -77,7 +81,7 @@ const PayoutStep: React.FC<{ steps: PayoutStepResult[] }> = ({ steps }) => {
                 )}
                 <span className="ml-4 text-sm">{step.message}</span>
                 {step.data?.files && step.step === "Upload Output Files" && (
-                  <StepFiles files={step.data.files} />
+                  <StepFiles files={step.data.files} fileName={getFileName(fileName)} />
                 )}
               </div>
             </div>

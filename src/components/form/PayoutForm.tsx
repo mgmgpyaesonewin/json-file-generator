@@ -30,7 +30,8 @@ import {
   copyFolder,
   downloadFiles,
   executeDbScripts,
-  uploadOutputFiles
+  uploadOutputFiles,
+  syncFiles
 } from "@/app/actions/payoutActions";
 import {
   Card,
@@ -40,6 +41,7 @@ import PayoutStep from "@/components/payout-step";
 import { PayoutStepResult } from "@/types";
 
 export function PayoutForm() {
+  const [isSyncing, setIsSyncing] = useState(false);
   const form = useForm<z.infer<typeof PayoutFormSchema>>({
     resolver: zodResolver(PayoutFormSchema),
   })
@@ -71,6 +73,19 @@ export function PayoutForm() {
 
     } catch (error) {
       console.error(error)
+    }
+  }
+
+  async function syncNow() {
+    try {
+      setIsSyncing(true);
+      const data = await syncFiles();
+      console.log(data);
+      toast("Files synced successfully", { type: 'success' });
+    } catch (error) {
+      console.error(error)
+    } finally {
+      setIsSyncing(false);
     }
   }
 
@@ -124,7 +139,12 @@ export function PayoutForm() {
                   </FormItem>
                 )}
               />
-              <Button type="submit">Submit</Button>
+              <div className="mt-4 flex items-center justify-start gap-2">
+                <Button type="button" onClick={syncNow} variant="destructive" disabled={isSyncing}>
+                  {isSyncing ? "Syncing..." : "Sync Now"}
+                </Button>
+                <Button type="submit">Submit</Button>
+              </div>
             </form>
           </Form>
         </CardContent>

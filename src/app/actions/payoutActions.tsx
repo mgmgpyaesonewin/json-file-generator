@@ -178,13 +178,20 @@ async function emailMerchant(
   password?: string
 ): Promise<PayoutStepResult> {
   try {
+    if (!process.env.NEXT_API_GATEWAY_URL || !process.env.NEXT_API_GATEWAY_KEY) {
+      throw new Error("API Gateway URL and Key not found");
+    }
+
+    const headers: HeadersInit = {
+      "Content-Type": "application/json",
+      "x-api-key": process.env.NEXT_API_GATEWAY_KEY,
+    };
+
     const result = await fetch(
-      "https://32stnjm7q6.execute-api.ap-southeast-1.amazonaws.com/develop/documents/mails",
+      `${process.env.NEXT_API_GATEWAY_URL}/documents/mails`,
       {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
+        headers,
         body: JSON.stringify({
           email,
           name: merchant,
@@ -218,6 +225,47 @@ async function emailMerchant(
   }
 }
 
+/*
+ * Gateway API call function to sync files
+ */
+async function syncFiles(): Promise<PayoutStepResult> {
+  try {
+    if (!process.env.NEXT_API_GATEWAY_URL || !process.env.NEXT_API_GATEWAY_KEY) {
+      throw new Error("API Gateway URL and Key not found");
+    }
+
+    const headers: HeadersInit = {
+      "Content-Type": "application/json",
+      "x-api-key": process.env.NEXT_API_GATEWAY_KEY,
+    };
+
+    const syncFilesResult = await fetch(
+      `${process.env.NEXT_API_GATEWAY_URL}/documents/transfers`,
+      {
+        method: "POST",
+        headers,
+      }
+    );
+
+    const data = await syncFilesResult.json();
+
+    return {
+      status: "success",
+      step: "Sync Files",
+      message: "Files synced successfully",
+      data,
+    };
+  } catch (error) {
+    console.error("Error syncing files:", error);
+    return {
+      status: "error",
+      step: "Sync Files",
+      message: "Error syncing files",
+      error: error instanceof Error ? error.message : String(error),
+    };
+  }
+}
+
 export {
   copyFolder,
   downloadFiles,
@@ -225,4 +273,5 @@ export {
   uploadOutputFiles,
   downloadUrlsAsZip,
   emailMerchant,
+  syncFiles,
 };

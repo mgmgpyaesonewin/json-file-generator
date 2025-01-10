@@ -46,3 +46,6 @@ next-env.d.ts
 amplify_outputs*
 amplify_outputs.json
 amplifyconfiguration*
+
+# Sentry Config File
+.env.sentry-build-plugin

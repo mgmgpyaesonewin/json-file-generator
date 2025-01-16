@@ -202,7 +202,6 @@ async function emailMerchant(
     );
 
     // Send email to merchant
-    console.log({ email, merchant, password });
     const data = await result.json();
     
     if (!result.ok) {

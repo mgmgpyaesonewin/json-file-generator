@@ -1,7 +1,7 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { PayoutStepResult } from "@/types";
-import { extractFileName } from "@/lib/utils";
+import { extractFileName, formatDateAsFile } from "@/lib/utils";
 import { downloadUrlsAsZip } from "@/app/actions/payoutActions";
 import { EmailMerchantsForm } from "./form/email-merchants-form";
 
@@ -29,10 +29,6 @@ const PayoutStep: React.FC<{ steps: PayoutStepResult[], fileName: Date }> = ({ s
       console.error("Error downloading zip:", error);
     }
   };
-
-  const getFileName = (fileName: Date) => {
-    return fileName.toISOString().split("T")[0];
-  }
 
   const StepFiles: React.FC<{ files: string[], fileName: string }> = ({ files, fileName }) => (
     <div className="ml-4 my-4 text-sm">
@@ -81,7 +77,7 @@ const PayoutStep: React.FC<{ steps: PayoutStepResult[], fileName: Date }> = ({ s
                 )}
                 <span className="ml-4 text-sm">{step.message}</span>
                 {step.data?.files && step.step === "Upload Output Files" && (
-                  <StepFiles files={step.data.files} fileName={getFileName(fileName)} />
+                  <StepFiles files={step.data.files} fileName={formatDateAsFile(fileName)} />
                 )}
               </div>
             </div>
